@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>OUR NOTES:</title>
+</head>
+
+<body onload="openCity(event, 'Linux')">
+<ul class="tab">
+  <li><a href="javascript:void(0)" onclick="openCity(event, 'Linux')" class="tablinks">Linux</a></li>
+  <li><a href="javascript:void(0)" onclick="openCity(event, 'Bilgi')" class="tablinks">Bigi Toplama</a></li>
+  <li><a href="javascript:void(0)" onclick="openCity(event, 'Nmap')" class="tablinks">Nmap</a></li>
+  <li><a href="javascript:void(0)" onclick="openCity(event, 'Metasploit')" class="tablinks">Metasploit</a></li>
+  <li><a href="javascript:void(0)" onclick="openCity(event, 'Mobil')" class="tablinks">Mobil</a></li>
+  <li><a href="javascript:void(0)" onclick="openCity(event, 'Web')" class="tablinks">Web</a></li>
+  <li><a href="javascript:void(0)" onclick="openCity(event, 'Reverse')" class="tablinks">Reverse Eng.</a></li>
+</ul>
+
+<div class="tabcontent" id="Linux">
+	nohing.
+</div>
+
+<div class="tabcontent" id="Bilgi">
+bilgi.
+
+</div>
+
+<div class="tabcontent" id="Nmap">
+	everything.
+</div>
+
+<div class="tabcontent" id="Metasploit">
+	everything.
+</div>
+
+<div class="tabcontent" id="Mobil">
+	everything.
+</div>
+
+<div class="tabcontent" id="Web">
+	everything.
+</div>
+
+<div class="tabcontent" id="Reverse">
+	everything.
+</div>
+
+
+<footer>Bu sayfa Nikita TÜRKMEN ve Musa ŞANA tarafından not tutulmak amacıyla oluşturulmuş olup herkesin paylaşımına açıktır.</footer>
+
+
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+
+
+</body>
+</html>
