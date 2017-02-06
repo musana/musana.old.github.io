@@ -41,6 +41,16 @@ bilgi.asdasdasd
     $adb -s [ip]:[port] shell  #birden fazla emulator varsa secer.</br>
     $adb push [source] [target] #dosya gondermeye yarar.</br>
     $adb pull [source] [target] #dosya cekmeye yarar.</br>
+    $adb shell [command]  #Android shelde kosar terminale getirir.</br>
+    $adb install [apkfile]  #install apk to emulator.</br>
+    $adb uninstall [com.packagename]  #uninstall apk from emulator.</br></br>
+    <b>Shell Android Komutlari</b></br></br>
+    #pm list packages #kurulu paketleri listeler</br>
+    </br>
+    <b>Onemli Dizinler</b></br></br>
+    <b>/data/data/com.android.providers.telephony/</br> #sms ve mms database sharedprefs</br>
+    <b>/data/system/*.key</br> #pincode and pattern key file</br>
+    <b>/data/system/locksettings.db #pin salt value</b></br>
   </p>
 </div>
 
