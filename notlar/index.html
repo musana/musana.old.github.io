@@ -35,8 +35,8 @@ bilgi.asdasdasd
 
 <div class="tabcontent" id="Mobil">
 	<p>
-    <h3>Terminal adb Komutlari</h3>
     <b><u>Sisteme normal kullanici olarak eristin yetkine bak!</u></b></br>
+    <h3>Terminal adb Komutlari</h3>
     <b>$adb devices</b><i>#list devices</i></br>
     $adb shell  #shell oturumu alir.</br>
     $adb -s [ip]:[port] shell  #birden fazla emulator varsa secer.</br>
@@ -53,10 +53,27 @@ bilgi.asdasdasd
     #rm /data/system/*.key #pin veya password kaldirma.</br>
     #id #userid gosterir.</br>
     </br>
+    <h3>Statik Analiz</h3>
+    <button class="copy-button" data-clipboard-action="copy" data-clipboard-target="#1">></button>
+    <b>$</b><b id="1">apktool d [apkfile] -o [output]</b> #manifesto,resource ve dex dosyasi elde edilir.</br>
+    <button class="copy-button" data-clipboard-action="copy" data-clipboard-target="#2">></button>
+    <b id="2">$d2j-dex2jar.sh [apk] -o [output].jar</b>  #jar kodlara cevirir.</br>
+    <b>Jd-Gui</b> #dex2jardan alinmis dosyanin komutlarini gosterir gui.</br>
+    <h4>String Cikarma - apktool output</h4>
+    <b>/res/values/public.xml</b> #Jd-Gui ciktisindan id alinarak publicte bulunur.</br>
+    <b>/res/values/[type].xml</b> #Verinin tipine gore xml dosyalarda tutulur.</br>
+    <h4>Acilan Paketi Imzalayarak Geri Paketleme</h4>
+    <b>$apktool b [sourcefolder] -o [apkfile] #tekrar paketleyerek apk yapar.</br>
+    <b>keytool -genkey -v -keystore keyfile -alias mk -keyalg RSA -keysize 2048 -validity 25000</b> #keyfile olusturur.</br>
+    <b>jarsigner -verbose -sigalg MD5withRSA -digestalg SHA1 -keystore keyfile mario.apk mk</b>
+    </br>
     <h3>Onemli Dizinler</h3>
     <b>/data/data/com.android.providers.telephony/</b> #sms ve mms database sharedprefs diger appslerde burada.</br>
+    <b>/data/data/[app_package_name]]/shared_prefs</b> #Uygulamanin paylasilan dosyalari onemli!!!</br>
+    <b>/data/data/[app_package_name]]/databases</b> #Uygulamanin database dosyalari onemli!!!</br>
     <b>/data/system/*.key</b> #pincode and pattern key file</br>
     <b>/data/system/locksettings.db #pin salt value</b></br>
+    <b>/sdcard/</b> #sdcard dizini.</br>
   </p>
 </div>
 
@@ -71,8 +88,9 @@ bilgi.asdasdasd
 
 <footer>Bu sayfa Nikita TÜRKMEN ve Musa ŞANA tarafından not tutulmak amacıyla oluşturulmuş olup herkesin paylaşımına açıktır.</footer>
 
-
+<script src="clipboard.min.js"></script>
 <script>
+var clipboard = new Clipboard('.copy-button');
 function openCity(evt, cityName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
