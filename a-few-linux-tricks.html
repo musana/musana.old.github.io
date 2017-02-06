@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Musa ŞANA" />
+        <meta name="copyright" content="Musa ŞANA" />
+
+<meta name="keywords" content="umask, sticky bit, sudo list, Gnu-Linux, " />
+        <title>A Few Linux Tricks  · musana.net
+</title>
+        <link href="/theme/css/slim-081711.css" rel="stylesheet" type="text/css">
+        <link href="/theme/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="http://musana.net/theme/css/style.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="http://musana.net/theme/css/solarizedlight.css" media="screen">
+        <link rel="shortcut icon" href="http://musana.net/theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="http://musana.net/theme/images/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="http://musana.net/theme/images/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="http://musana.net/theme/images/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="http://musana.net/theme/images/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="http://musana.net/theme/images/apple-touch-icon-144x144.png" />
+        <link rel="icon" href="http://musana.net/theme/images/apple-touch-icon-144x144.png" />
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet"> 
+        <link rel="stylesheet" type="text/css"  href="http://musana.net/theme/css/custom.css" media="screen" />
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" id="musana" href="http://musana.net/"><span class=site-name>musana.net</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href="http://musana.net/">Anasayfa</a></li>
+                            <li ><a href="http://musana.net/categories.html">Kategori</a></li>
+                            <li ><a href="http://musana.net/tags.html">Etiket</a></li>
+                            <li ><a href="http://musana.net/archives.html">Arşiv</a></li>
+                            <li><form class="navbar-search" action="http://musana.net/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Ara..." name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <!-- <div class="span1"></div> disabled for toc-->
+                <div class="span12">
+<article>
+<a id="page-top" href="#musana" style="display:block">↑</a>
+<div class="row-fluid">
+    <div class="span2"></div>
+    <header class="page_header span8">
+    <h1><a href="http://musana.net/a-few-linux-tricks.html"> A Few Linux Tricks  </a></h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+
+    
+        <div class="span2"></div>
+        <div class="span12  article-content">
+
+            <p>Temel linux kullanımının ötesinde sürekli ihtiyacınıza bağlı olarak linux dağıtımlarında yeni keşfetiğiniz özelliklerde olabilir. Bu yazıda en azından kendim karşılaştığım bazı linux komutlarını toplayacağım. Belki dikkatinizi çeker birgün kullanmak istediğinizde böyle bir şey vardı diye aklınızda bir şeyler bırakmayı başarabilirim.</p>
+<p>umask
+GNU/Linux dağıtımlarında bilindiği üzere bir dosya veya dizin oluşturulduğu zaman default permissionları set edilmiş bir şekilde oluşturulur. Aslında bu izinler umask tarafından belirlenmiştir/kısıtlanmıştır. Default olarak set edilmesini istemediğiniz izinleri umask ile belirtebilirsiniz. Umask değerini öğrenmek için ise terminale <code>umask</code> yazarak görebilirsiniz ve karşılaştığınız değer yüksek ihtimalle <code>022</code> dir. Bu değer izinler için kullanılan paradigmaya çok benziyor ancak bir nüans var arada. Buradaki değer bir dosya veya dizindeki izinleri kısıtlamak/elden almak şeklinde yorumlanmalıdır. O halde <code>022</code> değerini yorumlayalım;  </p>
+<ul>
+<li>İlk sayımız 0 olduğundan dolayı, dosya sahibinin herhangi bir iznini elinden almayacağımız anlamına gelir.</li>
+<li>İkinci sayımız 2 olduğundan dolayı, gruptakilerin dosya üzerindeki yazma haklarını ellerinden aldığımız anlamına gelir.</li>
+<li>Üçüncü sayımız da 2 olduğundan dolayı, diğer kullanıcıların dosya üzerindeki yazma haklarını ellerinden aldığımız anlamına gelir.</li>
+</ul>
+<p>Bir dosya oluşturalacağı zaman sistem <code>777</code> izniyle; yani user, grup ve other için <code>rwx</code> izinleri ile o dosyayı oluşturur ama yeni bir dosya oluşturduğunuzda default izin değerlerinin <code>777</code> olmadığını görürsünüz. İşte buna sebeb olan user mask işlevidir. Sistem tarafından dosyamız <code>777</code> izni ile oluşturulmasına rağmen umask değerimiz (öreneğin) 022 olduğundan dolayı; <code>777 - 022 = 755</code> işlemi gereği yeni oluşturulacak dosyalarımızdaki default izin değerlerimizde dosya sahibinin herhangi bir izni kısıtlanmaz iken, gruptaki ve diğer kullanıların ise yazma iznine sahip olmayacağı şekilde izinleri sınırlar. Ancak umask değeriniz 022 olduğu halde yeni bir dosya oluşturduğunuzda izin değerleri <code>-rwx-r-xr-x</code>(755) olması gerekirken; <code>-rw-r--r--</code>(644) iznine sahip olacağını görürüz. Burada bir duraksayalım o zaman. Yani yeni bir dosya oluşturulduğunda dosya sahibi dahil kimseye çalıştırma izni verilmemiştir/veremiyoruz. Onu da şöyle izah edelim; Bir dosya oluşturulacağı zaman default olarak dosya sahibi dahil kimseye çalıştırma izni verilmez bu durum unix camiasında bir genel güvenlik tedbiridir. Buradan yola çıkarak aslında umask değerimizde çalışma iznini temsil eden 1 sayımızın hiçbir öneminin olmadığı sonucuna varabiliriz. Yani 022 ile 033 aynı izin değeri olan <code>-rw-r--r--</code> kapısına çıkmaktadır. Bunu artık bildiğinizi düşünerek daha ta en başından hesaplama yaparken sistemin <code>666</code> izni ile oluşturduğunu varsayıp o şekilde hesaplayınız.</p>
+<blockquote>
+<p>Öte yandan bu durum dizin(klasör) oluşturulacağı zaman geçerli değildir. Sistem tarafından yeni oluşturulan klasörler <code>777</code> izni ile oluşturulur ve çalıştırma izni sistem tarafından kısıtlanmaz. Kısaca umask değerinizin yine 022 olduğunu farzedersek yeni oluşturulacak klasör <code>777 - 022 = 755</code> iznine sahip olacaktır.</p>
+</blockquote>
+
+
+<section style="font-size:0.7em; margin-bottom:-15px;">
+    <p id="post-share-links">
+        Paylaş:
+        <a href="http://twitter.com/home?status=b'A%20Few%20Linux%20Tricks%20http%3A//musana.net/a-few-linux-tricks.html'" target="_blank" title="Bu yazıyı twitter'da paylaş">Twitter</a>
+        ❄
+        <a href="http://www.facebook.com/sharer/sharer.php?u=http%3A//musana.net/a-few-linux-tricks.html" target="_blank" title="Bu yazıyı facebook'ta paylaş">Facebook</a>
+    </p>
+</section>
+
+
+
+<!--tag of part-->
+
+<hr class="cizgi"/>
+
+            
+        <ul class="list-of-tags tags-in-article" style="width:100%"> 
+
+ 
+               <li class="makale-bilgi">Tarih: </li>
+    	       <li> <time pubdate="pubdate" datetime="2017-01-18T00:00:00+02:00">Jan 18, 2017</time></li>
+
+       
+                <li class="makale-bilgi">Kategori: </li>
+                <li> <a class="category-link kategori" href="/categories.html#Gnu-Linux-ref">Gnu-Linux</a></li> 
+
+               <li class="makale-bilgi">Etiketler: <li>
+		 <li class="etiket"><a href="/tags.html#sticky-bit-ref">sticky bit
+                    <span>1</span>
+</a></li>
+		 <li class="etiket"><a href="/tags.html#sudo-list-ref">sudo list
+                    <span>1</span>
+</a></li>
+		 <li class="etiket"><a href="/tags.html#umask-ref">umask
+                    <span>1</span>
+</a></li>
+            </ul>
+
+
+
+
+<section>
+<div class="accordion" id="accordion2">
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle disqus-comment-count" data-parent="#accordion2"
+                href="http://musana.net/a-few-linux-tricks.html#disqus_thread">
+                Yorumlar
+            </a>
+        </div>
+        <div id="disqus_thread" class="accordion-body">
+            <div class="accordion-inner">
+                <div class="comments">
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = '0xmusana';
+        var disqus_identifier = 'http://musana.net/a-few-linux-tricks.html';
+    var disqus_url = 'http://musana.net/a-few-linux-tricks.html';
+
+    (function() {
+         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+     })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+        </div>
+
+            
+            <aside>
+            
+            <nav>
+            <ul class="articles_timeline">
+ 
+                <li class="previous_article">« <a href="http://musana.net/pytgon-web-crawling-and-web-scraping.html" title="Previous: Web Scraping & Web Crawling">Web Scraping & Web Crawling</a></li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+
+</article>
+                </div>
+                <!-- <div class="span1"></div> -->
+            </div>
+        </div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-subtitle"><span class="site-name"><a href="http://twitter.com/musa_sana">Musa ŞANA</a></span> kişisel web sitesi.</li>
+        <li class="elegant-power">Bu sitedeki bütün içerikler izinsiz kopyalanabilir, değiştirilebilir ve dağıtılabilirdir, ama yine de kaynak belirtmeniz tavsiye edilir. ;) <a href="http://getpelican.com/" title="Pelican Home Page"> Pelican</a> ile geliştirilmiştir.</li>
+    </ul>
+</div>
+</footer>            <script src="../theme/tipuesearch/jquery.min.js"></script>
+        <script src="../theme/tipuesearch/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+<script type="text/javascript">
+    var disqus_shortname = '0xmusana';
+
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+    </script>
+        <script  language="javascript" type="text/javascript">
+            function uncollapse() {
+                var hash_str = window.location.hash;
+                if (window.location.hash.match(/^#comment-\d+$/))
+                {
+                    var hash_str = '#disqus_thread';
+                }
+                $(hash_str).collapse({
+                    toggle: true
+                    })
+            }
+        </script>
+
+        <script type="text/javascript" language="JavaScript">
+            uncollapse(); 
+        </script>
+    </body>
+</html>
