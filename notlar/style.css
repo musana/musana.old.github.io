@@ -2,18 +2,35 @@ html body{
 font-family:Source Sans Pro;
 padding:0px !important;
 margin: 0px !important;
+background-color: #dfdfdf;
 
 }
+
+th{
+    text-align: left;
+    background-color: #0f9f8b;
+    color:white;
+    padding:0px 10px 0px 10px;
+    height: 30px;
+    line-height: 30px;
+}
+
+tr:hover {
+    background-color: #ffaec8;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+
+
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #333;
-}
-
-.tab{
-   
 }
 
 .tabcontent{

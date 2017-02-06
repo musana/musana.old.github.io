@@ -35,47 +35,139 @@ MusanaBudabana:))))))))))))
 </div>
 
 <div class="tabcontent" id="Mobil">
-	<p>
-    <b><u>Sisteme normal kullanici olarak eristin yetkine bak!</u></b></br>
-    <h3>Terminal adb Komutlari</h3>
-    <b>$adb devices</b><i>#list devices</i></br>
-    $adb shell  #shell oturumu alir.</br>
-    $adb -s [ip]:[port] shell  #birden fazla emulator varsa secer.</br>
-    $adb push [source] [target] #dosya gondermeye yarar.</br>
-    $adb pull [source] [target] #dosya cekmeye yarar.</br>
-    $adb shell [command]  #Android shelde kosar terminale getirir.</br>
-    $adb install [apkfile]  #install apk to emulator.</br>
-    $adb uninstall [com.packagename]  #uninstall apk from emulator.</br></br>
-    $od -t x1 gesture.key #hash degerini cikarir.</br>
-    $od -t x1 gesture.key | tr -d " \t\n\r" | cut -c 8-39 #gesturenin ilk satirini alir.</br>
-    </br>
-    <h3>Shell Android Komutlari</h3>
-    #pm list packages #kurulu paketleri listeler</br>
-    #rm /data/system/*.key #pin veya password kaldirma.</br>
-    #id #userid gosterir.</br>
-    </br>
-    <h3>Statik Analiz</h3>
-    <button class="copy-button" data-clipboard-action="copy" data-clipboard-target="#1">></button>
-    <b>$</b><b id="1">apktool d [apkfile] -o [output]</b> #manifesto,resource ve dex dosyasi elde edilir.</br>
-    <button class="copy-button" data-clipboard-action="copy" data-clipboard-target="#2">></button>
-    <b id="2">$d2j-dex2jar.sh [apk] -o [output].jar</b>  #jar kodlara cevirir.</br>
-    <b>Jd-Gui</b> #dex2jardan alinmis dosyanin komutlarini gosterir gui.</br>
-    <h4>String Cikarma - apktool output</h4>
-    <b>/res/values/public.xml</b> #Jd-Gui ciktisindan id alinarak publicte bulunur.</br>
-    <b>/res/values/[type].xml</b> #Verinin tipine gore xml dosyalarda tutulur.</br>
-    <h4>Acilan Paketi Imzalayarak Geri Paketleme</h4>
-    <b>$apktool b [sourcefolder] -o [apkfile] #tekrar paketleyerek apk yapar.</br>
-    <b>keytool -genkey -v -keystore keyfile -alias mk -keyalg RSA -keysize 2048 -validity 25000</b> #keyfile olusturur.</br>
-    <b>jarsigner -verbose -sigalg MD5withRSA -digestalg SHA1 -keystore keyfile mario.apk mk</b>
-    </br>
-    <h3>Onemli Dizinler</h3>
-    <b>/data/data/com.android.providers.telephony/</b> #sms ve mms database sharedprefs diger appslerde burada.</br>
-    <b>/data/data/[app_package_name]]/shared_prefs</b> #Uygulamanin paylasilan dosyalari onemli!!!</br>
-    <b>/data/data/[app_package_name]]/databases</b> #Uygulamanin database dosyalari onemli!!!</br>
-    <b>/data/system/*.key</b> #pincode and pattern key file</br>
-    <b>/data/system/locksettings.db #pin salt value</b></br>
-    <b>/sdcard/</b> #sdcard dizini.</br>
-  </p>
+
+<table>
+  <tr><th>Terminal abd Command</th><th>Description</th></tr>
+  <tr>
+    <td class="kod">$adb devices</td><td class="desc">list devices</td>
+  </tr>
+  
+  <tr>
+    <td class="kod">$adb shell</td><td class="desc">shell oturumu alir.</td>
+  </tr>
+  
+  <tr>
+    <td class="kod">$adb -s [ip]:[port] shell</td><td class="desc">birden fazla emulator varsa secer.</td>
+  </tr>
+  
+  <tr>
+    <td class="kod">$adb push [source] [target]</td><td class="desc">dosya gondermeye yarar.</td>
+  </tr>
+  
+  <tr>
+    <td class="kod">$adb pull [source] [target]</td><td class="desc">dosya cekmeye yarar.</td>
+  </tr>
+  
+  <tr>
+    <td class="kod">$adb shell [command]</td><td class="desc">Android shelde kosar terminale getirir.</td>
+  </tr>
+  
+  <tr>
+    <td class="kod">$adb install [apkfile]</td><td class="desc">install apk to emulator.</td>
+  </tr>
+  
+  <tr>
+    <td class="kod">$adb uninstall [com.packagename]</td><td class="desc">uninstall apk from emulator.</td>
+  </tr>
+  
+  <tr>
+    <td class="kod">$od -t x1 gesture.key</td><td class="desc">hash degerini cikarir.</td>
+  </tr>
+    
+  <tr>
+    <td class="kod">$od -t x1 gesture.key | tr -d " \t\n\r" | cut -c 8-39</td><td class="desc">gesturenin ilk satirini alir.</td>
+  </tr>
+    
+
+<tr>
+  <th>Shell Android Komutlari</th>  <th>Description</th>
+</tr>
+
+<tr>
+  <td>#pm list packages</td>  <td>kurulu paketleri listeler</td>
+</tr>
+<tr>
+  <td>#rm /data/system/*.key </td>  <td>pin veya password kaldirma.</td>
+</tr>
+<tr>
+  <td>#id</td>  <td>userid gosterir.</td>
+</tr>
+
+
+
+
+<tr>
+  <th>Statik Analiz</th>  <th>Description</th>
+</tr>
+<tr>
+  <td>$apktool d [apkfile] -o [output]</td>  <td>manifesto,resource ve dex dosyasi elde edilir.</td>
+</tr>
+<tr>
+  <td>$d2j-dex2jar.sh [apk] -o [output].jar</td>  <td>jar kodlara cevirir.</td>
+</tr>
+<tr>
+  <td>Jd-Gui</td>  <td>dex2jardan alinmis dosyanin komutlarini gosterir gui.</td>
+</tr>
+
+
+
+
+<tr>
+  <th>String Çıkarma</th>  <th>Description</th>
+</tr>
+<tr>
+  <td>/res/values/public.xml</td>  <td>Jd-Gui ciktisindan id alinarak publicte bulunur.</td>
+</tr>
+<tr>
+  <td>/res/values/[type].xml</td>  <td>Verinin tipine gore xml dosyalarda tutulur.</td>
+</tr>
+
+
+
+
+<tr>
+  <th>Acilan Paketi Imzalayarak Geri Paketleme</th>  <th>Description</th>
+</tr>
+<tr>
+  <td>$apktool b [sourcefolder] -o [apkfile] </td>  <td>tekrar paketleyerek apk yapar.</td>
+</tr>
+<tr>
+  <td>$keytool -genkey -v -keystore keyfile -alias mk -keyalg RSA -keysize 2048 -validity 25000</td>  <td>keyfile olusturur.</td>
+</tr>
+<tr>
+  <td>$jarsigner -verbose -sigalg MD5withRSA -digestalg SHA1 -keystore keyfile mario.apk mk</td>  <td>apk imzalama</td>
+</tr>
+
+
+
+<tr>
+  <th>Önemli Dizinler</th>  <th>Description</th>
+</tr>
+<tr>
+  <td>/data/data/com.android.providers.telephony/</td>  <td>sms ve mms database sharedprefs diger appslerde burada.</td>
+</tr>
+<tr>
+  <td>/data/data/[app_package_name]]/shared_prefs</td>  <td>Uygulamanin paylasilan dosyalari onemli!!!</td>
+</tr>
+<tr>
+  <td>/data/data/[app_package_name]]/databases</td>  <td>Uygulamanin database dosyalari onemli!!!</td>
+</tr>
+<tr>
+  <td>/data/system/*.key</td>  <td>pincode and pattern key file</td>
+</tr>
+<tr>
+  <td>/data/system/locksettings.db</td>
+  <td>pin salt value</td>
+</tr>
+<tr>
+  <td>/sdcard/</td>
+  <td>sdcard dizini.</td>
+</tr>
+
+
+
+</table>
+
 </div>
 
 <div class="tabcontent" id="Web">
