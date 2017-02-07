@@ -36,10 +36,8 @@ ul {
 .tabcontent{
     display: none;
     padding: 6px 12px;
-    border: 1px solid #11aadd;
-    border-top:none;
     padding-left: 50px;
-    min-height: 1000px;
+    min-height: 700px;
     width:1200px
 }
 
