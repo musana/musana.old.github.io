@@ -34,6 +34,8 @@
     <tr><td class="kod">watch -n 2 ‘command’</td><td class="desc">2 saniyede bir verilen komutu koşar sonuc gosterir.</td></tr>
     <tr><td class="kod">macchanger</td><td class="desc">Mac adresi değiştirme -r random mac verir. Alternatif= ifconfig eth0 hw ether 00:01:02:03:04:05</td></tr>
     <tr><td class="kod">cat /etc/shadow | grep root | cut -d ':' -f 2</td><td class="desc">root kullanıcısının hash sifresini verir.</td></tr>
+    <tr><td class="kod">find / \( -perm -u+s -or -perm -g+s \) -type f -exec ls -l {} \;</td><td class="desc">SUID set edilmiş uygulamaları verir.</td></tr>
+
     <tr><td class="kod">iptables -A INPUT -p tcp —dport ssh -s ip -j REJECT</td><td class="desc">-A [INPUT|OUTPUT|FORWARD] -p protocol -dport port -s ip -j [ACCEPT|REJECT|DROP]</td></tr>
     <tr><td class="kod">iptables -L</td><td class="desc">iptables kurallarını listeler. -F tüm kuralları siler.</td></tr>
     <tr><td class="kod">iptables -D INPUT 1</td><td class="desc">1 numaralı input kuralını siler.</td></tr>
