@@ -36,8 +36,12 @@
     <tr><td class="kod">iptables -A INPUT -p tcp —dport ssh -s ip -j REJECT</td><td class="desc">-A [INPUT|OUTPUT|FORWARD] -p protocol -dport port -s ip -j [ACCEPT|REJECT|DROP]</td></tr>
     <tr><td class="kod">iptables -L</td><td class="desc">iptables kurallarını listeler. -F tüm kuralları siler.</td></tr>
     <tr><td class="kod">iptables -D INPUT 1</td><td class="desc">1 numaralı input kuralını siler.</td></tr>
+    <tr><td class="kod">cat /etc/shadow | grep root | cut -d ':' -f 2</td><td class="desc">root kullanıcısının hash sifresini verir.</td></tr>
     <tr><td class="kod">nc -vlp 4444</td><td class="desc">4444 portu dinler. -e /bin/bash yazan shell verir.</td></tr>
     <tr><td class="kod">nc -vvn ip port</td><td class="desc">verilen ip ve porta baglanır. -e /bin/bash yazan shell verir.</td></tr>
+
+    <tr><td><br></td></tr>
+    <tr><th>awk & sed</th><th>Description</th></tr>
     <tr><td class="kod">sed 's/string1/string2' file</td><td class="desc">tüm string1ler yerine string2 yazar.</td></tr>
     <tr><td class="kod">sed -n '/A/,/B/ p'</td><td class="desc">A ve B arasındaki kalan verileri gösterir. '1,5 p' 1 ve 5 arası '5, p' sadece ilgili satır. '5,$ p' satır sonuna kadar.</td></tr>
     <tr><td class="kod">sed ‘2 d’ file</td><td class="desc">2. satır hariç diğerleri. ‘/str/ d’ str gecen satırlar hariç. '2,$ d’ 2.satırdan sona kadar siler kalanı gelir.</td></tr>
@@ -45,7 +49,6 @@
     <tr><td class="kod">awk ‘/x/{print $4}’ file</td><td class="desc">İçerisinde x geçen stringlerin 4. kolonu yazdırılır.</td></tr>
     <tr><td class="kod">awk ‘$3 > 5{print $4}’ file</td><td class="desc">3.kolonu 5 ten büyük olanların 4.kolonlarını yazdırır.</td></tr>
     <tr><td class="kod">ls | awk -F ‘.’ ‘/txt/{print “mv “$1”.”$2” “$1”.pdf”}’ | bash</td><td class="desc">Dizindeki tüm txt dosyalarını pdf yapar. -F '.' seperator belirler.</td></tr>
-    <tr><td class="kod">cat /etc/shadow | grep root | cut -d ':' -f 2</td><td class="desc">root kullanıcısının hash sifresini verir.</td></tr>
 
     <tr><td><br></td></tr>
     <tr><th>Önemli Dizinler</th><th>Description</th></tr>
@@ -152,7 +155,7 @@
       <td>$d2j-dex2jar.sh [apk] -o [output].jar</td>  <td>jar kodlara cevirir.</td>
     </tr>
     <tr>
-      <td>Jd-Gui</td>  <td>dex2jardan alinmis dosyanin komutlarini gosterir gui.</td>
+      <td>Jd-Gui</td>  <td><a href="http://www.javadecompiler.com" target="_blank">www.javadecompiler.com</a> dex2jardan alinmis dosyanin komutlarini gosterir gui.</td>
     </tr>
 
     <tr><td><br></td></tr>
