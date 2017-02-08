@@ -18,12 +18,69 @@
 </ul>
 
 <div class="tabcontent" id="Linux">
-  Linuxtur
+  <table>
+    <tr><th>Önemli komutlar</th><th>Description</th></tr>
+
+    <tr><td class="kod">arp</td><td class="desc">arp tablosunu gösterir.</td></tr>
+    <tr><td class="kod">netstat -nlp</td><td class="desc">Aktif bağlantıları gösterir -t TCP -u UDP portları.</td></tr>
+    <tr><td class="kod">netstat -r</td><td class="desc">Routing tablosunu verir. Alternatif route komutu.</td></tr>
+    <tr><td class="kod">find /etc/ -size +10k -exec ls -la {} \;</td><td class="desc">Parametrelere göre dosyayı bulur ve listeler. -name isim. -type [d (dizin) r (regular file)]</td></tr>
+    <tr><td class="kod">wget —no-check-certificate url</td><td class="desc">https'den wget ile veri cekme.</td></tr>
+    <tr><td class="kod">ps -aux | grep sshd</td><td class="desc">sshd servisinin çalışıp çalışmadığını gösterir.</td></tr>
+    <tr><td class="kod">grep "a" file</td><td class="desc">Dosya içinde arama yapar. -v hariç -i büyük/küçük uyumu kaldırır. -R recursive arama yapar.</td></tr>
+    <tr><td class="kod">tree -d -L 3</td><td class="desc">Agac yapisiyla listeleme yapar. -d directory -L derinlik</td></tr>
+    <tr><td class="kod">telnet host ip</td><td class="desc">Port kontrolü için işe yarar. İlkel ssh</td></tr>
+    <tr><td class="kod">pkill ssh</td><td class="desc">ssh processini öldürür. -t -u user #user in tum processlerini oldurur.</td></tr>
+    <tr><td class="kod">bg</td><td class="desc">Backgroundtaki işlemleri gösterir. fg % id ile ön plana alınır.</td></tr>
+    <tr><td class="kod">watch -n 2 ‘command’</td><td class="desc">2 saniyede bir verilen komutu koşar sonuc gosterir.</td></tr>
+    <tr><td class="kod">macchanger</td><td class="desc">Mac adresi değiştirme -r random mac verir. Alternatif= ifconfig eth0 hw ether 00:01:02:03:04:05</td></tr>
+    <tr><td class="kod">iptables -A INPUT -p tcp —dport ssh -s ip -j REJECT</td><td class="desc">-A [INPUT|OUTPUT|FORWARD] -p protocol -dport port -s ip -j [ACCEPT|REJECT|DROP]</td></tr>
+    <tr><td class="kod">iptables -L</td><td class="desc">iptables kurallarını listeler. -F tüm kuralları siler.</td></tr>
+    <tr><td class="kod">iptables -D INPUT 1</td><td class="desc">1 numaralı input kuralını siler.</td></tr>
+    <tr><td class="kod">nc -vlp 4444</td><td class="desc">4444 portu dinler. -e /bin/bash yazan shell verir.</td></tr>
+    <tr><td class="kod">nc -vvn ip port</td><td class="desc">verilen ip ve porta baglanır. -e /bin/bash yazan shell verir.</td></tr>
+    <tr><td class="kod">sed 's/string1/string2' file</td><td class="desc">tüm string1ler yerine string2 yazar.</td></tr>
+    <tr><td class="kod">sed -n '/A/,/B/ p'</td><td class="desc">A ve B arasındaki kalan verileri gösterir. '1,5 p' 1 ve 5 arası '5, p' sadece ilgili satır. '5,$ p' satır sonuna kadar.</td></tr>
+    <tr><td class="kod">sed ‘2 d’ file</td><td class="desc">2. satır hariç diğerleri. ‘/str/ d’ str gecen satırlar hariç. '2,$ d’ 2.satırdan sona kadar siler kalanı gelir.</td></tr>
+    <tr><td class="kod">awk ‘{print $1}’ file</td><td class="desc">Boşluk referans alınarak ilk sütünü yazdırır.</td></tr>
+    <tr><td class="kod">awk ‘/x/{print $4}’ file</td><td class="desc">İçerisinde x geçen stringlerin 4. kolonu yazdırılır.</td></tr>
+    <tr><td class="kod">awk ‘$3 > 5{print $4}’ file</td><td class="desc">3.kolonu 5 ten büyük olanların 4.kolonlarını yazdırır.</td></tr>
+    <tr><td class="kod">ls | awk -F ‘.’ ‘/txt/{print “mv “$1”.”$2” “$1”.pdf”}’ | bash</td><td class="desc">Dizindeki tüm txt dosyalarını pdf yapar. -F '.' seperator belirler.</td></tr>
+    <tr><td class="kod">cat /etc/shadow | grep root | cut -d ':' -f 2</td><td class="desc">root kullanıcısının hash sifresini verir.</td></tr>
+
+    <tr><td><br></td></tr>
+    <tr><th>Önemli Dizinler</th><th>Description</th></tr>
+
+    <tr><td class="kod">/etc/passwd</td><td class="desc">Kullanıcı bilgileri</td></tr>
+    <tr><td class="kod">/etc/shadow</td><td class="desc">Kullanıcı şifreleri</td></tr>
+    <tr><td class="kod">/etc/hostname</td><td class="desc">Hostname bilgisi</td></tr>
+    <tr><td class="kod">/etc/hosts</td><td class="desc">Hosts dosyası</td></tr>
+
+  </table>
 </div>
 
 <div class="tabcontent" id="Bilgi">
-bilgi.asdasdasd
-MusanaBudabana:))))))))))))
+  <table>
+    <tr><th>Wireshark Filtreleri</th><th>Description</th></tr>
+    <tr><td class="kod">ip.addr==ip</td><td class="desc">ip ye göre filtreleme yapar</td></tr>
+    <tr><td class="kod">ip.addr==ip1  && ip.addr==ip2</td><td class="desc">İki ip arasındaki paketleri filtreler</td></tr>
+    <tr><td class="kod">tcp.port==80</td><td class="desc">Sadece 80 portundan yapılan tcp trafiği.</td></tr>
+    <tr><td class="kod">tcp contains traffic</td><td class="desc">'traffic' kelimesini içeren tcp paketleri <b>string araması</b>.</td></tr>
+    <tr><td class="kod">http</td><td class="desc"> sadece http paketleri</td></tr>
+    <tr><td class="kod">http.request</td><td class="desc">Sadece http ile yapılan /GET istekleri.</td></tr>
+    <tr><td class="kod">http.request.method=="POST"</td><td class="desc">Post yapılan http istekleri.</td></tr>
+    <tr><td class="kod">http.cookie</td><td class="desc">http ile oturum acılmıs paketleri getirir</td></tr>
+
+    <tr><td><br></td></tr>
+    <tr><th>Nmap Komutları</th><th>Description</th></tr>
+    <tr><td class="kod">nmap -sS -sV -sC -T4 ip | tee out</td><td class="desc">SYN tarama. Version, Script taraması.</td></tr>
+    <tr><td class="kod">nmap -sU ip | tee out</td><td class="desc">SNMP için udp taraması - snmp port 161</td></tr>
+    <tr><td class="kod">nmap -sn 172.18.90.0/24 | awk '/192/{print $5}' | tee iplist.txt</td><td class="desc">Networkte acık olan pcleri iplist.txt ye yazar.</td></tr>
+    <tr><td class="kod">locate *.nse</td><td class="desc">tum nmap scriptleri</td></tr>
+    <tr><td class="kod">nmap -sV —script nfs-showmount ip</td><td class="desc"></td></tr>
+    <tr><td class="kod">locate *.nse</td><td class="desc">tum nmap scriptleri</td></tr>
+    <tr><td class="kod">locate *.nse</td><td class="desc">tum nmap scriptleri</td></tr>
+  </table>
 </div>
 
 <div class="tabcontent" id="Nmap">
