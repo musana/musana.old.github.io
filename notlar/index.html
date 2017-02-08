@@ -76,10 +76,12 @@
     <tr><td class="kod">nmap -sU ip | tee out</td><td class="desc">SNMP için udp taraması - snmp port 161</td></tr>
     <tr><td class="kod">nmap -sn 172.18.90.0/24 | awk '/192/{print $5}' | tee iplist.txt</td><td class="desc">Networkte acık olan pcleri iplist.txt ye yazar.</td></tr>
     <tr><td class="kod">locate *.nse</td><td class="desc">tum nmap scriptleri</td></tr>
-    <tr><td class="kod">nmap -sV —script nfs-showmount ip</td><td class="desc"></td></tr>
-    <tr><td class="kod">locate *.nse</td><td class="desc">tum nmap scriptleri</td></tr>
-    <tr><td class="kod">locate *.nse</td><td class="desc">tum nmap scriptleri</td></tr>
+    <tr><td class="kod">nmap -sV —script nfs-showmount ip</td><td class="desc">İpdeki paylaşımda olan klasörleri gösterir.</td></tr>
+    <tr><td class="kod">showmount -e [ip]</td><td class="desc">hedefteki paylaşılan dosyaları gösterir</td></tr>
+    <tr><td class="kod">mount -t nfs [ip]:/dizin /mnt/dizin</td><td class="desc">paylasılan nfs'yi mount etme.</td></tr>
   </table>
+</br></hr>
+<span>Bulunan servis hakkında online zafiyet tarama <a href="http://www.cvedetails.com" target="_blank">www.cvedetails.com</a></span>
 </div>
 
 <div class="tabcontent" id="Metasploit">
