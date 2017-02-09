@@ -6,9 +6,9 @@
 <title>OUR NOTES:</title>
 </head>
 
-<body onload="openCity(event, 'Linux');document.getElementById('main').click();">
+<body onload="openCity(event, 'Linux')">
 <ul class="tab">
-  <li><a href="javascript:void(0)" id="main" onclick="openCity(event, 'Linux')" class="tablinks">Linux</a></li>
+  <li><a href="javascript:void(0)" onclick="openCity(event, 'Linux')" class="tablinks">Linux</a></li>
   <li><a href="javascript:void(0)" onclick="openCity(event, 'Wireshark-Nmap')" class="tablinks">Wireshark/Nmap</a></li>
   <li><a href="javascript:void(0)" onclick="openCity(event, 'Metasploit')" class="tablinks">Metasploit</a></li>
   <li><a href="javascript:void(0)" onclick="openCity(event, 'Databases')" class="tablinks">Databases</a></li>
@@ -109,6 +109,24 @@
     <tr><td class="kod">nmap -sV —script nfs-showmount -iL iplist.txt</td><td class="desc">İpdeki paylaşımda olan klasörleri gösterir.</td></tr>
     <tr><td class="kod">showmount -e [ip]</td><td class="desc">hedefteki paylaşılan dosyaları gösterir</td></tr>
     <tr><td class="kod">mount -t nfs [ip]:/dizin /mnt/dizin</td><td class="desc">paylasılan nfs'yi mount etme.</td></tr>
+
+    <tr><td><br></td></tr>
+    <tr><th>Yaygın olarak kullanılan portlar Komutları</th><th>Deskripşın</th></tr>
+    <tr><td class="kod">21</td><td class="desc">Ftp</td></tr>
+    <tr><td class="kod">22</td><td class="desc">Ssh</td></tr>
+    <tr><td class="kod">23</td><td class="desc">Telnet</td></tr>
+    <tr><td class="kod">25</td><td class="desc">Smtp</td></tr>
+    <tr><td class="kod">53</td><td class="desc">Dns</td></tr>
+    <tr><td class="kod">443</td><td class="desc">Https</td></tr>
+    <tr><td class="kod">445</td><td class="desc">Samba, smb,netbios</td></tr>
+    <tr><td class="kod">3306</td><td class="desc">Mysql</td></tr>
+    <tr><td class="kod">1433</td><td class="desc">Mssql</td></tr>
+    <tr><td class="kod">8080</td><td class="desc">Tomcat</td></tr>
+    <tr><td class="kod">3390</td><td class="desc">Rdp</td></tr>
+    <tr><td class="kod">160,161</td><td class="desc">snmp</td></tr>
+    <tr><td class="kod">5900</td><td class="desc">vnc</td></tr>
+    <tr><td class="kod">3389</td><td class="desc">rdp</td></tr>
+
   </table>
   </br></hr>
   <span>Bulunan servis hakkında online zafiyet tarama <a href="http://www.cvedetails.com" target="_blank">www.cvedetails.com</a></span>
@@ -263,11 +281,11 @@
 </div>
 
 <div class="tabcontent" id="Web">
-	everything.wwww
+	
 </div>
 
 <div class="tabcontent" id="Reverse">
-	everything.
+	Konular çok ağırdı bu yüzden bi' bok öğrenemedik...
 </div>
 
 
