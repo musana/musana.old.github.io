@@ -71,6 +71,8 @@ footer{
     float: right;
     background-color:rgb(147, 84, 84);
     color:white;
+    border-radius: 2px;
+
 }
 
 .active {
