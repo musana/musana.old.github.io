@@ -106,8 +106,14 @@
     <tr><td class="kod">nmap -sn 172.18.90.0/24 | awk '/192/{print $5}' | tee iplist.txt</td><td class="desc">Networkte acık olan pcleri iplist.txt ye yazar.</td></tr>
     <tr><td class="kod">locate *.nse</td><td class="desc">tum nmap scriptleri</td></tr>
     <tr><td class="kod">nmap -sV —script nfs-showmount -iL iplist.txt</td><td class="desc">İpdeki paylaşımda olan klasörleri gösterir.</td></tr>
+
+    <tr><td><br></td></tr>
+    <tr><th>NFS ve SNMP Komutları</th><th>Description</th></tr>
     <tr><td class="kod">showmount -e [ip]</td><td class="desc">hedefteki paylaşılan dosyaları gösterir</td></tr>
     <tr><td class="kod">mount -t nfs [ip]:/dizin /mnt/dizin</td><td class="desc">paylasılan nfs'yi mount etme.</td></tr>
+    <tr><td class="kod">snmpwalk -v 1 -c public [ip]</td><td class="desc">Tum public dataları ceker.</td></tr>
+    <tr><td class="kod">snmpset -v 1 -c public [ip] [OID]</td><td class="desc">Tum public dataları ceker.</td></tr>
+    <tr><td class="kod">snmpset -v 1 -c [community] [ip] [OID] [datatype] "[value]"</td><td class="desc">snmp setleme yapar. datatype string -> s</td></tr>
 
     <tr><td><br></td></tr>
     <tr><th>Yaygın olarak kullanılan portlar</th><th>Deskripşın</th></tr>
@@ -179,8 +185,6 @@
     <tr><td>hydra -L user.lst -P pass.lst telnet://IP</td><td>Telnet bruteforce</td></tr>
     <tr><td>hydra -C userpass.lst telnet://IP</td><td>Telnet bruteforce. Verilen dosyadakiler ":" seperate edip dener.</td></tr>
     <tr><td>medusa -U userdeneme.txt -P passdeneme.txt -h 192.168.1.41 -M ssh</td><td>Küçük(u, p, h) parametreleri tek bir değer; büyük(U,H,P) ise wordlistler</td></tr>
-    
-   
     <tr><td><br></td></tr>
     <tr><th>Wordlist</th><th>Description</th></tr>
     <tr><td class="kod">/usr/share/metasploit-firmware/data/wordlists</td><td class="desc">Metasploit default wordlists</td></tr>
