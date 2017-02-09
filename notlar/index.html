@@ -111,14 +111,14 @@
     <tr><td class="kod">mount -t nfs [ip]:/dizin /mnt/dizin</td><td class="desc">paylasılan nfs'yi mount etme.</td></tr>
 
     <tr><td><br></td></tr>
-    <tr><th>Yaygın olarak kullanılan portlar Komutları</th><th>Deskripşın</th></tr>
+    <tr><th>Yaygın olarak kullanılan portlar</th><th>Deskripşın</th></tr>
     <tr><td class="kod">21</td><td class="desc">Ftp</td></tr>
     <tr><td class="kod">22</td><td class="desc">Ssh</td></tr>
     <tr><td class="kod">23</td><td class="desc">Telnet</td></tr>
     <tr><td class="kod">25</td><td class="desc">Smtp</td></tr>
     <tr><td class="kod">53</td><td class="desc">Dns</td></tr>
     <tr><td class="kod">443</td><td class="desc">Https</td></tr>
-    <tr><td class="kod">445</td><td class="desc">Samba, smb,netbios</td></tr>
+    <tr><td class="kod">445</td><td class="desc">Samba, smb,netbios)</td></tr>
     <tr><td class="kod">3306</td><td class="desc">Mysql</td></tr>
     <tr><td class="kod">1433</td><td class="desc">Mssql</td></tr>
     <tr><td class="kod">8080</td><td class="desc">Tomcat</td></tr>
@@ -140,13 +140,15 @@
   <span>searchsploit vsftpd #aranan servis hakkında detaylı metasploit modülleri gösterir.</span></br></br>
 	<table>
     <tr><th>Bilinen Metasploit Modülleri</th><th>Description</th></tr>
-    <tr><td class="kod">auxiliary/scanner/ssh/ssh_login</td><td class="desc">ssh Bruteforce</td></tr>
-    <tr><td class="kod">auxiliary/scanner/postgres/postgres_login</td><td class="desc">PostgreSQL Bruteforce</td></tr>
-    <tr><td class="kod">auxiliary/scanner/telnet/telnet_login</td><td class="desc">Telnet Bruteforce</td></tr>
+    <tr><td class="kod">auxiliary/scanner/ssh/ssh_login</td><td class="desc">[BruteForce] - SSH</td></tr>
+    <tr><td class="kod">auxiliary/scanner/postgres/postgres_login</td><td class="desc">[BruteForce] - POSTGRESQL</td></tr>
+    <tr><td class="kod">auxiliary/scanner/telnet/telnet_login</td><td class="desc">[BruteForce] - TELNET</td></tr>
+    <tr><td class="kod">auxiliary/scanner/http/tomcat_mgr_login</td><td class="desc">[BruteForce] - TOMCAT</td></tr>
+    <tr><td class="kod">auxiliary/scanner/smb/smb_login</td><td class="desc">[BruteForce] - samba,smb,(microsft-ds)</td></tr>
+    <tr><td class="kod">auxiliary/scanner/vnc/vnc_login</td><td class="desc">[BruteForce] - [VNC] | vncviewer [ip] login sadece password gerekli.</td></tr>
     <tr><td class="kod">auxiliary/scanner/telnet/telnet_version</td><td class="desc">Telnet Version erisim gelebilir</td></tr>
-    <tr><td class="kod">auxiliary/scanner/vnc/vnc_login</td><td class="desc">vnc Bruteforce | vncviewer [ip] login sadece password gerekli.</td></tr>
-    <tr><td class="kod">auxiliary/scanner/http/tomcat_mgr_login</td><td class="desc">Tomcat 6 BruteForce</td></tr>
     <tr><td class="kod">auxiliary/scanner/snmp/snmp_enum</td><td class="desc">snmp community stringlerini cekiyor. UDP unutma.</td></tr>
+    <tr><td class="kod">exploit/multi/samba/usermap_script</td><td class="desc">#samba 3.x Remote Code Execution</td></tr>
     <tr><td class="kod">exploit/multi/samba/usermap_script</td><td class="desc">#samba 3.x Remote Code Execution</td></tr>
     <tr><td class="kod">exploit/unix/ftp/vsftpd_234_backdoor</td><td class="desc">vsftpd v2.3.4 Remote Code Execution</td></tr>
     <tr><td class="kod">auxiliary/scanner/http/tomcat_mgr_upload</td><td class="desc">Tomcat 6 Remote Code Execution</td></tr>
@@ -180,6 +182,8 @@
     <tr><td><br></td></tr>
     <tr><th>Hydra</th><th>Description</th></tr>
     <tr><td>hydra -L user.lst -P pass.lst telnet://IP</td><td>Telnet bruteforce</td></tr>
+    <tr><td>hydra -C userpass.lst telnet://IP</td><td>Telnet bruteforce. Verilen dosyadakiler ":" seperate edip dener.</td></tr>
+    
     <tr><td class="kod">hydra -C metasploitableuserpass.txt IP ssh</td><td class="desc">ssh bruteforce</td></tr>
 
     <tr><td><br></td></tr>
