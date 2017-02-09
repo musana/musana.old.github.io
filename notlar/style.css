@@ -64,8 +64,14 @@ li a:hover {
 footer{
 	position: relative;
 	bottom:1px;
-  margin-top: 5px;
-  border-top:2px solid black;
+    margin-top: 5px;
+    border-top:2px solid black;
+    font-size: 13px;
+    padding: 2px;
+    float: left;
+    background-color:rgb(147, 84, 84);
+    color:white;
+
 }
 
 .active {

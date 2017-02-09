@@ -133,21 +133,16 @@
 </div>
 
 <div class="tabcontent" id="Metasploit">
-  </br>
-  <span>mysql -u root -h [ip]    #default password bos birakilabilir.</span></br>
-  <span>postgres -U [user] -h [ip]   #default password bos birakilabilir.</span></br>
-  <span>searchsploit vsftpd #aranan servis hakkında detaylı metasploit modülleri gösterir.</span></br></br>
 	<table>
     <tr><th>Bilinen Metasploit Modülleri</th><th>Description</th></tr>
     <tr><td class="kod">auxiliary/scanner/ssh/ssh_login</td><td class="desc">[BruteForce] - SSH</td></tr>
     <tr><td class="kod">auxiliary/scanner/postgres/postgres_login</td><td class="desc">[BruteForce] - POSTGRESQL</td></tr>
     <tr><td class="kod">auxiliary/scanner/telnet/telnet_login</td><td class="desc">[BruteForce] - TELNET</td></tr>
     <tr><td class="kod">auxiliary/scanner/http/tomcat_mgr_login</td><td class="desc">[BruteForce] - TOMCAT</td></tr>
-    <tr><td class="kod">auxiliary/scanner/smb/smb_login</td><td class="desc">[BruteForce] - samba,smb,(microsft-ds)</td></tr>
-    <tr><td class="kod">auxiliary/scanner/vnc/vnc_login</td><td class="desc">[BruteForce] - [VNC] | vncviewer [ip] login sadece password gerekli.</td></tr>
+    <tr><td class="kod">auxiliary/scanner/smb/smb_login</td><td class="desc">[BruteForce] - SAMBA,SMB,(microsft-ds)</td></tr>
+    <tr><td class="kod">auxiliary/scanner/vnc/vnc_login</td><td class="desc">[BruteForce] - VNC | vncviewer [ip] login sadece password gerekli.</td></tr>
     <tr><td class="kod">auxiliary/scanner/telnet/telnet_version</td><td class="desc">Telnet Version erisim gelebilir</td></tr>
     <tr><td class="kod">auxiliary/scanner/snmp/snmp_enum</td><td class="desc">snmp community stringlerini cekiyor. UDP unutma.</td></tr>
-    <tr><td class="kod">exploit/multi/samba/usermap_script</td><td class="desc">#samba 3.x Remote Code Execution</td></tr>
     <tr><td class="kod">exploit/multi/samba/usermap_script</td><td class="desc">#samba 3.x Remote Code Execution</td></tr>
     <tr><td class="kod">exploit/unix/ftp/vsftpd_234_backdoor</td><td class="desc">vsftpd v2.3.4 Remote Code Execution</td></tr>
     <tr><td class="kod">auxiliary/scanner/http/tomcat_mgr_upload</td><td class="desc">Tomcat 6 Remote Code Execution</td></tr>
@@ -179,12 +174,13 @@
     <tr><td>portfwd add -l 4444 -p 21 -r [IP]</td><td>Meterpreter: -l kaliport -p kurbanport -r kurbanip</td></tr>
 
     <tr><td><br></td></tr>
-    <tr><th>Hydra</th><th>Description</th></tr>
+    <tr><th>Brute Force Toolları</th><th>Description</th></tr>
+    <tr><td>hydra -C metasploitableuserpass.txt IP ssh</td><td>ssh bruteforce(with seperate :)</td></tr>
     <tr><td>hydra -L user.lst -P pass.lst telnet://IP</td><td>Telnet bruteforce</td></tr>
     <tr><td>hydra -C userpass.lst telnet://IP</td><td>Telnet bruteforce. Verilen dosyadakiler ":" seperate edip dener.</td></tr>
+    <tr><td>medusa -U userdeneme.txt -P passdeneme.txt -h 192.168.1.41 -M ssh</td><td>Küçük(u, p, h) parametreleri tek bir değer; büyük(U,H,P) ise wordlistler</td></tr>
     
-    <tr><td class="kod">hydra -C metasploitableuserpass.txt IP ssh</td><td class="desc">ssh bruteforce</td></tr>
-
+   
     <tr><td><br></td></tr>
     <tr><th>Wordlist</th><th>Description</th></tr>
     <tr><td class="kod">/usr/share/metasploit-firmware/data/wordlists</td><td class="desc">Metasploit default wordlists</td></tr>
@@ -288,7 +284,7 @@
 </div>
 
 <div class="tabcontent" id="Reverse">
-	Konular çok ağırdı bu yüzden bi' bok öğrenemedik...
+    ...
 </div>
 
 
