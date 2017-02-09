@@ -3,7 +3,6 @@ html body{
   padding:0px !important;
   margin: 0px !important;
   background-color: #dfdfdf;
-
 }
 
 th{
@@ -62,16 +61,16 @@ li a:hover {
 }
 
 footer{
-	position: relative;
-	bottom:1px;
+  	position: relative;
+  	bottom:1px;
     margin-top: 5px;
     border-top:2px solid black;
+    border-radius: 5px;
     font-size: 13px;
     padding: 2px;
-    float: left;
+    float: right;
     background-color:rgb(147, 84, 84);
     color:white;
-
 }
 
 .active {
