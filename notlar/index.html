@@ -6,9 +6,9 @@
 <title>OUR NOTES:</title>
 </head>
 
-<body onload="openCity(event, 'Linux')">
+<body onload="openCity(event, 'Linux');document.getElementById('main').click();">
 <ul class="tab">
-  <li><a href="javascript:void(0)" onclick="openCity(event, 'Linux')" class="tablinks">Linux</a></li>
+  <li><a id="main" href="javascript:void(0)" onclick="openCity(event, 'Linux')" class="tablinks">Linux</a></li>
   <li><a href="javascript:void(0)" onclick="openCity(event, 'Wireshark-Nmap')" class="tablinks">Wireshark/Nmap</a></li>
   <li><a href="javascript:void(0)" onclick="openCity(event, 'Metasploit')" class="tablinks">Metasploit</a></li>
   <li><a href="javascript:void(0)" onclick="openCity(event, 'Databases')" class="tablinks">Databases</a></li>
