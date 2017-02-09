@@ -187,12 +187,15 @@
     <tr><td class="kod">auxiliary/scanner/portscan/tcp</td><td class="desc">Subnette port tarama modülü.</td></tr>
     <tr><td>portfwd add -l 4444 -p 21 -r [IP]</td><td>Meterpreter: -l kaliport -p kurbanport -r kurbanip</td></tr>
 
+
     <tr><td><br></td></tr>
     <tr><th>Brute Force Toolları</th><th>Description</th></tr>
     <tr><td>hydra -C metasploitableuserpass.txt IP ssh</td><td>ssh bruteforce(with seperate :)</td></tr>
     <tr><td>hydra -L user.lst -P pass.lst telnet://IP</td><td>Telnet bruteforce</td></tr>
     <tr><td>hydra -C userpass.lst telnet://IP</td><td>Telnet bruteforce. Verilen dosyadakiler ":" seperate edip dener.</td></tr>
     <tr><td>medusa -U userdeneme.txt -P passdeneme.txt -h 192.168.1.41 -M ssh</td><td>Küçük(u, p, h) parametreleri tek bir değer; büyük(U,H,P) ise wordlistler</td></tr>
+    <tr><td>ncrack ip:port -U user.txt -P password.txt/td><td>Servisi kendi tespit eder. Bulunca p tusu gösterir.</td></tr>
+
     <tr><td><br></td></tr>
     <tr><th>Wordlist</th><th>Description</th></tr>
     <tr><td class="kod">/usr/share/metasploit-firmware/data/wordlists</td><td class="desc">Metasploit default wordlists</td></tr>
@@ -292,7 +295,32 @@
   <span>Content Provider Schema : content:/package_name/table/id</span>
 </div>
 
-<div class="tabcontent" id="Web"></div>
+<div class="tabcontent" id="Web">
+  <table>
+    <tr><th>sqlmap Komutları</th><th>Description</th></tr>
+    <tr><td>-u</td><td>Url</td></tr>
+    <tr><td>--cookie</td><td>Manuel cookie</td></tr>
+    <tr><td>--schema</td><td>Databasenin haritasını verir</td></tr>
+    <tr><td>--dbs</td><td>Veritabanını bulur</td></tr>
+    <tr><td>-D [db] --tables</td><td>Veritabanının tablolarını listeler</td></tr>
+    <tr><td>-D [db] -T [table] --columns</td><td>Tablonun kolonlarını verir</td></tr>
+    <tr><td>--all</td><td>Tüm herşeyi ekrana basar</td></tr>
+    <tr><td>--count</td><td>Gelecek verinin sayısını verir</td></tr>
+    <tr><td>--dump</td><td>Bulduğu verileri ekrana basar</td></tr>
+    <tr><td>--dump-all</td><td>Tabloya ait tüm verileri getirir</td></tr>
+    <tr><td>--search</td><td>db, table ve sutunda arama yapar</td></tr>
+    <tr><td>--users</td><td>DB kullanıcılarını getirir</td></tr>
+    <tr><td>--passwords</td><td>DB kullanıcılarının sifrelerini getirir</td></tr>
+    <tr><td>--file-read</td><td>sistemden dosya okuma</td></tr>
+    <tr><td>--file-write</td><td>sisteme dosyası yazma</td></tr>
+    <tr><td>--reg-read --reg-write</td><td>register key okuma yazma</td></tr>
+    <tr><td>--reg-add --reg-del</td><td>register key ekleme silme</td></tr>
+    <tr><td>--sql-query</td><td>Verilen sql sorgusunu calıstırır</td></tr>
+    <tr><td>--os-cmd / --os-shell</td><td>Os komutu calıştırır</td></tr>
+    <tr><td>--os-pwn</td><td>Metasploit shell alır</td></tr>
+    <tr><td>--priv-esc</td><td>Veritabanı yetki yükseltme</td></tr>
+  </table>
+</div>
 <div class="tabcontent" id="Reverse"></div>
 
 <footer>Bu sayfa Nikita TÜRKMEN ve Musa ŞANA tarafından not tutulmak amacıyla oluşturulmuş olup herkesin erişimine açıktır.</footer>
