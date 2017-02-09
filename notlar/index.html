@@ -65,33 +65,30 @@
 </div>
 
 <div class="tabcontent" id="Databases">
+  <table>
+  	<tr><th>Postgre Sql Komutları</th><th>Description</th></tr>
+  	<tr><td class="kod">psql -U [user] -h [ip]</td><td class="desc">psql connect</td></tr>
+  	<tr><td class="kod">\l or \list</td><td class="desc">Veri tabanlarını listeler.</td></tr>
+  	<tr><td class="kod">\c [db_name]</td><td class="desc">Veri tabanı seçme</td></tr>
+  	<tr><td class="kod">\dS</td><td class="desc">Tabloları listele</td></tr>
+  	<tr><td class="kod">\d [table_name]</td><td class="desc">Tablodaki sutunları listele</td></tr>
+  	<tr><td class="kod">SELECT * FROM "table_name";</td><td class="desc">Tablodaki verileri listele</td></tr>
 
-<table>
-	<tr><th>Postgre Sql Komutları</th><th>Description</th></tr>
-	<tr><td class="kod">psql -U [user] -h [ip]</td><td class="desc">psql connect</td></tr>
-	<tr><td class="kod">\l or \list</td><td class="desc">Veri tabanlarını listeler.</td></tr>
-	<tr><td class="kod">\c [db_name]</td><td class="desc">Veri tabanı seçme</td></tr>
-	<tr><td class="kod">\dS</td><td class="desc">Tabloları listele</td></tr>
-	<tr><td class="kod">\d [table_name]</td><td class="desc">Tablodaki sutunları listele</td></tr>
-	<tr><td class="kod">SELECT * FROM "table_name";</td><td class="desc">Tablodaki verileri listele</td></tr>
+  	<tr><td><br></td></tr>
 
-	<<tr><td><br></td></tr>
-
-	<tr><th>Mysql Komutları</th><th>Description</th></tr>
-	<tr><td class="kod">mysql -u [user] -h [ip]</td><td class="desc">mysql connect</td></tr>
-	<tr><td class="kod">show databases;</td><td class="desc">Veri tabanlarını listeler.</td></tr>
-	<tr><td class="kod">use [db_name]</td><td class="desc">Veri tabanı seçme</td></tr>
-	<tr><td class="kod">show tables;</td><td class="desc">Tabloları listele</td></tr>
-	<tr><td class="kod">SELECT * FROM "table_name";</td><td class="desc">Tablodaki verileri listele</td></tr>
-</table>
-
-
+  	<tr><th>Mysql Komutları</th><th>Description</th></tr>
+  	<tr><td class="kod">mysql -u [user] -h [ip]</td><td class="desc">mysql connect</td></tr>
+  	<tr><td class="kod">show databases;</td><td class="desc">Veri tabanlarını listeler.</td></tr>
+  	<tr><td class="kod">use [db_name]</td><td class="desc">Veri tabanı seçme</td></tr>
+  	<tr><td class="kod">show tables;</td><td class="desc">Tabloları listele</td></tr>
+  	<tr><td class="kod">SELECT * FROM "table_name";</td><td class="desc">Tablodaki verileri listele</td></tr>
+  </table>
 </div>
 
 <div class="tabcontent" id="Wireshark-Nmap">
   <table>
     <tr><th>Wireshark Filtreleri</th><th>Description</th></tr>
-    <tr><td class="kod">ip.addr==ip</td><td class="desc">ip ye göre filtreleme yapar | ip.src ip.dst</td></tr>
+    <tr><td class="kod">ip.addr==ip</td><td class="desc">ip ye göre filtreleme yapar | ip.src kaynak ip.dst hedef</td></tr>
     <tr><td class="kod">ip.addr==ip1  && ip.addr==ip2</td><td class="desc">İki ip arasındaki paketleri filtreler</td></tr>
     <tr><td class="kod">tcp.port==80</td><td class="desc">Sadece 80 portundan yapılan tcp trafiği.</td></tr>
     <tr><td class="kod">tcp contains traffic</td><td class="desc">'traffic' kelimesini içeren tcp paketleri <b>string araması</b>.</td></tr>
@@ -99,6 +96,7 @@
     <tr><td class="kod">http.request</td><td class="desc">Sadece http ile yapılan /GET istekleri.</td></tr>
     <tr><td class="kod">http.request.method=="POST"</td><td class="desc">Post yapılan http istekleri.</td></tr>
     <tr><td class="kod">http.cookie</td><td class="desc">http ile oturum acılmıs paketleri getirir</td></tr>
+    <tr><td class="kod">telnet, icmp, dns, ssh, arp, udp, smtp</td><td class="desc">Belli başlı protokoller</td></tr>
 
     <tr><td><br></td></tr>
     <tr><th>Nmap Komutları</th><th>Description</th></tr>
@@ -281,7 +279,7 @@
 </div>
 
 <div class="tabcontent" id="Web">
-	
+
 </div>
 
 <div class="tabcontent" id="Reverse">
