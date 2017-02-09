@@ -6,9 +6,9 @@
 <title>OUR NOTES:</title>
 </head>
 
-<body onload="openCity(event, 'Linux')">
+<body onload="openCity(event, 'Linux');document.getElementById('main').click();">
 <ul class="tab">
-  <li><a href="javascript:void(0)" onclick="openCity(event, 'Linux')" class="tablinks">Linux</a></li>
+  <li><a id="main" href="javascript:void(0)" onclick="openCity(event, 'Linux')" class="tablinks">Linux</a></li>
   <li><a href="javascript:void(0)" onclick="openCity(event, 'Wireshark-Nmap')" class="tablinks">Wireshark/Nmap</a></li>
   <li><a href="javascript:void(0)" onclick="openCity(event, 'Metasploit')" class="tablinks">Metasploit</a></li>
   <li><a href="javascript:void(0)" onclick="openCity(event, 'Databases')" class="tablinks">Databases</a></li>
@@ -45,7 +45,8 @@
 
     <tr><td><br></td></tr>
     <tr><th>awk & sed</th><th>Description</th></tr>
-    <tr><td class="kod">sed 's/string1/string2' file</td><td class="desc">tüm string1ler yerine string2 yazar.</td></tr>
+    <tr><td class="kod">sed 's/string1/string2/' file</td><td class="desc">tüm string1ler yerine string2 yazar.</td></tr>
+    <tr><td class="kod">sed 's/ /:/' file</td><td class="desc">Bosluk ile ayrılan stringleri : ile ayırır.</td></tr>
     <tr><td class="kod">sed -n '/A/,/B/ p'</td><td class="desc">A ve B arasındaki kalan verileri gösterir. '1,5 p' 1 ve 5 arası '5, p' sadece ilgili satır. '5,$ p' satır sonuna kadar.</td></tr>
     <tr><td class="kod">sed ‘2 d’ file</td><td class="desc">2. satır hariç diğerleri. ‘/str/ d’ str gecen satırlar hariç. '2,$ d’ 2.satırdan sona kadar siler kalanı gelir.</td></tr>
     <tr><td class="kod">awk ‘{print $1}’ file</td><td class="desc">Boşluk referans alınarak ilk sütünü yazdırır.</td></tr>
@@ -59,39 +60,36 @@
     <tr><td class="kod">/etc/passwd</td><td class="desc">Kullanıcı bilgileri</td></tr>
     <tr><td class="kod">/etc/shadow</td><td class="desc">Kullanıcı şifreleri</td></tr>
     <tr><td class="kod">/etc/hostname</td><td class="desc">Hostname bilgisi</td></tr>
-    <tr><td class="kod">/etc/hosts</td><td class="desc">Hosts dosyası</td></tr>
+    <tr><td name="foo"class="kod">/etc/hosts</td><td class="desc">Hosts dosyası</td></tr>
     <tr><td><br></td></tr>
   </table>
 </div>
 
 <div class="tabcontent" id="Databases">
+  <table>
+  	<tr><th>Postgre Sql Komutları</th><th>Description</th></tr>
+  	<tr><td class="kod">psql -U [user] -h [ip]</td><td class="desc">psql connect</td></tr>
+  	<tr><td class="kod">\l or \list</td><td class="desc">Veri tabanlarını listeler.</td></tr>
+  	<tr><td class="kod">\c [db_name]</td><td class="desc">Veri tabanı seçme</td></tr>
+  	<tr><td class="kod">\dS</td><td class="desc">Tabloları listele</td></tr>
+  	<tr><td class="kod">\d [table_name]</td><td class="desc">Tablodaki sutunları listele</td></tr>
+  	<tr><td class="kod">SELECT * FROM "table_name";</td><td class="desc">Tablodaki verileri listele</td></tr>
 
-<table>
-	<tr><th>Postgre Sql Komutları</th><th>Description</th></tr>
-	<tr><td class="kod">psql -U [user] -h [ip]</td><td class="desc">psql connect</td></tr>
-	<tr><td class="kod">\l or \list</td><td class="desc">Veri tabanlarını listeler.</td></tr>
-	<tr><td class="kod">\c [db_name]</td><td class="desc">Veri tabanı seçme</td></tr>
-	<tr><td class="kod">\dS</td><td class="desc">Tabloları listele</td></tr>
-	<tr><td class="kod">\d [table_name]</td><td class="desc">Tablodaki sutunları listele</td></tr>
-	<tr><td class="kod">SELECT * FROM "table_name";</td><td class="desc">Tablodaki verileri listele</td></tr>
+  	<tr><td><br></td></tr>
 
-	<<tr><td><br></td></tr>
-
-	<tr><th>Mysql Komutları</th><th>Description</th></tr>
-	<tr><td class="kod">mysql -u [user] -h [ip]</td><td class="desc">mysql connect</td></tr>
-	<tr><td class="kod">show databases;</td><td class="desc">Veri tabanlarını listeler.</td></tr>
-	<tr><td class="kod">use [db_name]</td><td class="desc">Veri tabanı seçme</td></tr>
-	<tr><td class="kod">show tables;</td><td class="desc">Tabloları listele</td></tr>
-	<tr><td class="kod">SELECT * FROM "table_name";</td><td class="desc">Tablodaki verileri listele</td></tr>
-</table>
-
-
+  	<tr><th>Mysql Komutları</th><th>Description</th></tr>
+  	<tr><td class="kod">mysql -u [user] -h [ip]</td><td class="desc">mysql connect</td></tr>
+  	<tr><td class="kod">show databases;</td><td class="desc">Veri tabanlarını listeler.</td></tr>
+  	<tr><td class="kod">use [db_name]</td><td class="desc">Veri tabanı seçme</td></tr>
+  	<tr><td class="kod">show tables;</td><td class="desc">Tabloları listele</td></tr>
+  	<tr><td class="kod">SELECT * FROM "table_name";</td><td class="desc">Tablodaki verileri listele</td></tr>
+  </table>
 </div>
 
 <div class="tabcontent" id="Wireshark-Nmap">
   <table>
     <tr><th>Wireshark Filtreleri</th><th>Description</th></tr>
-    <tr><td class="kod">ip.addr==ip</td><td class="desc">ip ye göre filtreleme yapar | ip.src ip.dst</td></tr>
+    <tr><td class="kod">ip.addr==ip</td><td class="desc">ip ye göre filtreleme yapar | ip.src kaynak ip.dst hedef</td></tr>
     <tr><td class="kod">ip.addr==ip1  && ip.addr==ip2</td><td class="desc">İki ip arasındaki paketleri filtreler</td></tr>
     <tr><td class="kod">tcp.port==80</td><td class="desc">Sadece 80 portundan yapılan tcp trafiği.</td></tr>
     <tr><td class="kod">tcp contains traffic</td><td class="desc">'traffic' kelimesini içeren tcp paketleri <b>string araması</b>.</td></tr>
@@ -99,6 +97,7 @@
     <tr><td class="kod">http.request</td><td class="desc">Sadece http ile yapılan /GET istekleri.</td></tr>
     <tr><td class="kod">http.request.method=="POST"</td><td class="desc">Post yapılan http istekleri.</td></tr>
     <tr><td class="kod">http.cookie</td><td class="desc">http ile oturum acılmıs paketleri getirir</td></tr>
+    <tr><td class="kod">telnet, icmp, dns, ssh, arp, udp, smtp</td><td class="desc">Belli başlı protokoller</td></tr>
 
     <tr><td><br></td></tr>
     <tr><th>Nmap Komutları</th><th>Description</th></tr>
@@ -285,7 +284,7 @@
 </div>
 
 <div class="tabcontent" id="Web">
-	
+
 </div>
 
 <div class="tabcontent" id="Reverse">
