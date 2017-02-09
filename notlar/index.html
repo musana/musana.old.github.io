@@ -45,7 +45,8 @@
 
     <tr><td><br></td></tr>
     <tr><th>awk & sed</th><th>Description</th></tr>
-    <tr><td class="kod">sed 's/string1/string2' file</td><td class="desc">tüm string1ler yerine string2 yazar.</td></tr>
+    <tr><td class="kod">sed 's/string1/string2/' file</td><td class="desc">tüm string1ler yerine string2 yazar.</td></tr>
+    <tr><td class="kod">sed 's/ /:/' file</td><td class="desc">Bosluk ile ayrılan stringleri : ile ayırır.</td></tr>
     <tr><td class="kod">sed -n '/A/,/B/ p'</td><td class="desc">A ve B arasındaki kalan verileri gösterir. '1,5 p' 1 ve 5 arası '5, p' sadece ilgili satır. '5,$ p' satır sonuna kadar.</td></tr>
     <tr><td class="kod">sed ‘2 d’ file</td><td class="desc">2. satır hariç diğerleri. ‘/str/ d’ str gecen satırlar hariç. '2,$ d’ 2.satırdan sona kadar siler kalanı gelir.</td></tr>
     <tr><td class="kod">awk ‘{print $1}’ file</td><td class="desc">Boşluk referans alınarak ilk sütünü yazdırır.</td></tr>
