@@ -7,7 +7,7 @@
         <meta name="copyright" content="Musa ŞANA" />
 
 <meta name="keywords" content="python, requests, http lib, request, python http requests, Python, " />
-        <title>Python Request Kütüphanesini Kullanmak  · musana.net
+        <title>Python Request Modülünü Kullanmak  · musana.net
 </title>
         <link href="/theme/css/slim-081711.css" rel="stylesheet" type="text/css">
         <link href="/theme/css/bootstrap-combined.min.css" rel="stylesheet">
@@ -56,7 +56,7 @@
 <div class="row-fluid">
     <div class="span2"></div>
     <header class="page_header span8">
-    <h1><a href="/python-request-lib-notes.html"> Python Request Kütüphanesini Kullanmak  </a></h1>
+    <h1><a href="/yazilar/2016/python-request-module-notes.html"> Python Request Modülünü Kullanmak  </a></h1>
     </header>
 </div>
 
@@ -82,8 +82,8 @@
     <div class="span10 article-content">
 
             
-<p>Python dilinin tiyneti gereği request modülü de anlamabilirlik ve okunabilirlik açısından insana doğrudan hitap eden, kolay anlaşılabilen python ile yazılmış bir http kütüphanesidir. Bu modül ile en temel şekilde http/https protokollerine yönelik request/response işlemlerimizi gerçekleştirebiliriz.<br/>
-Requests modülünü pip ile kurmak için;</p>
+<p><code>requests</code> minimalist bir python modülüdür. Bu modül ile en temel şekilde http/https protokollerine yönelik request/response işlemlerimizi gerçekleştirebiliriz.<br>
+Requests modülünü pip ile kurmak için;</br></p>
 <div class="highlight"><pre><span></span><span class="n">pip3</span> <span class="n">install</span> <span class="n">requests</span>  
 </pre></div>
 <p>Kaynak koddan kurmak için ise;</p>
@@ -137,8 +137,8 @@ Requests modülünü pip ile kurmak için;</p>
 <span class="n">req</span> <span class="o">=</span> <span class="n">reqeusts</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"http://musana.net"</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span> <span class="c1">#Output: 200, 404?, 302?, 500? ...</span>
 </pre></div>
-<p>Sunucudan dönen cevabın başlık bilgilerine erişebilmek için ise request nesnemize <code>headers</code> nesne değişkeni üzerinden erişebiliriz. Bu değer bize bütün header response bilgisini sözlük tipinde verecektir. Daha spesifik başlıklara erişmek için sözlük yapısını kullanabiliriz. Örneğin;<br/>
-<code>req.headers.get("content-type")</code> diyerek içeriğin hangi formatta ve hangi karakter setini kullandığı bilgisine ulaşabiliriz. Erişmeye çalıştığımız başlık değeri yok ise sonuç <code>None</code> dönecektir.</p>
+<p>Sunucudan dönen cevabın başlık bilgilerine erişebilmek için ise request nesnemize <code>headers</code> nesne değişkeni üzerinden erişebiliriz. Bu değer bize bütün header response bilgisini sözlük tipinde verecektir. Daha spesifik başlıklara erişmek için sözlük yapısını kullanabiliriz. Örneğin;<br>
+<code>req.headers.get("content-type")</code> diyerek içeriğin hangi formatta ve hangi karakter setini kullandığı bilgisine ulaşabiliriz. Erişmeye çalıştığımız başlık değeri yok ise sonuç <code>None</code> dönecektir.</br></p>
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">request</span>
 
 <span class="n">req</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"http://musana.net"</span><span class="p">)</span>
@@ -183,9 +183,9 @@ Requests modülünü pip ile kurmak için;</p>
 <section style="font-size:0.7em; margin-bottom:-15px;">
     <p id="post-share-links">
         Paylaş:
-        <a href="http://twitter.com/home?status=b'Python%20Request%20K%C3%BCt%C3%BCphanesini%20Kullanmak%20/python-request-lib-notes.html'" target="_blank" title="Bu yazıyı twitter'da paylaş">Twitter</a>
+        <a href="http://twitter.com/home?status=b'Python%20Request%20Mod%C3%BCl%C3%BCn%C3%BC%20Kullanmak%20/yazilar/2016/python-request-module-notes.html'" target="_blank" title="Bu yazıyı twitter'da paylaş">Twitter</a>
         ❄
-        <a href="http://www.facebook.com/sharer/sharer.php?u=/python-request-lib-notes.html" target="_blank" title="Bu yazıyı facebook'ta paylaş">Facebook</a>
+        <a href="http://www.facebook.com/sharer/sharer.php?u=/yazilar/2016/python-request-module-notes.html" target="_blank" title="Bu yazıyı facebook'ta paylaş">Facebook</a>
     </p>
 </section>
 
@@ -200,7 +200,7 @@ Requests modülünü pip ile kurmak için;</p>
 
  
                <li class="makale-bilgi">Tarih: </li>
-    	       <li> <time pubdate="pubdate" datetime="2016-11-16T00:00:00+02:00">Nov 16, 2016</time></li>
+    	       <li> <time pubdate="pubdate" datetime="2016-11-16T00:00:00+03:00">Kas 16, 2016</time></li>
 
        
                 <li class="makale-bilgi">Kategori: </li>
@@ -211,7 +211,7 @@ Requests modülünü pip ile kurmak için;</p>
                     <span>1</span>
 </a></li>
 		 <li class="etiket"><a href="/tags.html#python-ref">python
-                    <span>1</span>
+                    <span>2</span>
 </a></li>
 		 <li class="etiket"><a href="/tags.html#python-http-requests-ref">python http requests
                     <span>1</span>
@@ -236,7 +236,9 @@ Requests modülünü pip ile kurmak için;</p>
             <nav>
             <ul class="articles_timeline">
  
-                <li class="previous_article">« <a href="/vim-editor-ipuclari.html" title="Previous: Vim'i Özelleştirmek">Vim'i Özelleştirmek</a></li>
+                <li class="previous_article">« <a href="/yazilar/2016/vim-editor-ipuclari.html" title="Previous: Vim'i Özelleştirmek">Vim'i Özelleştirmek</a></li>
+ 
+                <li class="next_article"><a href="/yazilar/2016/boolean-sql-injection-and-python-exploit-tool.html" title="Next: Boolean Sqli ve Exploit Tool">Boolean Sqli ve Exploit Tool</a> »</li>
             </ul>
             </nav>
             </aside>
@@ -255,8 +257,8 @@ Requests modülünü pip ile kurmak için;</p>
         <li class="elegant-power">Bu sitedeki bütün içerikler izinsiz kopyalanabilir, değiştirilebilir ve dağıtılabilirdir, ama yine de kaynak belirtmeniz tavsiye edilir. ;) <a href="http://getpelican.com/" title="Pelican Home Page"> Pelican</a> ile geliştirilmiştir.</li>
     </ul>
 </div>
-</footer>            <script src="../theme/tipuesearch/jquery.min.js"></script>
-        <script src="../theme/tipuesearch/bootstrap.min.js"></script>
+</footer>            <script src="/theme/tipuesearch/jquery.min.js"></script>
+        <script src="/theme/tipuesearch/bootstrap.min.js"></script>
         <script>
             function validateForm(query)
             {

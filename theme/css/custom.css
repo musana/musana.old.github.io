@@ -129,3 +129,29 @@ a#page-top{
 .article-content blockquote p{
 /*margin-bottom:0px;*/
 }
+
+/*Arama kutusu*/
+
+.navbar input{border-radius: 0px !important; color:white; background-color: #06a6c0; border:1px solid #00d2ff; position: relative; left: 50px;}
+.navbar .nav > li > a:focus, .navbar .nav > li > a:hover{
+
+color: #00f6ff;
+cursor: pointer;
+}
+
+/*mobil yazı rengi*/
+.nav-collapse .nav > li > a, .nav-collapse .dropdown-menu a {
+	color:white !important;
+}
+
+/*aram kutusus mobilde hizalama*/
+#tipue_search_input{
+	left:10px;
+}
+
+.navbar .nav > .active > a, .navbar .nav > .active {
+
+	background-color: #06a6c0;
+}
+
+.nav-collapse .nav > li > a:hover, .nav-collapse .nav > li > a:focus, .nav-collapse .dropdown-menu a:hover, .nav-collapse .dropdown-menu a:focus {background-color: #06a6c0;}

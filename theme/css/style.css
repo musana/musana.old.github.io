@@ -19,7 +19,7 @@ h1, h2, h3, h4, h5, h5 {
 
 .site-name {
     font-weight:bold;
-    color:#0081ff;
+    color:yellow;
     font-family:'Open Sans', sans-serif;
 }
 
@@ -78,6 +78,7 @@ padding-right:10px;
     background-color:rgb(23, 23, 23);
     font-family:Source Sans Pro;
     border-radius:3px 3px 3px 3px;
+    color:#dadada;
 }
 
 td.code .highlight pre {

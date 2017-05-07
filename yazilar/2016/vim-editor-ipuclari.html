@@ -11,18 +11,18 @@
 </title>
         <link href="/theme/css/slim-081711.css" rel="stylesheet" type="text/css">
         <link href="/theme/css/bootstrap-combined.min.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="http://musana.net/theme/css/style.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="http://musana.net/theme/css/solarizedlight.css" media="screen">
-        <link rel="shortcut icon" href="http://musana.net/theme/images/favicon.ico" type="image/x-icon" />
-        <link rel="apple-touch-icon" href="http://musana.net/theme/images/apple-touch-icon.png" />
-        <link rel="apple-touch-icon" sizes="57x57" href="http://musana.net/theme/images/apple-touch-icon-57x57.png" />
-        <link rel="apple-touch-icon" sizes="72x72" href="http://musana.net/theme/images/apple-touch-icon-72x72.png" />
-        <link rel="apple-touch-icon" sizes="114x114" href="http://musana.net/theme/images/apple-touch-icon-114x114.png" />
-        <link rel="apple-touch-icon" sizes="144x144" href="http://musana.net/theme/images/apple-touch-icon-144x144.png" />
-        <link rel="icon" href="http://musana.net/theme/images/apple-touch-icon-144x144.png" />
+        <link rel="stylesheet" type="text/css" href="/theme/css/style.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/theme/css/solarizedlight.css" media="screen">
+        <link rel="shortcut icon" href="/theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="/theme/images/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/theme/images/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/theme/images/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/theme/images/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/theme/images/apple-touch-icon-144x144.png" />
+        <link rel="icon" href="/theme/images/apple-touch-icon-144x144.png" />
 	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet"> 
-        <link rel="stylesheet" type="text/css"  href="http://musana.net/theme/css/custom.css" media="screen" />
+        <link rel="stylesheet" type="text/css"  href="/theme/css/custom.css" media="screen" />
     </head>
     <body>
         <div id="content-sans-footer">
@@ -34,14 +34,14 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </a>
-                    <a class="brand" id="musana" href="http://musana.net/"><span class=site-name>musana.net</span></a>
+                    <a class="brand" id="musana" href="/"><span class=site-name>musana.net</span></a>
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right top-menu">
-                            <li ><a href="http://musana.net/">Anasayfa</a></li>
-                            <li ><a href="http://musana.net/categories.html">Kategori</a></li>
-                            <li ><a href="http://musana.net/tags.html">Etiket</a></li>
-                            <li ><a href="http://musana.net/archives.html">Arşiv</a></li>
-                            <li><form class="navbar-search" action="http://musana.net/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Ara..." name="q" id="tipue_search_input"></form></li>
+                            <li ><a href="/">Anasayfa</a></li>
+                            <li ><a href="/categories.html">Kategori</a></li>
+                            <li ><a href="/tags.html">Etiket</a></li>
+                            <li ><a href="/archives.html">Arşiv</a></li>
+                            <li><form class="navbar-search" action="/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Ara..." name="q" id="tipue_search_input"></form></li>
                         </ul>
                     </div>
                 </div>
@@ -56,7 +56,7 @@
 <div class="row-fluid">
     <div class="span2"></div>
     <header class="page_header span8">
-    <h1><a href="http://musana.net/vim-editor-ipuclari.html"> Vim'i Özelleştirmek  </a></h1>
+    <h1><a href="/yazilar/2016/vim-editor-ipuclari.html"> Vim'i Özelleştirmek  </a></h1>
     </header>
 </div>
 
@@ -76,39 +76,30 @@
 
 
 <p>Yukarıdaki komut yardımıyla repoyu  <code>~/.vim/bundle/Vundle.vim</code> dizinimize indiriyoruz. Artık pluginlerimiz ile ilgili configrasyon ayarlarımızı <code>.vimrc</code> dosyası üzerinden gerçekleştireceğiz. Bu nedenle home dizinimizde <code>.vimrc</code> adında oluşturup aşağıdaki kodları dosyamıza yapıştıralım.(Oluşturmak için <code>touch ~/.vimrc</code>)</p>
-<div class="highlight"><pre><span></span><span class="k">set</span> <span class="nb">nocompatible</span>        <span class="c">&quot; be iMproved, required</span>
-<span class="k">filetype</span> off            <span class="c">&quot; required</span>
-
-<span class="c">&quot; set the runtime path to include Vundle and initialize</span>
+<div class="highlight"><pre><span></span><span class="k">set</span> <span class="nb">nocompatible</span>        
+<span class="k">filetype</span> off            
+<span class="c">&quot; vundle.vim pathini belirtiyoruz.</span>
 <span class="k">set</span> <span class="nb">rtp</span><span class="p">+=~</span><span class="sr">/.vim/</span>bundle/Vundle.<span class="k">vim</span>
-<span class="k">call</span> vundle#begin<span class="p">()</span>
-<span class="c">&quot; alternatively, pass a path where Vundle should install plugins</span>
-<span class="c">&quot;call vundle#begin(&#39;~/some/path/here&#39;)</span>
 
-<span class="c">&quot; let Vundle manage Vundle, required</span>
+<span class="k">call</span> vundle#begin<span class="p">()</span>
+
 Plugin <span class="s1">&#39;VundleVim/Vundle.vim&#39;</span>
 
 <span class="c">&quot; PLUGINLERIMIZIN ADINI YAZACAĞIMIZ KISIM [BAŞLANGIÇ]</span>
 
-<span class="c">&quot; plugin on GitHub repo</span>
+<span class="c">&quot; Github reposundan plugin yüklemek için</span>
 Plugin <span class="s1">&#39;tpope/vim-fugitive&#39;</span>
-<span class="c">&quot; plugin from http://vim-scripts.org/vim/scripts.html</span>
+<span class="c">&quot; http://vim-scripts.org/vim/scripts.html bu bağlatıdan plugin yüklemek için</span>
 Plugin <span class="s1">&#39;L9&#39;</span>
-<span class="c">&quot; Git plugin not hosted on GitHub</span>
+<span class="c">&quot; Git&#39;den plugin yüklemek.(github üzerinde olmayan pluginler)</span>
 Plugin <span class="s1">&#39;git://git.wincent.com/command-t.git&#39;</span>
-<span class="c">&quot; git repos on your local machine (i.e. when working on your own plugin)</span>
+<span class="c">&quot; local makinadan plugin yüklemek için</span>
 Plugin <span class="s1">&#39;file:///home/gmarik/path/to/plugin&#39;</span>
-<span class="c">&quot; The sparkup vim script is in a subdirectory of this repo called vim.</span>
-<span class="c">&quot; Pass the path to set the runtimepath properly.</span>
-Plugin <span class="s1">&#39;rstacruz/sparkup&#39;</span><span class="p">,</span> {<span class="s1">&#39;rtp&#39;</span>: <span class="s1">&#39;vim/&#39;</span>}
-<span class="c">&quot; Install L9 and avoid a Naming conflict if you&#39;ve already installed a</span>
-<span class="c">&quot; different version somewhere else.</span>
-Plugin <span class="s1">&#39;ascenator/L9&#39;</span><span class="p">,</span> {<span class="s1">&#39;name&#39;</span>: <span class="s1">&#39;newL9&#39;</span>}
 
 <span class="c">&quot; PLUGINLERİMİZİN ADINI YAZACAĞIMIZ KISIM [BİTİŞ]</span>
 
-<span class="k">call</span> vundle#<span class="k">end</span><span class="p">()</span>            <span class="c">&quot; required</span>
-<span class="k">filetype</span> plugin indent <span class="k">on</span>    <span class="c">&quot; required</span>
+<span class="k">call</span> vundle#<span class="k">end</span><span class="p">()</span>            
+<span class="k">filetype</span> plugin indent <span class="k">on</span>    
 </pre></div>
 
 
@@ -122,9 +113,9 @@ Plugin <span class="s1">&#39;ascenator/L9&#39;</span><span class="p">,</span> {<
 <blockquote>
 <p>Yüklemek istediğiniz pluginin adının <code>call vundle()#begin</code> kodu ile <code>call vundle()#end</code> kodu arasında olmasına dikkat ediniz. Ayrıca vundle'ın önceki sürümlerinde plugin kelimesi yerine bundle kelimesi kullanılmaktaydı. Yukarıdaki dosyada plugin yerine bundle da yazarsanız sorun olmayacaktır yani.</p>
 </blockquote>
-<p>Özetle artık yapacağımız şey çok basit; yüklemek istediğimiz pluginin github adresinin dediğimiz kısmını kopyalayıp  <code>.vimrc</code> dosyasını açarak yukarıda bahsettiğimiz kısma <code>Plugin 'plugin-adı'</code> veya <code>Bundle 'plugin-adı</code> yazıp <code>PluginInstall</code> komutuyla kuruyoruz.<br />
-Kurulum işlemine ait ekran görüntüsü aşağıdaki gibidir.<br />
-<img alt="vundle.png" src="/img/vundle.png" />  </p>
+<p>Özetle artık yapacağımız şey çok basit; yüklemek istediğimiz pluginin github adresinin dediğimiz kısmını kopyalayıp  <code>.vimrc</code> dosyasını açarak yukarıda bahsettiğimiz kısma <code>Plugin 'plugin-adı'</code> veya <code>Bundle 'plugin-adı</code> yazıp <code>PluginInstall</code> komutuyla kuruyoruz.<br>
+Kurulum işlemine ait ekran görüntüsü aşağıdaki gibidir.<br>
+<img alt="vundle.png" src="/img/vundle.png">  </p>
 <div class="highlight"><pre><span></span><span class="c">&quot; Yardımcı olabilecek birkaç komut.</span>
 <span class="p">:</span>PluginList <span class="c">&quot;yüklü pluginleri listele</span>
 <span class="p">:</span>PluginInstall <span class="c">&quot;plugin yükle</span>
@@ -133,9 +124,9 @@ Kurulum işlemine ait ekran görüntüsü aşağıdaki gibidir.<br />
 </pre></div>
 
 
-<p>Hepsi bu. Pratik yapmak için birkaç plugin kuralım.<br />
+<p>Hepsi bu. Pratik yapmak için birkaç plugin kuralım.<br>
 En çok hoşuma giden pluginlerden biri olan otomotik bir şekilde indent bırakan <a href="Plugin" title="vim-scripts/indentpython.vim">indentpython</a> kuralım. Terminale sudo <code>sudo vim ~/.vimrc</code> yazarak config dosyamızı açalım ve <code>Plugin 'vim-scripts/indentpython.vim'</code> yazıp <code>:PluginInstall</code> komutuyla kuralım. Örnek bir python kodu yazarak indentleri kendisinin bıraktığını test edebilirsiniz.  </p>
-<p>Güzel bir status bar olan <a href="https://github.com/powerline/powerline">powerline</a> kurmak için ise;<br />
+<p>Güzel bir status bar olan <a href="https://github.com/powerline/powerline">powerline</a> kurmak için ise;<br>
 önce yukarıda belirttiğim kısımlar arasına <code>Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}</code> yazıp dosyanın en altına da aşağıdaki kodları yapıştın. Tamamdır.</p>
 <div class="highlight"><pre><span></span><span class="k">set</span>  <span class="nb">rtp</span><span class="p">+=</span><span class="sr">/usr/</span>local<span class="sr">/lib/</span>python2.<span class="m">7</span><span class="sr">/dist-packages/</span>powerline<span class="sr">/bindings/</span><span class="k">vim</span>/
 <span class="k">set</span> <span class="nb">laststatus</span><span class="p">=</span><span class="m">2</span>
@@ -179,23 +170,23 @@ Plugin <span class="s1">&#39;vim-scripts/indentpython.vim&#39;</span>
 </pre></div>
 
 
-<p>Bu arada bütün pluginlere ait bilgileri <a href="http://vimawesome.com/">vimawesome</a> adresinden edinebilirsiniz. Sanırım başlangıç için yeterli oldu. Siz artık kendi ihtiyaçlarınıza göre daha da kişileştirebilirsiniz.<br />
+<p>Bu arada bütün pluginlere ait bilgileri <a href="http://vimawesome.com/">vimawesome</a> adresinden edinebilirsiniz. Sanırım başlangıç için yeterli oldu. Siz artık kendi ihtiyaçlarınıza göre daha da kişileştirebilirsiniz.<br>
 Şimdi ise Vim'i efektif kullanmak için birkaç ipucu verelim:</p>
 <h3 id="normal-mode">Normal Mode:</h3>
-<p><code>:sp dosya_adi</code>     Dosyayı ekranı yatay olarak ikiye bölerek açar.<br />
-<code>:vsp dosya_adi</code>    Dosyayı ekranı dikey olarak ikiye bölerek açar.<br />
-<code>ctrl+w+J</code>      Eğer yatay olarak açılmış pencerede denerseniz pencere dikey olarak açılır ama eğer zaten dikey olan bir pencere denerseniz solundaki pencere ile yer değiştirir.<br />
-<code>ctrl+w+T</code>      Pencereyi sekmeye taşır. <br />
-<code>:tabs</code>         Açık sekmeleri listele.<br />
-<code>:tabm 0</code>       Mevcut sekmeyi ilk sıraya taşı.<br />
-<code>:tabm</code>         Mevcut sekmeyi en sona taşı.<br />
-<code>:tabm {i}</code>     Mevcut sekmeyi i. sıraya taşı. (i=sekme numarası)<br />
-<code>:tabn</code>         Sonraki sekmeye geç.<br />
-<code>:tabp</code>         Önceki sekmeye geç.<br />
-<code>ctrl+shift+up</code>     Sonraki sekmeye geç.<br />
-<code>ctrl+shift+down</code>   Önceki sekmeye geç.<br />
-<code>ctrl+w+yön tuşları</code>    Pencereler arası geçiş yapmak için.<br />
-<code>ctrl+u</code>        10 satır yukarı git.<br />
+<p><code>:sp dosya_adi</code>     Dosyayı ekranı yatay olarak ikiye bölerek açar.<br>
+<code>:vsp dosya_adi</code>    Dosyayı ekranı dikey olarak ikiye bölerek açar.<br>
+<code>ctrl+w+J</code>      Eğer yatay olarak açılmış pencerede denerseniz pencere dikey olarak açılır ama eğer zaten dikey olan bir pencere denerseniz solundaki pencere ile yer değiştirir.<br>
+<code>ctrl+w+T</code>      Pencereyi sekmeye taşır. <br>
+<code>:tabs</code>         Açık sekmeleri listele.<br>
+<code>:tabm 0</code>       Mevcut sekmeyi ilk sıraya taşı.<br>
+<code>:tabm</code>         Mevcut sekmeyi en sona taşı.<br>
+<code>:tabm {i}</code>     Mevcut sekmeyi i. sıraya taşı. (i=sekme numarası)<br>
+<code>:tabn</code>         Sonraki sekmeye geç.<br>
+<code>:tabp</code>         Önceki sekmeye geç.<br>
+<code>ctrl+shift+up</code>     Sonraki sekmeye geç.<br>
+<code>ctrl+shift+down</code>   Önceki sekmeye geç.<br>
+<code>ctrl+w+yön tuşları</code>    Pencereler arası geçiş yapmak için.<br>
+<code>ctrl+u</code>        10 satır yukarı git.<br>
 <code>ctrl+d</code> ve <code>ctrl+f</code>    10 satır aşağı in.   </p>
 <p>Ayrıca penceler arası geçisi pratik hale getirmek için <code>.vimrc</code> dosyasına aşağıdaki 4 satırlık kodu yapıştırırak <code>alt+yön tuşları</code> kombinasyonlarını kullanarak daha hızlı bir şekilde geçiş yapabilirsiniz.</p>
 <div class="highlight"><pre><span></span>nmap <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>A<span class="p">-</span>Up<span class="p">&gt;</span> :<span class="k">wincmd</span> <span class="k">k</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
@@ -205,8 +196,8 @@ nmap <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt
 </pre></div>
 
 
-<p>Şimdi şöyle bir ufak sorunla karşılaştığınızı varsayıyorum. 2 veya daha fazla pencere açık ancak siz pencerelerin yerini değiştirmek istiyorsunuz. Şöyle bir şey yani:<br />
-<img alt="vim-windows" src="/img/windows.png" />  </p>
+<p>Şimdi şöyle bir ufak sorunla karşılaştığınızı varsayıyorum. 2 veya daha fazla pencere açık ancak siz pencerelerin yerini değiştirmek istiyorsunuz. Şöyle bir şey yani:<br>
+<img alt="vim-windows" src="/img/windows.png">  </p>
 <p>Örneğin pencere <code>üç</code> ile pencere <code>bir</code>in yerlerini karşılıklı olarak değiştirmek istiyorsunuz? İşte bir elemanda vim'e ilk başladığı zamanlarda böyle bir sorunla karşılaşmış (benim gibi) ve <a href="http://stackoverflow.com/questions/2586984/how-can-i-swap-positions-of-two-open-files-in-splits-in-vim/4903681#4903681">stack overflow</a>'da derdini dile getirmiş. Ancak bir yıl sonra dönüt alabilmiş ve daha sonra <code>Plugin 'wesQ3/vim-windowswap'</code> adında ufak bir plugin yazarak vim'de newbie olanlara yardımcı olmuş. Sağolsun.</p>
 <p>Yukarıda adı geçen plugini kurduğunuzu farzediyorum. Pencerelerin karşılıklı olarak yerlerini değiştirmek için <code>leader key</code> kullanacağız. Leader key nedir diye sorarsanız aslında kendi atatığınız bir karakterden ibaret olan bir tuş. Yani <code>.vimrc</code> dosyasında şöyle bir tanımlama yaparsanız; <code>let mapleader="-"</code> sizin leader keyiniz <code>-</code> karakteri oluyor. Eğer herhangi bir karakter set edilmemiş ise default olarak back slash <code>\</code> karakteridir. Artık değiştirelim şu pencere <code>bir</code> ile <code>üç</code>'ün yerini.  </p>
 <ul>
@@ -216,16 +207,16 @@ nmap <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt
 <li>Pencere <code>bir</code> ile <code>üç</code>ün yeri değişmiş oldu.</li>
 </ul>
 <p>Son olarak kendi kullandığım vimden bir görüntü.  </p>
-<p><img alt="vimshow" src="/img/vimshowx.png" /><br />
+<p><img alt="vimshow" src="/img/vimshowx.png"><br>
 Sağlıcakla kalınız.  </p>
 
 
 <section style="font-size:0.7em; margin-bottom:-15px;">
     <p id="post-share-links">
         Paylaş:
-        <a href="http://twitter.com/home?status=b'Vim%27i%20%C3%96zelle%C5%9Ftirmek%20http%3A//musana.net/vim-editor-ipuclari.html'" target="_blank" title="Bu yazıyı twitter'da paylaş">Twitter</a>
+        <a href="http://twitter.com/home?status=b'Vim%27i%20%C3%96zelle%C5%9Ftirmek%20/yazilar/2016/vim-editor-ipuclari.html'" target="_blank" title="Bu yazıyı twitter'da paylaş">Twitter</a>
         ❄
-        <a href="http://www.facebook.com/sharer/sharer.php?u=http%3A//musana.net/vim-editor-ipuclari.html" target="_blank" title="Bu yazıyı facebook'ta paylaş">Facebook</a>
+        <a href="http://www.facebook.com/sharer/sharer.php?u=/yazilar/2016/vim-editor-ipuclari.html" target="_blank" title="Bu yazıyı facebook'ta paylaş">Facebook</a>
     </p>
 </section>
 
@@ -240,7 +231,7 @@ Sağlıcakla kalınız.  </p>
 
  
                <li class="makale-bilgi">Tarih: </li>
-    	       <li> <time pubdate="pubdate" datetime="2016-11-13T00:00:00+02:00">Nov 13, 2016</time></li>
+    	       <li> <time pubdate="pubdate" datetime="2016-11-13T00:00:00+03:00">Kas 13, 2016</time></li>
 
        
                 <li class="makale-bilgi">Kategori: </li>
@@ -282,37 +273,6 @@ Sağlıcakla kalınız.  </p>
 
 
 
-<section>
-<div class="accordion" id="accordion2">
-    <div class="accordion-group">
-        <div class="accordion-heading">
-            <a class="accordion-toggle disqus-comment-count" data-parent="#accordion2"
-                href="http://musana.net/vim-editor-ipuclari.html#disqus_thread">
-                Yorumlar
-            </a>
-        </div>
-        <div id="disqus_thread" class="accordion-body">
-            <div class="accordion-inner">
-                <div class="comments">
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-    var disqus_shortname = '0xmusana';
-        var disqus_identifier = 'http://musana.net/vim-editor-ipuclari.html';
-    var disqus_url = 'http://musana.net/vim-editor-ipuclari.html';
-
-    (function() {
-         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-     })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</section>
 
         </div>
 
@@ -322,9 +282,9 @@ Sağlıcakla kalınız.  </p>
             <nav>
             <ul class="articles_timeline">
  
-                <li class="previous_article">« <a href="http://musana.net/xss-detayli-dokuman.html" title="Previous: Cross Site Scripting">Cross Site Scripting</a></li>
+                <li class="previous_article">« <a href="/yazilar/2016/xss-detayli-dokuman.html" title="Previous: Cross Site Scripting">Cross Site Scripting</a></li>
  
-                <li class="next_article"><a href="http://musana.net/python-request-module-notes.html" title="Next: Python Request Modülünü Kullanmak">Python Request Modülünü Kullanmak</a> »</li>
+                <li class="next_article"><a href="/yazilar/2016/python-request-module-notes.html" title="Next: Python Request Modülünü Kullanmak">Python Request Modülünü Kullanmak</a> »</li>
             </ul>
             </nav>
             </aside>
@@ -343,8 +303,8 @@ Sağlıcakla kalınız.  </p>
         <li class="elegant-power">Bu sitedeki bütün içerikler izinsiz kopyalanabilir, değiştirilebilir ve dağıtılabilirdir, ama yine de kaynak belirtmeniz tavsiye edilir. ;) <a href="http://getpelican.com/" title="Pelican Home Page"> Pelican</a> ile geliştirilmiştir.</li>
     </ul>
 </div>
-</footer>            <script src="../theme/tipuesearch/jquery.min.js"></script>
-        <script src="../theme/tipuesearch/bootstrap.min.js"></script>
+</footer>            <script src="/theme/tipuesearch/jquery.min.js"></script>
+        <script src="/theme/tipuesearch/bootstrap.min.js"></script>
         <script>
             function validateForm(query)
             {
@@ -352,31 +312,5 @@ Sağlıcakla kalınız.  </p>
             }
         </script>
 
-<script type="text/javascript">
-    var disqus_shortname = '0xmusana';
-
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-    </script>
-        <script  language="javascript" type="text/javascript">
-            function uncollapse() {
-                var hash_str = window.location.hash;
-                if (window.location.hash.match(/^#comment-\d+$/))
-                {
-                    var hash_str = '#disqus_thread';
-                }
-                $(hash_str).collapse({
-                    toggle: true
-                    })
-            }
-        </script>
-
-        <script type="text/javascript" language="JavaScript">
-            uncollapse(); 
-        </script>
     </body>
 </html>
