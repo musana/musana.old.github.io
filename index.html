@@ -39,7 +39,7 @@
                         <ul class="nav pull-right top-menu">
                             <li  class="active"><a href="http://musana.net/">Anasayfa</a></li>
                             <li ><a href="http://musana.net/categories.html">Kategori</a></li>
-                            <li ><a href="http://musana.net/tags.html">Etiket</a></li>
+                            <li ><a href="http://musana.net/tags.html">Etiketler</a></li>
                             <li ><a href="http://musana.net/archives.html">Arşiv</a></li>
                             <li><form class="navbar-search" action="http://musana.net/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Ara..." name="q" id="tipue_search_input"></form></li>
                         </ul>
@@ -60,6 +60,12 @@
     <div class="row-fluid">
         <div class="span12 anasayfa">
 		<!--part 1-->
+            <ul class="list-all-articles">
+                <li>
+                <a href="http://musana.net/yazilar/2017/make-turkey-great-musana.html">Dönüşüm muhteşem olacak :)  </a> 
+                <time pubdate="pubdate" datetime="2017-11-10T00:00:00+03:00">Cum 10 Kasım 2017</time>
+                </li>
+            </ul>
             <ul class="list-all-articles">
                 <li>
                 <a href="http://musana.net/yazilar/2016/boolean-sql-injection-and-python-exploit-tool.html">Boolean Sqli ve Exploit Tool  </a> 
@@ -99,8 +105,8 @@
         <li class="elegant-power">Bu sitedeki bütün içerikler izinsiz kopyalanabilir, değiştirilebilir ve dağıtılabilirdir, ama yine de kaynak belirtmeniz tavsiye edilir. ;) <a href="http://getpelican.com/" title="Pelican Home Page"> Pelican</a> ile geliştirilmiştir.</li>
     </ul>
 </div>
-</footer>        <script src="/theme/tipuesearch/jquery.min.js"></script>
-        <script src="/theme/tipuesearch/bootstrap.min.js"></script>
+</footer>        <script src="../theme/tipuesearch/jquery.min.js"></script>
+        <script src="../theme/tipuesearch/bootstrap.min.js"></script>
         <script>
             function validateForm(query)
             {

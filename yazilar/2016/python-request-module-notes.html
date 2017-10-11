@@ -82,8 +82,8 @@
     <div class="span10 article-content">
 
             
-<p><code>requests</code> minimalist bir python modülüdür. Bu modül ile en temel şekilde http/https protokollerine yönelik request/response işlemlerimizi gerçekleştirebiliriz.<br>
-Requests modülünü pip ile kurmak için;</br></p>
+<p><code>requests</code> minimalist bir python modülüdür. Bu modül ile en temel şekilde http/https protokollerine yönelik request/response işlemlerimizi gerçekleştirebiliriz.<br/>
+Requests modülünü pip ile kurmak için;</p>
 <div class="highlight"><pre><span></span><span class="n">pip3</span> <span class="n">install</span> <span class="n">requests</span>  
 </pre></div>
 <p>Kaynak koddan kurmak için ise;</p>
@@ -137,8 +137,8 @@ Requests modülünü pip ile kurmak için;</br></p>
 <span class="n">req</span> <span class="o">=</span> <span class="n">reqeusts</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"http://musana.net"</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span> <span class="c1">#Output: 200, 404?, 302?, 500? ...</span>
 </pre></div>
-<p>Sunucudan dönen cevabın başlık bilgilerine erişebilmek için ise request nesnemize <code>headers</code> nesne değişkeni üzerinden erişebiliriz. Bu değer bize bütün header response bilgisini sözlük tipinde verecektir. Daha spesifik başlıklara erişmek için sözlük yapısını kullanabiliriz. Örneğin;<br>
-<code>req.headers.get("content-type")</code> diyerek içeriğin hangi formatta ve hangi karakter setini kullandığı bilgisine ulaşabiliriz. Erişmeye çalıştığımız başlık değeri yok ise sonuç <code>None</code> dönecektir.</br></p>
+<p>Sunucudan dönen cevabın başlık bilgilerine erişebilmek için ise request nesnemize <code>headers</code> nesne değişkeni üzerinden erişebiliriz. Bu değer bize bütün header response bilgisini sözlük tipinde verecektir. Daha spesifik başlıklara erişmek için sözlük yapısını kullanabiliriz. Örneğin;<br/>
+<code>req.headers.get("content-type")</code> diyerek içeriğin hangi formatta ve hangi karakter setini kullandığı bilgisine ulaşabiliriz. Erişmeye çalıştığımız başlık değeri yok ise sonuç <code>None</code> dönecektir.</p>
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">request</span>
 
 <span class="n">req</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"http://musana.net"</span><span class="p">)</span>
@@ -288,8 +288,8 @@ Requests modülünü pip ile kurmak için;</br></p>
         <li class="elegant-power">Bu sitedeki bütün içerikler izinsiz kopyalanabilir, değiştirilebilir ve dağıtılabilirdir, ama yine de kaynak belirtmeniz tavsiye edilir. ;) <a href="http://getpelican.com/" title="Pelican Home Page"> Pelican</a> ile geliştirilmiştir.</li>
     </ul>
 </div>
-</footer>            <script src="/theme/tipuesearch/jquery.min.js"></script>
-        <script src="/theme/tipuesearch/bootstrap.min.js"></script>
+</footer>            <script src="../theme/tipuesearch/jquery.min.js"></script>
+        <script src="../theme/tipuesearch/bootstrap.min.js"></script>
         <script>
             function validateForm(query)
             {
