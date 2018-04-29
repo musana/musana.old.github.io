@@ -79,7 +79,7 @@
 
             
 <h2 id="burp-suite-ile-http-basic-auth-brute-force">Burp Suite İle HTTP Basic Auth Brute Force</h2>
-<p>HTTP Basic Authentication, kimlik bilgilerini http paketine eklediği Authentication başğında aşağıdaki formata uygun şekilde tutmaktadır.  </p>
+<p>HTTP Basic Authentication, kimlik bilgilerini http paketine eklediği Authentication başlığında aşağıdaki formata uygun şekilde tutmaktadır.  </p>
 <div class="highlight"><pre><span></span><span class="n">Authorization</span><span class="o">:</span> <span class="n">Basic</span> <span class="n">base64encode</span><span class="o">(</span><span class="s2">"username:password"</span><span class="o">)</span>
 </pre></div>
 <p>Brute force yaparken bizim değişken alanımız http headerlerında bulunana <code>Authorization: Basic</code> kısmından sonraki ifade olan base64 ile encode edilmiş kısım olacaktır.  </p>
@@ -92,7 +92,7 @@
 Bu bölümde ise değişken olan alanımızı seçtikten sonra yan tarafta bulunan <code>Add to §</code> diyerek değişken alanımızı belirtiyoruz.  <br/>
 <img alt="add-to-s" src="/img/http-basic-auth/add-to-s.png"/> </br></p>
 <p><br>
-Bundan sonra sonra değişken alanımıza verilecek değerleri belirtmemiz gerekir. Bunun için Payloads sekmesine geliyoruz.<br/>
+Bundan sonra sonra değişken alanımıza verilecek değerleri belirtmemiz gerekir. Bunun için <strong>Payloads</strong> sekmesine geliyoruz.<br/>
 <img alt="general" src="/img/http-basic-auth/general.png"/> </br></p>
 <p><br>
 Yukarıdaki resimde işaretli olan alanlara değinecek olursak;<br/>
@@ -100,7 +100,7 @@ Yukarıdaki resimde işaretli olan alanlara değinecek olursak;<br/>
 <p><br>
 <code>Payload Options</code> bölümünde ise hazır bir wordlisti load edebileceğimiz gibi, manuel değerler girerek de mini bir wordlist oluşturulabilir. İşlemin uzun sürmemesi adına manuel olarak bir kaç kullanıcı adı ve parola değeri giriyorum. Seçenekelerimiz marker ile işaretlenen kısımlar gibi olmalıdır.  </br></p>
 <p><br>
-<code>position: 1</code> ifadesi username değerlerimizi ifade etmektedir. Parola değerlerini de eklemek için position değerini 2 yaparak listeye manul olarak parola değerleri giriniz. (veya parola wordlisti yükleyebilirsiniz.)  </br></p>
+<code>position: 1</code> ifadesi username değerlerimizi ifade etmektedir. Parola değerlerini de eklemek için position değerini 2 yaparak listeye manuel olarak parola değerleri giriniz. (veya parola wordlisti yükleyebilirsiniz.)  </br></p>
 <p><br/>
 <code>Seperator for position 1</code> kısmında seperate karakterimizi <strong>:</strong> nokta seçmemizin nedeni kimlik bilgilerinin <em>username:password</em> formatında gönderilmesinden dolayı.  </p>
 <p><br/>
@@ -109,7 +109,7 @@ Yukarıdaki resimde işaretli olan alanlara değinecek olursak;<br/>
 Son olarak base64 encode işlemi 4'ün katlarına tamamlamak için sona konulan <code>=</code> ifadelerini encode etmesini engellemek için <code>payload encoding</code> kısmından <code>=</code> işaretini kaldırarak payladın doğru bir şekilde gönderilmesini sağlıyoruz.<br/>
 <img alt="payload-process" src="/img/http-basic-auth/payload-process.png"/><br/>
 <br/></p>
-<p>Bu adımları sorunsuz bir şekilde uyguladıktan sonra attack diyerek sadece 200 dönen cevaba bakmamız gerekir.(Başarısız olanlar için 401 durum kodu dönmektedir.)<br/>
+<p>Bu adımları sorunsuz bir şekilde uyguladıktan sonra <strong>attack</strong> diyerek sadece 200 dönen cevaba bakmamız gerekir.(Başarısız olanlar için 401 durum kodu dönmektedir.)<br/>
 <img alt="result" src="/img/http-basic-auth/result.png"/><br/>
 <br>
 <strong>TRICK:</strong> Ayrıca <code>options</code> sekmesinde thread sayısını artırma, yeniden bağlanma, başlama zamanı gibi çesitli seçenekleri de ayarlayabilirsiniz.<br/>
